@@ -21,9 +21,10 @@ const sideBar = () => {
                     objectFit='cover'
                     boxSize='7em'
                     src='/dashboard-pp.jpg'
-                    alt='dashboard-pp'/>
+                    alt='dashboard-pp'
+                    boxShadow='0 4px 12px 0 black'/>
+                    <Text color='white' fontSize='1.2em'>Sally Hermawan</Text>
                     <Spacer></Spacer>
-                    <Text color='white' fontSize='1em' mr={4}>Sally Hermawan</Text>
                     <VStack align="baseline">
                         <Text color='white' fontSize='1em' >Gender: Female</Text>
                         <Text color='white' fontSize='1em' >Year of birth: 03/03/1999</Text>
