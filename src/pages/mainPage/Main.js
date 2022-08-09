@@ -4,6 +4,7 @@ import SignUpBox from '../../components/signUpBox/SignUpBox';
 import { VStack, Flex, Spacer} from '@chakra-ui/layout';
 import NavigationBar from '../../components/navigationBar/NavigationBar';
 import DashboardNavigationBar from '../../components/dashboard/navigationBar/DashboardNavigationBar';
+import SideBar from '../../components/dashboard/sideBar/SideBar';
 
 const Main = () => {
   return (
@@ -14,8 +15,7 @@ const Main = () => {
         <Spacer>
         </Spacer>
         <Flex>
-          {/* <LoginBox/> */}
-          <SignUpBox/>
+          <SideBar/>
         </Flex>
       </VStack>
     </div>
