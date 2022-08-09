@@ -9,6 +9,7 @@ const Pricing = () => {
                     <Text fontSize='2em' fontWeight='bold' color='black'>25.000pts</Text>
                     <Text>Lorem Ipsum </Text>
                     <Spacer></Spacer>
+                    <Spacer></Spacer>
                     <Text fontSize='2em' fontWeight='bold'>Rp30.000,-</Text>
                     <Text>Dapatkan hingga puluhan survey!</Text>    
                     <Spacer></Spacer>
@@ -22,6 +23,7 @@ const Pricing = () => {
                     <Text fontSize='2em' fontWeight='bold' color='white'>50.000pts</Text>
                     <Text color='white'>Lorem Ipsum </Text>
                     <Spacer></Spacer>
+                    <Spacer></Spacer>
                     <Text fontSize='2em' fontWeight='bold' color='white'>Rp52.500,-</Text>
                     <Text color='white'>Dapatkan hingga puluhan survey!</Text>    
                     <Spacer></Spacer>
@@ -34,6 +36,7 @@ const Pricing = () => {
                     <Spacer></Spacer>
                     <Text fontSize='2em' fontWeight='bold' color='black'>10.000pts</Text>
                     <Text>Lorem Ipsum </Text>
+                    <Spacer></Spacer>
                     <Spacer></Spacer>
                     <Text fontSize='2em' fontWeight='bold'>Rp17.000,-</Text>
                     <Text>Dapatkan hingga puluhan survey!</Text>    
