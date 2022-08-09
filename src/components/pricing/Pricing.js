@@ -21,7 +21,7 @@ const Pricing = () => {
                 <Stack w='full' h='full' alignItems='center'>
                     <Spacer></Spacer>
                     <Text fontSize='2em' fontWeight='bold' color='white'>50.000pts</Text>
-                    <Text color='white'>Lorem Ipsum </Text>
+                    <Text color='white'>Lorem Ipsum</Text>
                     <Spacer></Spacer>
                     <Spacer></Spacer>
                     <Text fontSize='2em' fontWeight='bold' color='white'>Rp52.500,-</Text>
