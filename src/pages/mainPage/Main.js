@@ -5,6 +5,7 @@ import { VStack, Flex, Spacer} from '@chakra-ui/layout';
 import NavigationBar from '../../components/navigationBar/NavigationBar';
 import DashboardNavigationBar from '../../components/dashboard/navigationBar/DashboardNavigationBar';
 import SideBar from '../../components/dashboard/sideBar/SideBar';
+import Pricing from '../../components/pricing/Pricing';
 
 const Main = () => {
   return (
