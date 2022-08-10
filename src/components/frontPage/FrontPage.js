@@ -1,5 +1,5 @@
 //Belom kelar. Gausah dicoba-coba dulu. Baru bgt dibuat//
-import {Box, Text, HStack, Image, VStack} from "@chakra-ui/react";
+import {Text, HStack, Image, VStack} from "@chakra-ui/react";
 const FrontPage = () => {
     return ( 
         <HStack w='full' h='full' spacing={20} marginTop={'10%'} alignItems='flex-start'>

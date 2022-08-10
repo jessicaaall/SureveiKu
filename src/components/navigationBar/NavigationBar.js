@@ -18,22 +18,24 @@ const NavigationBar = () => {
         <VStack p={5} w='full'>
           <Flex w='100%'>
             <Stack direction='row' spacing={10} align='center'>
-              <LogoHome />
+              <NavLink to='/home'>
+                <LogoHome />
+              </NavLink>
               <NavLink to='/home'>
                 <Link to color='white' fontSize='16pt'>
                   Home
                 </Link>
               </NavLink>
-              <Link href='#' color='white' fontSize='16pt'>
+              <Link color='white' fontSize='16pt'>
                 Pricing
               </Link>
-              <Link href='#' color='white' fontSize='16pt'>
+              <Link color='white' fontSize='16pt'>
                 Service
               </Link>
-              <Link href='#' color='white' fontSize='16pt'>
+              <Link color='white' fontSize='16pt'>
                 Contact
               </Link>
-              <Link href='#' color='white' fontSize='16pt'>
+              <Link color='white' fontSize='16pt'>
                 Feedback
               </Link>
             </Stack>
