@@ -1,9 +1,9 @@
 import './Main.css';
 import { VStack, Flex, Spacer} from '@chakra-ui/layout';
-import LoginBox from '../../components/loginBox/LoginBox';
-import NavigationBar from '../../components/navigationBar/NavigationBar';
+import SignUpBox from '../components/signUpBox/SignUpBox';
+import NavigationBar from '../components/navigationBar/NavigationBar';
 
-const LoginPage = () => {
+const SignUpPage = () => {
   return (
     <div>
       <div className="bg-image"></div>
@@ -11,11 +11,11 @@ const LoginPage = () => {
         <NavigationBar/>
         <Spacer></Spacer>
         <Flex>
-          <LoginBox/>
+          <SignUpBox/>
         </Flex>
       </VStack>
     </div>
   );
 }
 
-export default LoginPage;
+export default SignUpPage;
