@@ -1,0 +1,10 @@
+.bg-image{
+    background: linear-gradient(to bottom right, #33416E 50%, #4685B2 100%);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}

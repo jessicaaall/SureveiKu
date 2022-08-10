@@ -1,8 +1,6 @@
-import './Main.css';
-import LoginBox from '../../components/loginBox/LoginBox';
-import SignUpBox from '../../components/signUpBox/SignUpBox';
+// import './Main.css';
+import '../../components/dashboard/background/DashboardBackground.css';
 import { VStack, Flex, Spacer} from '@chakra-ui/layout';
-import NavigationBar from '../../components/navigationBar/NavigationBar';
 import DashboardNavigationBar from '../../components/dashboard/navigationBar/DashboardNavigationBar';
 import SideBar from '../../components/dashboard/sideBar/SideBar';
 
@@ -10,10 +8,9 @@ const Main = () => {
   return (
     <div>
       <div className="bg-image"></div>
-      <VStack w='full' h='full' alignItems="center" spacing={10}>
+      <VStack w='full' h='full' spacing={10}>
         <DashboardNavigationBar/>
-        <Spacer>
-        </Spacer>
+        <Spacer></Spacer>
         <Flex>
           <SideBar/>
         </Flex>

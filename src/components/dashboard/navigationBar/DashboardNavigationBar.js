@@ -7,7 +7,7 @@ import {Flex, Stack, Box, Spacer} from '@chakra-ui/react';
 const DashboardNavigationBar = () => {
     return (
         <div className='dashboard-navigation-bar'>
-            <Box bg='whiteAlpha.900' w='full' p={4}>
+            <Box bg='white' w='full' p={4}>
                 <Flex w='full'>
                     <Stack direction='row' align='center'>
                     <Logo/>

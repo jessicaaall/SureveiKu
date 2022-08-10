@@ -6,9 +6,9 @@ const sideBar = () => {
     return (
         <Flex
             pos="fixed"
-            left="5"
+            left="0"
             h="95vh"
-            marginTop="2.5vh"
+            // marginTop="2.5vh"
             boxShadow="0 4px 12px 0 black"
             w="300px"
             flexDir="column"
