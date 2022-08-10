@@ -1,6 +1,7 @@
 import './NavigationBar.css';
 import { Text, VStack, Flex, Spacer, Button, Stack, Link} from '@chakra-ui/react';
 import { Box } from '@chakra-ui/layout'
+import Logo from '../../components/Logo';
 
 const NavigationBar = () => {
     return (
@@ -9,7 +10,7 @@ const NavigationBar = () => {
                 <VStack p={5} w='full'>
                     <Flex w="100%">
                         <Stack direction='row' spacing={10} align='center'>
-                            <Text ml="8" fontSize="4xl" fontWeight="bold" bgGradient='linear(to-l, blue.900, orange.300)' href="#" bgClip='text'>SureveiKu</Text>
+                            <Logo/>
                             <Link href="#" color='white' fontSize='16pt'>Home</Link>
                             <Link href="#" color='white' fontSize='16pt'>Pricing</Link>
                             <Link href="#" color='white' fontSize='16pt'>Service</Link>
