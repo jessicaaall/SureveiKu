@@ -1,5 +1,5 @@
 import './NavigationBar.css';
-import { Text, VStack, Flex, Spacer, Button, Stack, Link} from '@chakra-ui/react';
+import { VStack, Flex, Spacer, Button, Stack, Link} from '@chakra-ui/react';
 import { Box } from '@chakra-ui/layout'
 import Logo from '../../components/Logo';
 
