@@ -1,5 +1,5 @@
 import './DashboardNavigationBar.css';
-import Logo from './Logo';
+import Logo from '../../Logo';
 import DashboardProfile from './DashboardProfile';
 import {Flex, Stack, Box, Spacer} from '@chakra-ui/react';
 

@@ -5,7 +5,6 @@ import DashboardNavigationBar from '../../components/dashboard/navigationBar/Das
 import SideBar from '../../components/dashboard/sideBar/SideBar';
 import Pricing from '../../components/pricing/Pricing';
 import FrontPage from '../../components/frontPage/FrontPage';
-import SignUpBox from '../../components/signUpBox/SignUpBox';
 import NavigationBar from '../../components/navigationBar/NavigationBar';
 import SignUpPage from '../SignUpPage';
 import LoginPage from '../LoginPage';
