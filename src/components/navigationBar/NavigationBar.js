@@ -26,9 +26,11 @@ const NavigationBar = () => {
                   Home
                 </Link>
               </NavLink>
-              <Link color='white' fontSize='16pt'>
-                Pricing
-              </Link>
+              <NavLink to='/pricing'>
+                <Link color='white' fontSize='16pt'>
+                    Pricing
+                </Link>
+              </NavLink>
               <Link color='white' fontSize='16pt'>
                 Service
               </Link>
