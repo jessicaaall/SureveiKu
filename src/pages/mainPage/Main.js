@@ -7,6 +7,7 @@ const Main = () => {
   return (
     <div>
       <div className="bg-image"></div>
+      <div className="bg-filter"></div>
       <VStack w='full' h='full' spacing={10}>
         <NavigationBar/>
         <Spacer></Spacer>
