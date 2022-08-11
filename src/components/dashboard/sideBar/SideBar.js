@@ -1,5 +1,6 @@
 import { VStack, Spacer, Stack, Button,Flex} from "@chakra-ui/react";
 import {Img, Text} from '@chakra-ui/react';
+import { NavLink } from 'react-router-dom';
 import {ArrowForwardIcon, ArrowLeftIcon} from '@chakra-ui/icons';
 
 const sideBar = () => {
@@ -41,7 +42,9 @@ const sideBar = () => {
                         <Button color='white' variant='link' leftIcon={<ArrowForwardIcon/>} >Terms of Service</Button>
                     </VStack>
                     <Spacer></Spacer>
+                    <NavLink to='/signup'>
                     <Button leftIcon={<ArrowLeftIcon/>}>Sign Out</Button>
+                    </NavLink>
             </Stack>
         </Flex>
     );

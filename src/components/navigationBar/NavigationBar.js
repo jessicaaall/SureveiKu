@@ -31,12 +31,16 @@ const NavigationBar = () => {
                     Pricing
                 </Link>
               </NavLink>
-              <Link color='white' fontSize='16pt'>
-                Service
-              </Link>
-              <Link color='white' fontSize='16pt'>
-                Contact
-              </Link>
+              <NavLink to='/service'>
+                <Link color='white' fontSize='16pt'>
+                  Service
+                </Link>
+              </NavLink>
+              <NavLink to='/contact'>
+                <Link color='white' fontSize='16pt'>
+                  Contact
+                </Link>
+              </NavLink>
               <Link color='white' fontSize='16pt'>
                 Feedback
               </Link>
@@ -51,6 +55,11 @@ const NavigationBar = () => {
               <NavLink to='/signup'>
                 <Button colorScheme='orange' size='md'>
                   Sign Up
+                </Button>
+              </NavLink>
+              <NavLink to='/dashboard'>
+                <Button colorScheme='teal' size='md'>
+                  KE DASHBOARD (SEMENTARA)
                 </Button>
               </NavLink>
             </Stack>
