@@ -1,10 +1,10 @@
-import './mainPage/Main.css';
+import './Main.css';
 import { VStack, Flex, Spacer } from '@chakra-ui/layout';
-import Pricing from '../components/pricing/Pricing';
-import NavigationBar from '../components/navigationBar/NavigationBar';
+import Service from '../../components/service/Service';
+import NavigationBar from '../../components/navigationBar/NavigationBar';
 
-const SignUpPage = () => {
-  return (
+const ServicePage = () => {
+    return ( 
     <div>
       <div className='bg-image'></div>
       <div className="bg-filter"></div>
@@ -12,11 +12,11 @@ const SignUpPage = () => {
         <NavigationBar />
         <Spacer></Spacer>
         <Flex>
-          <Pricing/>
+          <Service/>
         </Flex>
       </VStack>
     </div>
-  );
-};
-
-export default SignUpPage;
+     );
+}
+ 
+export default ServicePage;

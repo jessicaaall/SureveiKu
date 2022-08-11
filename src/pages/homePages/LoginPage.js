@@ -1,22 +1,22 @@
-import './mainPage/Main.css';
+import './Main.css';
 import { VStack, Flex, Spacer } from '@chakra-ui/layout';
-import Contact from '../components/contact/Contact';
-import NavigationBar from '../components/navigationBar/NavigationBar';
+import LoginBox from '../../components/loginBox/LoginBox';
+import NavigationBar from '../../components/navigationBar/NavigationBar';
 
-const ContactPage = () => {
+const LoginPage = () => {
   return (
     <div>
       <div className='bg-image'></div>
-      <div className='bg-filter'></div>
+      <div className="bg-filter"></div>
       <VStack w='full' h='full' spacing={10}>
         <NavigationBar />
         <Spacer></Spacer>
         <Flex>
-          <Contact />
+          <LoginBox />
         </Flex>
       </VStack>
     </div>
   );
 };
 
-export default ContactPage;
+export default LoginPage;

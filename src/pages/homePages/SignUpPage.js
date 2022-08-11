@@ -1,7 +1,7 @@
-import './mainPage/Main.css';
+import './Main.css';
 import { VStack, Flex, Spacer } from '@chakra-ui/layout';
-import SignUpBox from '../components/signUpBox/SignUpBox';
-import NavigationBar from '../components/navigationBar/NavigationBar';
+import SignUpBox from '../../components/signUpBox/SignUpBox';
+import NavigationBar from '../../components/navigationBar/NavigationBar';
 
 const SignUpPage = () => {
   return (

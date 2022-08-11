@@ -3,6 +3,7 @@ import { Img, Text } from '@chakra-ui/react';
 import { ArrowForwardIcon, ArrowLeftIcon } from '@chakra-ui/icons';
 import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
 import { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { getDoc, doc, getFirestore } from 'firebase/firestore';
 
 const SideBar = () => {
@@ -100,9 +101,11 @@ const SideBar = () => {
           </Button>
         </VStack>
         <Spacer></Spacer>
-        <Button onClick={signOutAccount} leftIcon={<ArrowLeftIcon />}>
-          Sign Out
-        </Button>
+        <NavLink to='/signup'>
+          <Button onClick={signOutAccount} leftIcon={<ArrowLeftIcon />}>
+            Sign Out
+          </Button>
+        </NavLink>
       </Stack>
     </Flex>
   );

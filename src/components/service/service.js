@@ -1,7 +1,7 @@
 import { Box, Button, Center, HStack, Spacer, Stack, Text } from "@chakra-ui/react"
 import { Image }from "@chakra-ui/react"
 
-const Example = () => {
+const Service = () => {
     return(
         <HStack mx="120px" mt="120px" mb="90px" spacing="60px">
             <Box boxShadow="xl" rounded="md" bg="white" w="65%" h="450px">
@@ -65,4 +65,4 @@ const Example = () => {
     );
 }
 
-export default Example;
+export default Service;
