@@ -5,13 +5,17 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import { BrowserRouter } from 'react-router-dom';
+import { initializeApp } from 'firebase/app';
+import { firebaseConfig } from './firebase';
+
+initializeApp(firebaseConfig);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <React.StrictMode>
       <ChakraProvider>
-        <ColorModeScript initialColorMode="light" useSystemColorMode="false"/>
+        <ColorModeScript initialColorMode='light' useSystemColorMode='false' />
         <App />
       </ChakraProvider>
     </React.StrictMode>
