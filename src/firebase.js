@@ -21,7 +21,7 @@ const createNewUserData = async (id, fullname, email, points) => {
     pekerjaan: '',
     points: points,
     telephone: '',
-    mySurveys: {},
+    dob: undefined,
   });
 };
 

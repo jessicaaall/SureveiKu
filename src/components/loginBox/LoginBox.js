@@ -34,7 +34,6 @@ const LoginBox = () => {
         email,
         password
       );
-      console.log(userCredentials.user);
     } catch (error) {
       console.error(error);
     }
