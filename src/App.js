@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import SignUpPage from './pages/SignUpPage';
 import LoginPage from './pages/LoginPage';
 import PricingPage from './pages/PricingPage';
+import Dashboard from './pages/Dashboard';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Route path='/signup' element={<SignUpPage />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/pricing' element={<PricingPage />} />
+        <Route path='/dashboard' element={<Dashboard />} />
         <Route path='*' element={<Navigate to='/home' replace />} />
       </Routes>
     </div>
