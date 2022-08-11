@@ -43,7 +43,7 @@ const sideBar = () => {
                     </VStack>
                     <Spacer></Spacer>
                     <NavLink to='/signup'>
-                    <Button leftIcon={<ArrowLeftIcon/>}>Sign Out</Button>
+                    <Button leftIcon={<ArrowLeftIcon/>}>Sign Out (PENCET INI KE HOME)</Button>
                     </NavLink>
             </Stack>
         </Flex>
