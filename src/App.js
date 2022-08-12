@@ -1,12 +1,12 @@
 import Main from './pages/homePages/Main';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import SignUpPage from './pages/homePages/SignUpPage';
 import LoginPage from './pages/homePages/LoginPage';
 import PricingPage from './pages/homePages/PricingPage';
 import ServicePage from './pages/homePages/ServicePage';
 import ContactPage from './pages/homePages/ContactPage';
 import Dashboard from './pages/dashboardPages/Dashboard';
-import { useEffect, useNavigate } from 'react';
+import { useEffect } from 'react';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
 const App = () => {
