@@ -144,7 +144,8 @@ const SignUpBox = () => {
             </FormControl>
           </Stack>
           <Spacer></Spacer>
-          <Button
+          <Stack alignItems='center'>
+            <Button
             onClick={signUpAccount}
             bg='#49439B'
             color='white'
@@ -156,7 +157,8 @@ const SignUpBox = () => {
           <Text>or register with</Text>
           <Spacer></Spacer>
           <Box><LoginGoogle/></Box>
-          <Spacer></Spacer>
+          <Spacer></Spacer></Stack>
+          
         </VStack>
       </Flex>
     </Container>

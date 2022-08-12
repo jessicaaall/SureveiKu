@@ -93,7 +93,8 @@ const LoginBox = () => {
             <Checkbox>Remember me</Checkbox>
           </Stack>
           <Spacer></Spacer>
-          <Button
+          <Stack alignItems='center'>          
+            <Button
             bg='#49439B'
             color='white'
             _hover={{ background: '#1A1287' }}
@@ -103,7 +104,8 @@ const LoginBox = () => {
             Login
           </Button>
           <Text>or login with</Text>
-          <Box w='100%'><LoginGoogle/></Box>
+          <Box w='100%'><LoginGoogle/></Box></Stack>
+
           <Spacer></Spacer>
           <Text>
             Not a member?{' '}
