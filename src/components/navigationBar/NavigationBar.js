@@ -41,9 +41,11 @@ const NavigationBar = () => {
                   Contact
                 </Link>
               </NavLink>
-              <Link color='white' fontSize='16pt'>
-                Feedback
-              </Link>
+              <NavLink to='/feedback'>
+                <Link color='white' fontSize='16pt'>
+                  Feedback
+                </Link>
+              </NavLink>
             </Stack>
             <Spacer></Spacer>
             <Stack direction='row' spacing={4} align='center'>

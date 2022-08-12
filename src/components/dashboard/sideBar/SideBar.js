@@ -43,16 +43,15 @@ const SideBar = () => {
   return (
     <Flex
       pos='fixed'
-      left='0'
-      h='95vh'
-      // marginTop="2.5vh"
+      h='full'
       boxShadow='0 4px 12px 0 black'
-      w='300px'
+      w='250px'
       flexDir='column'
       justifyContent='space-between'
       bgGradient='linear(to-b, #8FBFDB, #33426E)'
     >
-      <Stack alignItems='center' mt={4} spacing={4}>
+      <Stack alignItems='center' spacing={4}>
+        <Spacer></Spacer>
         <Img
           borderRadius='full'
           objectFit='cover'
@@ -106,6 +105,7 @@ const SideBar = () => {
             Sign Out
           </Button>
         </NavLink>
+        <Spacer></Spacer>
       </Stack>
     </Flex>
   );

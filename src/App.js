@@ -5,6 +5,7 @@ import LoginPage from './pages/homePages/LoginPage';
 import PricingPage from './pages/homePages/PricingPage';
 import ServicePage from './pages/homePages/ServicePage';
 import ContactPage from './pages/homePages/ContactPage';
+import FeedbackPage from './pages/homePages/FeedbackPage';
 import Dashboard from './pages/dashboardPages/Dashboard';
 import { useEffect, useNavigate } from 'react';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
@@ -31,7 +32,7 @@ const App = () => {
         <Route path='/pricing' element={<PricingPage />} />
         <Route path='/service' element={<ServicePage />} />
         <Route path='/contact' element={<ContactPage />} />
-        {/* <Route path='/feedback' element={<FeedbackPage />} /> */}
+        <Route path='/feedback' element={<FeedbackPage />} />
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='*' element={<Navigate to='/home' replace />} />
       </Routes>
