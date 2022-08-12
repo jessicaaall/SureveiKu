@@ -16,14 +16,7 @@ const ContactPage = () => {
         </Flex>
       </VStack>
     </div>
-<<<<<<< HEAD:src/pages/ContactPage.js
   );
 };
 
 export default ContactPage;
-=======
-     );
-}
- 
-export default ContactPage;
->>>>>>> 4769a2ce8876e2d197758156e0f70d8489b10065:src/pages/homePages/ContactPage.js
