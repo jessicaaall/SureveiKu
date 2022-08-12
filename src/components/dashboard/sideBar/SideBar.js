@@ -1,4 +1,4 @@
-import { VStack, Spacer, Stack, Button, Flex } from '@chakra-ui/react';
+import { VStack, Spacer, Stack, Button, Flex, Link } from '@chakra-ui/react';
 import { Img, Text } from '@chakra-ui/react';
 import { ArrowForwardIcon, ArrowLeftIcon } from '@chakra-ui/icons';
 import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
@@ -86,9 +86,12 @@ const SideBar = () => {
           <Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
             My Surveys
           </Button>
-          <Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
-            Available Surveys
-          </Button>
+          <NavLink to='/available-surveys'>
+            <Link><Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
+              Available Surveys
+              </Button>
+            </Link>
+          </NavLink>
           <Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
             Help
           </Button>

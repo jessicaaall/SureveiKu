@@ -2,6 +2,6 @@
     background: linear-gradient(to bottom right, #33416E 50%, #4685B2 100%);
     height: 100%;
     width: 100%;
-    position: fixed;
+    position: relative;
     z-index: -1;
 }

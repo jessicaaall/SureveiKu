@@ -9,6 +9,7 @@ import FeedbackPage from './pages/homePages/FeedbackPage';
 import Dashboard from './pages/dashboardPages/Dashboard';
 import { useEffect, useNavigate } from 'react';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import AvailableSurvey from './pages/dashboardPages/AvailableSurvey';
 
 const App = () => {
   // const navigate = useNavigate();
@@ -34,6 +35,7 @@ const App = () => {
         <Route path='/contact' element={<ContactPage />} />
         <Route path='/feedback' element={<FeedbackPage />} />
         <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/available-surveys' element={<AvailableSurvey />} />
         <Route path='*' element={<Navigate to='/home' replace />} />
       </Routes>
     </div>
