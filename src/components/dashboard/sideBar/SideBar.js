@@ -1,4 +1,4 @@
-import { VStack, Spacer, Stack, Button, Flex } from '@chakra-ui/react';
+import { VStack, Spacer, Stack, Button, Flex, Link } from '@chakra-ui/react';
 import { Img, Text } from '@chakra-ui/react';
 import { ArrowForwardIcon, ArrowLeftIcon } from '@chakra-ui/icons';
 import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
@@ -43,16 +43,15 @@ const SideBar = () => {
   return (
     <Flex
       pos='fixed'
-      left='0'
-      h='95vh'
-      // marginTop="2.5vh"
+      h='full'
       boxShadow='0 4px 12px 0 black'
-      w='300px'
+      w='250px'
       flexDir='column'
       justifyContent='space-between'
       bgGradient='linear(to-b, #8FBFDB, #33426E)'
     >
-      <Stack alignItems='center' mt={4} spacing={4}>
+      <Stack alignItems='center' spacing={4}>
+        <Spacer></Spacer>
         <Img
           borderRadius='full'
           objectFit='cover'
@@ -87,9 +86,12 @@ const SideBar = () => {
           <Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
             My Surveys
           </Button>
-          <Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
-            Available Surveys
-          </Button>
+          <NavLink to='/available-surveys'>
+            <Link><Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
+              Available Surveys
+              </Button>
+            </Link>
+          </NavLink>
           <Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
             Help
           </Button>
@@ -106,6 +108,7 @@ const SideBar = () => {
             Sign Out
           </Button>
         </NavLink>
+        <Spacer></Spacer>
       </Stack>
     </Flex>
   );

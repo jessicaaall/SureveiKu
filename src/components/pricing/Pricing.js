@@ -1,4 +1,4 @@
-import { HStack, Box, Text, Stack, Spacer, Button, Image, Center, Flex, VStack } from "@chakra-ui/react";
+import { HStack, Box, Text, Stack, Spacer, Button, Image, Center } from "@chakra-ui/react";
 
 const Pricing = () => {
     return ( 

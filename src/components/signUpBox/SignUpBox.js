@@ -20,6 +20,8 @@ import {
 import { Box, Button, Spacer, Stack } from '@chakra-ui/react';
 import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth';
 import { createNewUserData } from '../../firebase';
+import LoginGoogle from '../LoginGoogle';
+
 
 const SignUpBox = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -142,7 +144,8 @@ const SignUpBox = () => {
             </FormControl>
           </Stack>
           <Spacer></Spacer>
-          <Button
+          <Stack alignItems='center'>
+            <Button
             onClick={signUpAccount}
             bg='#49439B'
             color='white'
@@ -153,8 +156,9 @@ const SignUpBox = () => {
           </Button>
           <Text>or register with</Text>
           <Spacer></Spacer>
-          <Box>Google Shit</Box>
-          <Spacer></Spacer>
+          <Box><LoginGoogle/></Box>
+          <Spacer></Spacer></Stack>
+          
         </VStack>
       </Flex>
     </Container>

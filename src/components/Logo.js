@@ -20,8 +20,6 @@ const Logo = () => {
                     >SureveiKu</Link>
                 </Flex>
             </VStack>
-            
-            
         </div>
     );
 }

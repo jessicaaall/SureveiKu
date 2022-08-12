@@ -2,8 +2,9 @@ import '../../components/dashboard/background/DashboardBackground.css';
 import SideBar from '../../components/dashboard/sideBar/SideBar';
 import { Grid, GridItem } from '@chakra-ui/react'
 import DashboardNavigationBar from '../../components/dashboard/navigationBar/DashboardNavigationBar';
+import AvailableSurveys from '../../components/availableSurveys/AvailableSurveys';
 
-const Dashboard = () => {
+const AvailableSurvey = () => {
   return (
     <div>
       <div className='dashboard-bg-image'>
@@ -11,7 +12,7 @@ const Dashboard = () => {
           templateAreas={`"header header"
                           "nav main"
                           `}
-          gridTemplateRows={'10vh'}
+          gridTemplateRows={'10vh auto'}
           gridTemplateColumns={'250px auto'}
           h='full'
           w='full'
@@ -24,8 +25,7 @@ const Dashboard = () => {
             <SideBar/>
           </GridItem>
           <GridItem p={4} area={'main'}>
-            MASUKIN KOMPONEN KALIAN DI SINI
-            {/* MASUKIN KOMPONEN KALIAN DI SINI */}
+            <AvailableSurveys/>
           </GridItem>
         </Grid>
       </div>
@@ -33,4 +33,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default AvailableSurvey;

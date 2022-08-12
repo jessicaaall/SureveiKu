@@ -14,6 +14,7 @@ import { EmailIcon, LockIcon, ViewOffIcon, ViewIcon } from '@chakra-ui/icons';
 import { Checkbox, Box, Button, Link, Spacer, Stack } from '@chakra-ui/react';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { Link as ReachLink } from 'react-router-dom';
+import LoginGoogle from '../LoginGoogle';
 
 const LoginBox = () => {
   const [show, setShow] = useState(false);
@@ -92,7 +93,8 @@ const LoginBox = () => {
             <Checkbox>Remember me</Checkbox>
           </Stack>
           <Spacer></Spacer>
-          <Button
+          <Stack alignItems='center'>          
+            <Button
             bg='#49439B'
             color='white'
             _hover={{ background: '#1A1287' }}
@@ -102,7 +104,8 @@ const LoginBox = () => {
             Login
           </Button>
           <Text>or login with</Text>
-          <Box>Google Shit</Box>
+          <Box w='100%'><LoginGoogle/></Box></Stack>
+
           <Spacer></Spacer>
           <Text>
             Not a member?{' '}
