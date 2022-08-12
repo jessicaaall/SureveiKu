@@ -12,19 +12,19 @@ const FrontPage = () => {
       <VStack spacing={19} alignItems='baseline'>
         <VStack alignItems='baseline'>
           <VStack spacing={-8} alignItems='baseline'>
-            <Text fontSize='4.5em' fontWeight='bold' color='white'>
+            <Text fontSize='4.5em' fontWeight='bold' color='white' textShadow='1px 1px black'>
               Daftarkan Surveimu
             </Text>
-            <Text fontSize='4.5em' fontWeight='bold' color='white'>
+            <Text fontSize='4.5em' fontWeight='bold' color='white' textShadow='1px 1px black'>
               Dengan Mudah
             </Text>
             </VStack>
           <VStack alignItems='baseline'>
-            <Text fontSize='xl' color={'white'}>
+            <Text fontSize='xl' color={'white'} textShadow='1px 1px black'>
               Ingin surveimu diisi dengan responden yang berkualitas dan memenuhi
               target?
             </Text>
-            <Text fontSize='xl' color={'white'}>
+            <Text fontSize='xl' color={'white'} textShadow='1px 1px black'>
               Bergabunglah dengan SureveiKu sekarang juga.
             </Text>
           </VStack>
