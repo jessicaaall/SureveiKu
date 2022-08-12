@@ -98,9 +98,13 @@ const SideBar = () => {
           <Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
             Privacy Policy
           </Button>
-          <Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
-            Terms of Service
-          </Button>
+          <NavLink to='/tos'>
+            <Link>
+              <Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
+                Terms of Service
+              </Button>
+            </Link>
+          </NavLink>
         </VStack>
         <Spacer></Spacer>
         <NavLink to='/signup'>
