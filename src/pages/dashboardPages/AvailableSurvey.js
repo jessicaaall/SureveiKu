@@ -1,6 +1,6 @@
 import '../../components/dashboard/background/DashboardBackground.css';
 import SideBar from '../../components/dashboard/sideBar/SideBar';
-import { Grid, GridItem } from '@chakra-ui/react'
+import { Grid, GridItem } from '@chakra-ui/react';
 import DashboardNavigationBar from '../../components/dashboard/navigationBar/DashboardNavigationBar';
 import AvailableSurveys from '../../components/availableSurveys/AvailableSurveys';
 
@@ -14,7 +14,7 @@ const AvailableSurvey = () => {
                           `}
           gridTemplateRows={'10vh auto'}
           gridTemplateColumns={'250px auto'}
-          h='full'
+          minH='100vh'
           w='full'
           color='blackAlpha.700'
         >
@@ -22,10 +22,10 @@ const AvailableSurvey = () => {
             <DashboardNavigationBar />
           </GridItem>
           <GridItem area={'nav'}>
-            <SideBar/>
+            <SideBar />
           </GridItem>
           <GridItem p={4} area={'main'}>
-            <AvailableSurveys/>
+            <AvailableSurveys />
           </GridItem>
         </Grid>
       </div>

@@ -1,16 +1,19 @@
 import { VStack, Spacer, Stack, Button, Flex, Link } from '@chakra-ui/react';
 import { Img, Text } from '@chakra-ui/react';
 import { ArrowForwardIcon, ArrowLeftIcon } from '@chakra-ui/icons';
+import ProfileSVG from '../../../assets/account.svg';
 import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { getDoc, doc, getFirestore } from 'firebase/firestore';
+import { getStorage, ref, getDownloadURL } from 'firebase/storage';
 
 const SideBar = () => {
   const [fullname, setFullname] = useState('');
   const [dob, setDob] = useState('');
   const [gender, setGender] = useState('');
   const [points, setPoints] = useState('');
+  const [ppSrc, setPpSrc] = useState(ProfileSVG);
 
   const signOutAccount = () => {
     signOut(getAuth());
@@ -20,6 +23,9 @@ const SideBar = () => {
     const id = user.uid;
     const docSnap = await getDoc(doc(getFirestore(), 'Akun', id));
     const data = docSnap.data();
+
+    const url = await getDownloadURL(ref(getStorage(), `users/${id}/pp.jpg`));
+    setPpSrc(url);
 
     setFullname(data.name);
 
@@ -56,7 +62,7 @@ const SideBar = () => {
           borderRadius='full'
           objectFit='cover'
           boxSize='7em'
-          src='/dashboard-pp.jpg'
+          src={ppSrc}
           alt='dashboard-pp'
           boxShadow='0 4px 12px 0 black'
         />
@@ -87,8 +93,13 @@ const SideBar = () => {
             My Surveys
           </Button>
           <NavLink to='/available-surveys'>
-            <Link><Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
-              Available Surveys
+            <Link>
+              <Button
+                color='white'
+                variant='link'
+                leftIcon={<ArrowForwardIcon />}
+              >
+                Available Surveys
               </Button>
             </Link>
           </NavLink>
