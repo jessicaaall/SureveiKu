@@ -1,7 +1,7 @@
 import { HStack, Box, Text, Stack, Spacer, Button, Image, Center, Flex, VStack, Checkbox, Link } from "@chakra-ui/react";
 
 const ToS = () => {
-    return ( 
+    return (
         <VStack>
             <Text fontSize={70} color='white' fontWeight='bold'>TERMS OF SERVICE</Text>
             <Box w='60%' h='730px' bg='white' padding='1.7%' borderRadius={30} boxShadow="4px 5px 2px 2px black">
@@ -22,7 +22,7 @@ const ToS = () => {
                         <Link color='blue' href='#'>terms of service</Link> 
                         {/* tinggal hrefnya diganti */}
                     </HStack>
-                    <Button bg='#EA8238' borderRadius={20} w='150px' border='1px' fontWeight='bold' _hover={{ bg: '#F19552' }} left={900}>SUBMIT</Button>
+                    <Button bg='#EA8238' borderRadius={20} w='150px' border='1px' fontWeight='bold' _hover={{ bg: '#F19552' }} alignSelf='end'>SUBMIT</Button>
                 </VStack>
             </Box>
         </VStack>
