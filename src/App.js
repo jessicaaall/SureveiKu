@@ -12,17 +12,15 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import AvailableSurvey from './pages/dashboardPages/AvailableSurvey';
 
 const App = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   onAuthStateChanged(getAuth(), (user) => {
-  //     if (user) {
-  //       navigate('/dashboard', { replace: true });
-  //     } else {
-  //       navigate('/home', { replace: true });
-  //     }
-  //   });
-  // }, []);
+  useEffect(() => {
+    onAuthStateChanged(getAuth(), (user) => {
+      if (!user) {
+        navigate('/home', { replace: true });
+      }
+    });
+  }, []);
 
   return (
     <div className='App'>
