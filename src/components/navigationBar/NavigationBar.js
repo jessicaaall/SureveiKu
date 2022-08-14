@@ -15,6 +15,7 @@ const NavigationBar = () => {
     }
   }
 
+
   return (
     <div style={styles.navbar}>
       <HStack spacing={10} padding={5} h='10vh' alignItems={'center'} justify='space-between' bg='whiteAlpha.300' broderRadius={4}>
@@ -49,14 +50,26 @@ const NavigationBar = () => {
         <Spacer></Spacer>
         <HStack>
         <NavLink to='/login'>
-            <Button colorScheme='orange' size='md'>
+            <Button 
+            color='white'
+            bg="#FF9F45"
+            borderRadius='10'
+            _hover={{ bg:'#F76E11' }}
+            _active={{bg:'#F76E11'}}
+            size='md'>
               Login
             </Button>
           </NavLink>
           <NavLink to='/signup'>
-            <Button colorScheme='orange' size='md'>
-              Sign Up
-            </Button>
+            <Button 
+              color='white'
+              bg="#F76E11"
+              borderRadius='10'
+              _hover={{ bg:'#FF9F45' }}
+              _active={{bg:'#FF9F45'}}
+              size='md'>
+                SignUp
+              </Button>
           </NavLink>
         </HStack>
         </HStack>
