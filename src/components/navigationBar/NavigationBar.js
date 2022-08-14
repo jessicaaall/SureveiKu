@@ -58,11 +58,6 @@ const NavigationBar = () => {
               Sign Up
             </Button>
           </NavLink>
-          <NavLink to='/dashboard'>
-            <Button colorScheme='teal' size='md'>
-              KE DASHBOARD (SEMENTARA)
-            </Button>
-          </NavLink>
         </HStack>
         </HStack>
     </div>
