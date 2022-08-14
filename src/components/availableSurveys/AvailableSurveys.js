@@ -4,7 +4,6 @@ import {
   Image,
   Spacer,
   Stack,
-  HStack,
   Button,
   VStack,
   Flex,
@@ -102,14 +101,13 @@ const AvailableSurveys = () => {
   return (
       <VStack align='center' h='100%'>
         <FormalHeading title='Available Surveys'/>
-        <SimpleGrid columns={3} spacingX={20} spacingY='10' overflowY={'scroll'} w='auto' h='full' css={{"&::-webkit-scrollbar": {width:"8px",},"&::-webkit-scrollbar-track": {background:'#D9D9D9', borderRadius:"50px",},"&::-webkit-scrollbar-thumb": {background:'#122543', borderRadius:"50px",},}}>
-              <Surveybox/>
-              <Surveybox/>
-              <Surveybox/>   
-              <Surveybox/>
-              <Surveybox/>
-              <Surveybox/>
-              <Spacer/>
+        <SimpleGrid pt={4} pb={4} pr={2} columns={3} spacingX={20} spacingY='10' overflowY={'scroll'} w='auto' h='full' css={{"&::-webkit-scrollbar": {width:"8px",},"&::-webkit-scrollbar-track": {background:'#D9D9D9', borderRadius:"50px",},"&::-webkit-scrollbar-thumb": {background:'#122543', borderRadius:"50px",},}}>
+          <Surveybox/>
+          <Surveybox/>
+          <Surveybox/>   
+          <Surveybox/>
+          <Surveybox/>
+          <Surveybox/>
         </SimpleGrid>
       </VStack>
   );
