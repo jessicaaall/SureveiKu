@@ -3,7 +3,6 @@ import {
   Button,
   HStack,
   Link,
-  Stack,
 } from '@chakra-ui/react';
 import { NavLink } from 'react-router-dom';
 import LogoHome from '../../components/LogoHome';

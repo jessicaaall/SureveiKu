@@ -83,15 +83,33 @@ const SideBar = () => {
         </VStack>
         <Spacer></Spacer>
         <VStack align='baseline'>
-          <Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
-            Redeem Points
-          </Button>
-          <Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
-            Create Survey
-          </Button>
-          <Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
-            My Surveys
-          </Button>
+
+        <NavLink to='/redeempoints'>
+          <Link>
+            <Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
+              Redeem Points
+            </Button>
+          </Link>
+        </NavLink>
+
+          <NavLink to='/createsurvey'>
+            <Link>
+              <Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
+                  Create Survey
+              </Button>
+            </Link>
+          </NavLink>
+          
+
+          <NavLink to='/mysurveys'>
+            <Link>
+              <Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
+                My Surveys
+              </Button>
+            </Link>
+          </NavLink>
+          
+
           <NavLink to='/available-surveys'>
             <Link>
               <Button
@@ -103,12 +121,22 @@ const SideBar = () => {
               </Button>
             </Link>
           </NavLink>
-          <Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
-            Help
-          </Button>
-          <Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
-            Privacy Policy
-          </Button>
+
+          <NavLink to='/help'>
+            <Link>
+              <Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
+              Help
+              </Button>
+            </Link>
+          </NavLink>
+          
+          <NavLink to='/privacypolicy'>
+            <Link>
+              <Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
+                Privacy Policy
+              </Button>
+            </Link>
+          </NavLink>
           <NavLink to='/tos'>
             <Link>
               <Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
@@ -116,6 +144,7 @@ const SideBar = () => {
               </Button>
             </Link>
           </NavLink>
+
         </VStack>
         <Spacer></Spacer>
         <NavLink to='/signup'>
@@ -123,6 +152,7 @@ const SideBar = () => {
             Sign Out
           </Button>
         </NavLink>
+
         <Spacer></Spacer>
       </Stack>
     </Flex>
