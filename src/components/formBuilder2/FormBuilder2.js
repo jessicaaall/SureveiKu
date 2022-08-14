@@ -1,4 +1,5 @@
-import {Box, Text, VStack, UnorderedList, ListItem, Button, Stack} from '@chakra-ui/react';
+import { Radio, RadioGroup, Checkbox, CheckboxGroup, IconButton, Flex, Spacer, MenuItem, MenuList, Box, Text, VStack, UnorderedList, ListItem, Button, Stack, Menu, MenuButton } from '@chakra-ui/react';
+import { ChevronDownIcon, CloseIcon} from '@chakra-ui/icons'
 import FormalHeading from '../FormalHeading';
 import "@fontsource/raleway";
 import "@fontsource/krona-one";
@@ -28,6 +29,7 @@ const FormBuilder2 = () => {
                             </Text>
                         </Box>
                     </Box>
+
                     <Box w='98%' h='auto' bg='#122543' borderRadius='25px'>
                         <Text color='white' fontSize='20px' pl={4} pt={2} pb={2} fontFamily='Raleway'>
                             Syarat Survei
@@ -44,6 +46,154 @@ const FormBuilder2 = () => {
                             </Box>
                         </Box>
                     </Box>
+
+                    <Box w='98%' h='auto' bg='#122543' borderRadius='25px'>
+                        <Box>
+                          <Flex>
+                            <Text color='white' fontSize='20px' pl={4} pt={2} pb={2} fontFamily='Raleway'>
+                            Pertanyaan
+                            </Text>
+                            <Spacer />
+                              <Box marginTop='2' marginRight='2'>
+                                <Menu>
+                                    <MenuButton as={Button} rightIcon={<ChevronDownIcon />} bgColor='white' color='black' _hover={{ bg: '#375682' }} w='160px' h='30px' fontSize='14px' borderRadius='30px' fontFamily='Raleway' pl={4} pt={2} pb={2}>
+                                        Paragraph
+                                    </MenuButton>
+                                    <MenuList>
+                                        <MenuItem>Text</MenuItem>
+                                        <MenuItem>Checkbox</MenuItem>
+                                        <MenuItem>Radio</MenuItem>
+                                    </MenuList>
+                                </Menu>
+                              </Box>
+                                <IconButton aria-label='Close' icon={<CloseIcon/>} bgColor='#122543' color='white' _hover={{ bg: 'red' }} borderRadius='100' />
+                          </Flex>
+                        </Box>
+
+                        <Box w="100%" h='auto' bg='white' borderRadius='25px' pb={3}>
+                            <Text color='black' fontSize='20px' fontWeight='900' pl={4} fontFamily='Raleway'> 
+                                Deskripsi
+                            </Text>
+                            <Text color='black' fontSize='17px' pl={4} pr={4} fontFamily='Raleway'> 
+                                Survei ini dibuat untuk menganalisis kaitan antara penggunaan gawai terhadap waktu jam tidur. Hipotesis yang diajukan adalah penggunaan gawai yang berlebih sebelum tidur akan mengakibatkan waktu jam tidur yang berkurang dan kualitas tidur yang tidak baik.
+                            </Text>
+                        </Box>
+                    </Box>
+                    <Box w='98%' h='auto' bg='#122543' borderRadius='25px'>
+                        <Box>
+                          <Flex>
+                            <Text color='white' fontSize='20px' pl={4} pt={2} pb={2} fontFamily='Raleway'>
+                            Pertanyaan
+                            </Text>
+                            <Spacer />
+                              <Box marginTop='2' marginRight='2'>
+                                <Menu>
+                                    <MenuButton as={Button} rightIcon={<ChevronDownIcon />} bgColor='white' color='black' _hover={{ bg: '#375682' }} w='160px' h='30px' fontSize='14px' borderRadius='30px' fontFamily='Raleway' pl={4} pt={2} pb={2}>
+                                        Text
+                                    </MenuButton>
+                                    <MenuList>
+                                        <MenuItem>Paragraph</MenuItem>
+                                        <MenuItem>Checkbox</MenuItem>
+                                        <MenuItem>Radio</MenuItem>
+                                    </MenuList>
+                                </Menu>
+                              </Box>
+                                <IconButton aria-label='Close' icon={<CloseIcon/>} bgColor='#122543' color='white' _hover={{ bg: 'red' }} borderRadius='100' />
+                          </Flex>
+                        </Box>
+                        <Box w="100%" h='auto' bg='white' borderRadius='25px' pb={3}>
+                            <Text color='black' fontSize='17px' pl={4} pr={4} fontFamily='Raleway'> 
+                                Survei ini dibuat untuk menganalisis kaitan antara penggunaan gawai terhadap waktu jam tidur. Hipotesis yang diajukan adalah penggunaan gawai yang berlebih sebelum tidur akan mengakibatkan waktu jam tidur yang berkurang dan kualitas tidur yang tidak baik.
+                            </Text>
+                        </Box>
+                    </Box>
+
+                    <Box w='98%' h='auto' bg='#122543' borderRadius='25px'>
+                        <Box>
+                          <Flex>
+                            <Text color='white' fontSize='20px' pl={4} pt={2} pb={2} fontFamily='Raleway'>
+                            Pertanyaan
+                            </Text>
+                            <Spacer />
+                              <Box marginTop='2' marginRight='2'>  
+                                <Menu>
+                                    <MenuButton as={Button} rightIcon={<ChevronDownIcon />} bgColor='white' color='black' _hover={{ bg: '#375682' }} w='160px' h='30px' fontSize='14px' borderRadius='30px' fontFamily='Raleway' pl={4} pt={2} pb={2}>
+                                        Checkbox
+                                    </MenuButton>
+                                    <MenuList>
+                                        <MenuItem>Paragraph</MenuItem>
+                                        <MenuItem>Text</MenuItem>
+                                        <MenuItem>Radio</MenuItem>
+                                    </MenuList>
+                                </Menu>
+                              </Box>
+                            <IconButton aria-label='Close' icon={<CloseIcon/>} bgColor='#122543' color='white' _hover={{ bg: 'red' }} borderRadius='100' />
+                          </Flex>
+                        </Box>
+
+                        <Box w="100%" h='auto' bg='white' borderRadius='25px' pb={3} >
+                            <Box pl='6' pt='3' pr='6'>
+                                <Box pb={3}>
+                                <CheckboxGroup colorScheme='facebook' direction={['column', 'row']} >
+                                    <Stack spacing={[1, 5]}>
+                                        <Checkbox fontFamily='Raleway' value='Pilihan 1'>Pilihan 1</Checkbox>
+                                        <Checkbox fontFamily='Raleway' value='Pilihan 2'>Pilihan 2</Checkbox>
+                                        <Checkbox fontFamily='Raleway' value='Pilihan 3'>Pilihan 3</Checkbox>
+                                    </Stack>
+                                </CheckboxGroup>
+                                </Box>
+                                <Box marginBottom='1' pt={3}>
+                                    <Button bgColor='#122543' color='white' _hover={{ bg: '#375682' }} w='160px' h='30px' fontSize='14px' borderRadius='30px' fontFamily='Raleway'>
+                                        Add New Option
+                                    </Button>
+                                </Box>
+                            </Box>
+                        </Box>
+                    </Box>
+
+                    <Box w='98%' h='auto' bg='#122543' borderRadius='25px'>
+                        <Box>
+                          <Flex>
+                            <Text color='white' fontSize='20px' pl={4} pt={2} pb={2} fontFamily='Raleway'>
+                            Pertanyaan
+                            </Text>
+                            <Spacer />
+                              <Box marginTop='2' marginRight='2'>
+                                <Menu>
+                                    <MenuButton as={Button} rightIcon={<ChevronDownIcon />} bgColor='white' color='black' _hover={{ bg: '#375682' }} w='160px' h='30px' fontSize='14px' borderRadius='30px' fontFamily='Raleway' pl={4} pt={2} pb={2}>
+                                        Radio
+                                    </MenuButton>
+                                    <MenuList>
+                                        <MenuItem>Paragraph</MenuItem>
+                                        <MenuItem>Text</MenuItem>
+                                        <MenuItem>Checkbox</MenuItem>
+                                    </MenuList>
+                                </Menu>
+                              </Box>
+                            <IconButton aria-label='Close' icon={<CloseIcon/>} bgColor='#122543' color='white' _hover={{ bg: 'red' }} borderRadius='100' />
+                          </Flex>
+                        </Box>
+                        <Box w="100%" h='auto' bg='white' borderRadius='25px' pb={3} >
+                            <Box pl='6' pt='3' pr='6'>
+                                <Box pb={3}>
+                                    <RadioGroup colorScheme='facebook' direction={['column', 'row']} >
+                                        <Stack spacing={[1, 5]}>
+                                            <Radio fontFamily='Raleway' value='Pilihan 1'>Pilihan 1</Radio>
+                                            <Radio fontFamily='Raleway' value='Pilihan 2'>Pilihan 2</Radio>
+                                            <Radio fontFamily='Raleway' value='Pilihan 3'>Pilihan 3</Radio>
+                                        </Stack>
+                                    </RadioGroup>
+                                </Box>
+                                <Box marginBottom='1' pt={3}>
+                                    <Button bgColor='#122543' color='white' _hover={{ bg: '#375682' }} w='160px' h='30px' fontSize='14px' borderRadius='30px' fontFamily='Raleway'>
+                                        Add New Option
+                                    </Button>
+                                </Box>
+                            </Box>
+                        </Box>
+                    </Box>
+
+
                     <Box w='98%' h='auto' bg='#122543' borderRadius='25px'>
                         <Text color='white' fontSize='20px' pl={4} pt={2} pb={2} fontFamily='Raleway'>
                             Survei Points

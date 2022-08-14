@@ -1,10 +1,10 @@
 import DashboardWrapper from './dashboardWrapper/DashboardWrapper';
-// import komponen anda di sini
+import FormBuilder2 from '../../components/formBuilder2/FormBuilder2';
 
 const CreateSurvey = () => {
     return (
         <DashboardWrapper>
-            {/* <KomponenAnda/> */}
+            <FormBuilder2 />
         </DashboardWrapper>
     );
 }
