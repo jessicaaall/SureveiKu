@@ -8,7 +8,7 @@ const FormBuilder2 = () => {
             <Text color='white' fontSize={'48px'} fontWeight='bold' pl='20px'>
                 DETAIL SURVEI
             </Text>
-            <Box w='auto' h='full'>
+            <Box w='auto' h='full' css={{"&::-webkit-scrollbar": {width:"8px",},"&::-webkit-scrollbar-track": {background:'#D9D9D9', borderRadius:"50px",},"&::-webkit-scrollbar-thumb": {background:'#122543', borderRadius:"50px",},}} overflowX="auto" maxHeight="460px">
                 <VStack p={5} spacing='80px'>
                     <Box w='1075px' h='190px' bg='#122543' borderRadius='25px'>
                         <Text color='white' fontSize='20px' pl={4} pt={2} pb={2} fontFamily='Raleway'>
