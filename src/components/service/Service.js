@@ -2,27 +2,41 @@ import { Box, Button, Center, HStack, Spacer, Stack, Text } from "@chakra-ui/rea
 import { Image }from "@chakra-ui/react"
 
 const Service = () => {
-    let styles = {
-        textTitle: {
-          fontSize: '1.25em',
-          fontWeight: 'bold',
-          color: 'white'
-        }
-      }
     return(
-        <HStack spacing="60px">
-            <Box boxShadow="xl" rounded="md" bg="white" w="100%" h="450px">
-                <Center rounded="md" bg="#0F2543" w="100%" h="20%" p={4}>
-                    <Text style={styles.textTitle}>
-                        Build Surveys</Text>
-                </Center>
-                <Stack alignItems="center">
-                    <Image pt="33px" boxSize="100%" w="90%" src="left_service_icon.png"/>
-                    <Spacer p="7px"/>
+        <HStack mx="7.5%" mt="7.5%" mb="5%" w="100%" textAlign="center" spacing="5%">
+            <Box boxShadow="dark-lg" rounded="md" bg="white" w="70%" h="500px">
+                <Stack w="100%" alignItems="center">
+                    <Center rounded="md" bg="#0F2543" w="100%" h="100px">
+                        <Text fontSize="4xl" fontWeight="bold" color="white">
+                            Build Surveys</Text>
+                    </Center>
+                    <Spacer p="12.5px"/>
+                    <Image boxSize="100%" w="70%" src="left_service_icon.png"/>
+                    <Spacer p="12.5px"/>
+                        <Button
+                            bg="#49439B"
+                            size="lg"
+                            w="70%"
+                            h="30px"
+                            color="white"
+                            _hover={{bg:"#e3e3e3", color:"#49439B"}}>
+                            TRY NOW
+                            </Button>    
+                </Stack>
+            </Box>
+            <Box boxShadow="dark-lg" rounded="md" bg="white" w="70%" h="500px">
+                <Stack w="100%" alignItems="center">
+                    <Center rounded="md" bg="#0F2543" w="100%" h="100px">
+                        <Text fontSize="4xl" fontWeight="bold" color="white">
+                            Real Time Analysis</Text>
+                    </Center>
+                    <Spacer p="12.5px"/>
+                    <Image boxSize="100%" w="70%" src="middle_service_icon.png"/>
+                    <Spacer p="10px"/>
                     <Button
                         bg="#49439B"
                         size="lg"
-                        w="65%"
+                        w="70%"
                         h="30px"
                         color="white"
                         _hover={{bg:"#e3e3e3", color:"#49439B"}}>
@@ -30,37 +44,19 @@ const Service = () => {
                         </Button>
                 </Stack>
             </Box>
-            <Box boxShadow="xl" rounded="md" bg="white" w="100%" h="450px">
-                <Center rounded="md" bg="#0F2543" w="100%" h="20%" p={4}>
-                    <Text style={styles.textTitle}>
-                        Real Time Analysis</Text>
-                </Center>
-                <Stack alignItems="center">
-                    <Image pt="33px" boxSize="280px" w="65%" src="middle_service_icon.png"/>
-                    <Spacer p="7px"/>
+            <Box boxShadow="dark-lg" rounded="md" bg="white" w="70%" h="500px">
+                <Stack w="100%" alignItems="center">
+                    <Center rounded="md" bg="#0F2543" w="100%" h="100px">
+                        <Text fontSize="4xl" fontWeight="bold" color="white">
+                            Fill in Surveys</Text>
+                    </Center>
+                    <Spacer p="12.5px"/>
+                    <Image boxSize="100%" w="70%" src="right_service_icon.png"/>
+                    <Spacer p="6.5px"/>
                     <Button
                         bg="#49439B"
                         size="lg"
-                        w="60%"
-                        h="30px"
-                        color="white"
-                        _hover={{bg:"#e3e3e3", color:"#49439B"}}>
-                        TRY NOW
-                        </Button>
-                </Stack>
-            </Box>
-            <Box boxShadow="xl" rounded="md" bg="white" w="100%" h="450px">
-                <Center rounded="md" bg="#0F2543" w="100%" h="20%" p={4}>
-                    <Text style={styles.textTitle}>
-                        Fill in Surveys</Text>
-                </Center>
-                <Stack alignItems="center">
-                    <Image pt="33px" boxSize="280px" w="65%" src="right_service_icon.png"/>
-                    <Spacer p="7px"/>
-                    <Button
-                        bg="#49439B"
-                        size="lg"
-                        w="65%"
+                        w="70%"
                         h="30px"
                         color="white"
                         _hover={{bg:"#e3e3e3", color:"#49439B"}}>
