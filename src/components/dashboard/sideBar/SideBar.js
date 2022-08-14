@@ -7,6 +7,16 @@ import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { getDoc, doc, getFirestore } from 'firebase/firestore';
 import { getStorage, ref, getDownloadURL } from 'firebase/storage';
+import {
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogContent,
+  AlertDialogOverlay,
+} from '@chakra-ui/react'
+import { useDisclosure } from '@chakra-ui/react';
+import React from 'react';
 
 const SideBar = () => {
   const [fullname, setFullname] = useState('');
@@ -45,6 +55,9 @@ const SideBar = () => {
   useEffect(() => {
     onAuthStateChanged(getAuth(), getProfileData);
   }, []);
+
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const cancelRef = React.useRef()
 
   return (
     <Flex
@@ -151,11 +164,38 @@ const SideBar = () => {
 
         </VStack>
         <Spacer></Spacer>
-        <NavLink to='/signup'>
-          <Button onClick={signOutAccount} leftIcon={<ArrowLeftIcon />}>
+      
+        <Button onClick={onOpen} leftIcon={<ArrowLeftIcon />}>
             Sign Out
-          </Button>
-        </NavLink>
+        </Button>
+        <AlertDialog
+        motionPreset='slideInBottom'
+        isOpen={isOpen}
+        leastDestructiveRef={cancelRef}
+        onClose={onClose}
+        isCentered
+      >
+        <AlertDialogOverlay>
+          <AlertDialogContent>
+            <AlertDialogHeader fontSize='lg' fontWeight='bold'>
+              Sign Out
+            </AlertDialogHeader>
+
+            <AlertDialogBody>
+              Are you sure you want to sign out?
+            </AlertDialogBody>
+
+            <AlertDialogFooter>
+              <Button ref={cancelRef} onClick={onClose}>
+                Cancel
+              </Button>
+              <Button colorScheme='red' onClick={signOutAccount} ml={3}>
+                Proceed
+              </Button>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialogOverlay>
+      </AlertDialog>
 
         <Spacer></Spacer>
       </Stack>

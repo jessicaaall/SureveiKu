@@ -3,7 +3,7 @@ import AvailableSurveys from '../../components/availableSurveys/AvailableSurveys
 
 const AvailableSurvey = () => {
   return (
-    <DashboardWrapper>
+    <DashboardWrapper marginBawah={0}>
       <AvailableSurveys/>
     </DashboardWrapper>
   );

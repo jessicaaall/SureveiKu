@@ -21,7 +21,7 @@ export default function DashboardWrapper(props){
                 <GridItem area={'sidebar'} zIndex='100'>
                     <SideBar/>
                 </GridItem>
-                <GridItem p={8} area={'content'}>
+                <GridItem p={8} area={'content'} paddingBottom={props.marginBawah}>
                     {props.children}
                 </GridItem>
             </Grid>
