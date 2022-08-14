@@ -78,7 +78,7 @@ const SignUpBox = () => {
           boxShadow='lg'
         >
           <Spacer></Spacer>
-          <Text fontSize='3em' fontWeight='bold'>
+          <Text fontSize='3em' fontWeight='bold' color='black'>
             Signup
           </Text>
           <Spacer></Spacer>
@@ -88,23 +88,27 @@ const SignUpBox = () => {
                 <InputLeftElement
                   pointerEvents='none'
                   children={<ChatIcon />}
+                  color='black'
                 />
                 <Input
                   value={fullName}
                   onChange={handleChangeFullName}
                   placeholder='full name'
+                  _placeholder={{ color: 'gray.400' }}
                 />
               </InputGroup>
               <InputGroup>
                 <InputLeftElement
                   pointerEvents='none'
                   children={<EmailIcon />}
+                  color='black'
                 />
                 <Input
                   value={email}
                   onChange={handleChangeEmail}
                   type='email'
                   placeholder='example@mail.com'
+                  _placeholder={{ color: 'gray.400' }}
                 />
               </InputGroup>
             </FormControl>
@@ -113,32 +117,38 @@ const SignUpBox = () => {
                 <InputLeftElement
                   pointerEvents='none'
                   children={<LockIcon />}
+                  color='black'
                 />
                 <Input
                   value={password}
                   onChange={handleChangePassword}
                   type={showPassword ? 'text' : 'password'}
                   placeholder='your password'
+                  _placeholder={{ color: 'gray.400' }}
                 />
                 <InputRightElement
                   children={showPassword ? <ViewIcon /> : <ViewOffIcon />}
                   onClick={handleClickPassword}
+                  color='black'
                 />
               </InputGroup>
               <InputGroup>
                 <InputLeftElement
                   pointerEvents='none'
                   children={<LockIcon />}
+                  color='black'
                 />
                 <Input
                   value={confirm}
                   onChange={handleChangeConfirm}
                   type={showConfirm ? 'text' : 'password'}
                   placeholder='confirm password'
+                  _placeholder={{ color: 'gray.400' }}
                 />
                 <InputRightElement
                   children={showConfirm ? <ViewIcon /> : <ViewOffIcon />}
                   onClick={handleClickConfirm}
+                  color='black'
                 />
               </InputGroup>
             </FormControl>
@@ -154,7 +164,7 @@ const SignUpBox = () => {
           >
             Register
           </Button>
-          <Text>or register with</Text>
+          <Text color='black'>or register with</Text>
           <Spacer></Spacer>
           <Box><LoginGoogle/></Box>
           <Spacer></Spacer></Stack>

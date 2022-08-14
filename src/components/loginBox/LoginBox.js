@@ -53,7 +53,7 @@ const LoginBox = () => {
           boxShadow='lg'
         >
           <Spacer></Spacer>
-          <Text fontSize='3em' fontWeight='bold'>
+          <Text fontSize='3em' fontWeight='bold' color='black'>
             Login
           </Text>
           <Spacer></Spacer>
@@ -63,12 +63,14 @@ const LoginBox = () => {
                 <InputLeftElement
                   pointerEvents='none'
                   children={<EmailIcon />}
+                  color='black'
                 />
                 <Input
                   value={email}
                   onChange={handleChangeEmail}
                   type='email'
                   placeholder='example@mail.com'
+                  _placeholder={{ color: 'gray.400' }}
                 />
               </InputGroup>
             </FormControl>
@@ -77,20 +79,24 @@ const LoginBox = () => {
                 <InputLeftElement
                   pointerEvents='none'
                   children={<LockIcon />}
+                  color='black'
                 />
                 <Input
                   value={password}
                   onChange={handleChangePassword}
                   type={show ? 'text' : 'password'}
                   placeholder='********'
+                  color='black'
+                  _placeholder={{ color: 'gray.400' }}
                 />
                 <InputRightElement
                   children={show ? <ViewIcon /> : <ViewOffIcon />}
                   onClick={handleClick}
+                  color='black'
                 />
               </InputGroup>
             </FormControl>
-            <Checkbox>Remember me</Checkbox>
+            <Checkbox color="black">Remember me</Checkbox>
           </Stack>
           <Spacer></Spacer>
           <Stack alignItems='center'>          
@@ -103,11 +109,11 @@ const LoginBox = () => {
           >
             Login
           </Button>
-          <Text>or login with</Text>
+          <Text color='black'>or login with</Text>
           <Box w='100%'><LoginGoogle/></Box></Stack>
 
           <Spacer></Spacer>
-          <Text>
+          <Text color='black'>
             Not a member?{' '}
             <Link as={ReachLink} to='/signup'>
               Create an account

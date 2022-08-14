@@ -1,4 +1,3 @@
-import Main from './pages/homePages/Main';
 import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import SignUpPage from './pages/homePages/SignUpPage';
 import LoginPage from './pages/homePages/LoginPage';
@@ -11,6 +10,7 @@ import { useEffect } from 'react';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import AvailableSurvey from './pages/dashboardPages/AvailableSurvey';
 import ToSPage from './pages/dashboardPages/ToSPage';
+import FrontPage from './pages/homePages/FrontPage';
 
 const App = () => {
   const navigate = useNavigate();
@@ -26,7 +26,7 @@ const App = () => {
   return (
     <div className='App'>
       <Routes>
-        <Route path='/home' element={<Main />} />
+        <Route path='/home' element={<FrontPage />} />
         <Route path='/signup' element={<SignUpPage />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/pricing' element={<PricingPage />} />

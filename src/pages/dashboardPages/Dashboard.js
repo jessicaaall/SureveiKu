@@ -6,23 +6,23 @@ import DashboardNavigationBar from '../../components/dashboard/navigationBar/Das
 const Dashboard = () => {
   return (
     <Grid
-      templateAreas={`"header header"
-                          "nav main"
+      templateAreas={`"navbar navbar"
+                      "sidebar content"
                           `}
-      gridTemplateRows={'10vh 1fr'}
-      gridTemplateColumns={'250px 1fr'}
+      gridTemplateRows={'10%'}
+      gridTemplateColumns={'250px auto'}
       minHeight='100vh'
       w='full'
       color='blackAlpha.700'
       className='dashboard-bg-image'
     >
-      <GridItem area={'header'}>
+      <GridItem area={'navbar'} zIndex='101'>
         <DashboardNavigationBar />
       </GridItem>
-      <GridItem area={'nav'} zIndex='100'>
-        <SideBar />
+      <GridItem area={'sidebar'} zIndex='100'>
+        <SideBar/>
       </GridItem>
-      <GridItem p={4} area={'main'}>
+      <GridItem p={4} area={'content'}>
         MASUKIN KOMPONEN KALIAN DI SINI
       </GridItem>
     </Grid>

@@ -2,7 +2,7 @@ import { HStack, Box, Text, Stack, Spacer, Button, Image, Center } from "@chakra
 
 const Pricing = () => {
     return ( 
-        <HStack spacing={20} textAlign='center' marginTop={'10%'}>
+        <HStack spacing={20} textAlign='center'>
             <Center>
                 <Box w='25%' h='500px' bg='white' boxShadow="0 4px 12px 0 black" borderRadius={20} padding='1%' margin='2%'>
                     <Stack w='100%' h='100%' alignItems='center'>
@@ -11,10 +11,10 @@ const Pricing = () => {
                             <Image src='./paperwork.png'/>
                         </Box>
                         <Text fontSize='2em' fontWeight='bold' color='black'>25.000pts</Text>
-                        <Text>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</Text>
+                        <Text color='black'>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</Text>
                         <Spacer></Spacer>
-                        <Text fontSize='2em' fontWeight='bold'>Rp30.000,-</Text>
-                        <Text>Dapatkan hingga puluhan survey!</Text>    
+                        <Text fontSize='2em' fontWeight='bold' color='black'>Rp30.000,-</Text>
+                        <Text color='black'>Dapatkan hingga puluhan survey!</Text>    
                         <Spacer></Spacer>
                         <Button bgColor='#0F2543' color='white' _hover={{ bg: '#375682' }} w='80%' fontWeight='bold'>BELI SEKARANG</Button>
                         <Spacer></Spacer>
@@ -43,10 +43,10 @@ const Pricing = () => {
                             <Image src='./paperwork.png'/>
                         </Box>
                         <Text fontSize='2em' fontWeight='bold' color='black'>10.000pts</Text>
-                        <Text>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</Text>
+                        <Text color='black'>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</Text>
                         <Spacer></Spacer>
-                        <Text fontSize='2em' fontWeight='bold'>Rp17.000,-</Text>
-                        <Text>Dapatkan hingga puluhan survey!</Text>    
+                        <Text fontSize='2em' fontWeight='bold' color='black'>Rp17.000,-</Text>
+                        <Text color='black'>Dapatkan hingga puluhan survey!</Text>    
                         <Spacer></Spacer>
                         <Button bgColor='#0F2543' color='white' _hover={{ bg: '#375682' }} w='80%' fontWeight='bold'>BELI SEKARANG</Button>
                         <Spacer></Spacer>

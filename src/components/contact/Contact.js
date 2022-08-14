@@ -2,7 +2,7 @@ import { Text, Spacer, VStack, HStack, Image } from "@chakra-ui/react";
 
 const Contact = () => {
     return (
-        <VStack mt='18em'>
+        <VStack>
             <Text fontSize={60} fontWeight='bold' color='white' letterSpacing={2}>CONTACT US!</Text>
             <Text fontSize={25} color='white' letterSpacing={3}>We will respond to you as soon as possible.</Text>
             <Spacer></Spacer>

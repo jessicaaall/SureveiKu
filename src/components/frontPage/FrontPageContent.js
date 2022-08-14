@@ -4,10 +4,6 @@ import { NavLink } from 'react-router-dom';
 const FrontPage = () => {
   return (
     <HStack
-      w='full'
-      h='full'
-      marginTop={'10%'}
-      alignItems='center'
     >
       <VStack spacing={19} alignItems='baseline'>
         <VStack alignItems='baseline'>

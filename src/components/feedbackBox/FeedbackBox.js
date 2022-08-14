@@ -28,7 +28,7 @@ import {
             boxShadow='lg'
           >
             <Spacer></Spacer>
-            <Text fontSize='3em' fontWeight='bold'>
+            <Text fontSize='3em' fontWeight='bold' color='black'>
               Feedback
             </Text>
             <Spacer></Spacer>
@@ -38,19 +38,23 @@ import {
                   <InputLeftElement
                     pointerEvents='none'
                     children={<AtSignIcon />}
+                    color='black'
                   />
                   <Input
                     placeholder='your name'
+                    _placeholder={{ color: 'gray.400' }}
                   />
                 </InputGroup>
                 <InputGroup>
                   <InputLeftElement
                     pointerEvents='none'
                     children={<EmailIcon />}
+                    color='black'
                   />
                   <Input
                     type='email'
                     placeholder='example@mail.com'
+                    _placeholder={{ color: 'gray.400' }}
                   />
                 </InputGroup>
               </FormControl>
@@ -59,9 +63,11 @@ import {
                     <InputLeftElement
                         pointerEvents='none'
                         children={<ChatIcon />}
+                        color='black'
                     />
                     <Input
                         placeholder='your feedback'
+                        _placeholder={{ color: 'gray.400' }}
                     />
                 </InputGroup>
               </FormControl>

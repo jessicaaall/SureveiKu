@@ -1,21 +1,11 @@
-import './Main.css';
-import { VStack, Flex, Spacer } from '@chakra-ui/layout';
+import MainWrapper from "./mainWrapper/MainWrapper";
 import Pricing from '../../components/pricing/Pricing';
-import NavigationBar from '../../components/navigationBar/NavigationBar';
 
 const PricingPage = () => {
   return (
-    <div>
-      <div className='bg-image'></div>
-      <div className="bg-filter"></div>
-      <VStack w='full' h='full' spacing={10}>
-        <NavigationBar />
-        <Spacer></Spacer>
-        <Flex>
-          <Pricing/>
-        </Flex>
-      </VStack>
-    </div>
+    <MainWrapper>
+      <Pricing/>
+    </MainWrapper>
   );
 };
 

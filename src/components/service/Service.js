@@ -2,15 +2,22 @@ import { Box, Button, Center, HStack, Spacer, Stack, Text } from "@chakra-ui/rea
 import { Image }from "@chakra-ui/react"
 
 const Service = () => {
+    let styles = {
+        textTitle: {
+          fontSize: '1.25em',
+          fontWeight: 'bold',
+          color: 'white'
+        }
+      }
     return(
-        <HStack mx="120px" mt="120px" mb="90px" spacing="60px">
-            <Box boxShadow="xl" rounded="md" bg="white" w="65%" h="450px">
-                <Center rounded="md" bg="#0F2543" w="100%" h="20%">
-                    <Text fontFamily="" fontSize="4xl" fontWeight="bold" color="white">
+        <HStack spacing="60px">
+            <Box boxShadow="xl" rounded="md" bg="white" w="100%" h="450px">
+                <Center rounded="md" bg="#0F2543" w="100%" h="20%" p={4}>
+                    <Text style={styles.textTitle}>
                         Build Surveys</Text>
                 </Center>
                 <Stack alignItems="center">
-                    <Image pt="33px" boxSize="280px" w="65%" src="left_service_icon.png"/>
+                    <Image pt="33px" boxSize="100%" w="90%" src="left_service_icon.png"/>
                     <Spacer p="7px"/>
                     <Button
                         bg="#49439B"
@@ -23,9 +30,9 @@ const Service = () => {
                         </Button>
                 </Stack>
             </Box>
-            <Box boxShadow="xl" rounded="md" bg="white" w="65%" h="450px">
-                <Center rounded="md" bg="#0F2543" w="100%" h="20%">
-                    <Text fontFamily="" fontSize="4xl" fontWeight="bold" color="white">
+            <Box boxShadow="xl" rounded="md" bg="white" w="100%" h="450px">
+                <Center rounded="md" bg="#0F2543" w="100%" h="20%" p={4}>
+                    <Text style={styles.textTitle}>
                         Real Time Analysis</Text>
                 </Center>
                 <Stack alignItems="center">
@@ -42,9 +49,9 @@ const Service = () => {
                         </Button>
                 </Stack>
             </Box>
-            <Box boxShadow="xl" rounded="md" bg="white" w="65%" h="450px">
-                <Center rounded="md" bg="#0F2543" w="100%" h="20%">
-                    <Text fontFamily="" fontSize="4xl" fontWeight="bold" color="white">
+            <Box boxShadow="xl" rounded="md" bg="white" w="100%" h="450px">
+                <Center rounded="md" bg="#0F2543" w="100%" h="20%" p={4}>
+                    <Text style={styles.textTitle}>
                         Fill in Surveys</Text>
                 </Center>
                 <Stack alignItems="center">
