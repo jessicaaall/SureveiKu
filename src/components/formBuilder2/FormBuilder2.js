@@ -1,20 +1,22 @@
 import {Box, Text, VStack, UnorderedList, ListItem, Button, Stack} from '@chakra-ui/react';
-import "@fontsource/raleway"
-import "@fontsource/krona-one"
-  
+import FormalHeading from '../FormalHeading';
+import "@fontsource/raleway";
+import "@fontsource/krona-one";
+
+
 const FormBuilder2 = () => {
     return (
-        <VStack align='left'>
-            <Text color='white' fontSize={'48px'} fontWeight='bold' pl='20px'>
-                DETAIL SURVEI
-            </Text>
-            <Box w='auto' h='full' css={{"&::-webkit-scrollbar": {width:"8px",},"&::-webkit-scrollbar-track": {background:'#D9D9D9', borderRadius:"50px",},"&::-webkit-scrollbar-thumb": {background:'#122543', borderRadius:"50px",},}} overflowX="auto" maxHeight="460px">
-                <VStack p={5} spacing='80px'>
-                    <Box w='1075px' h='190px' bg='#122543' borderRadius='25px'>
+        <VStack align='left' h='100%'>
+            <Box pb={3}>
+                <FormalHeading title='CREATE SURVEY'/>
+            </Box>
+            <Box w='auto' h='full' overflowY={'scroll'} css={{"&::-webkit-scrollbar": {width:"8px",},"&::-webkit-scrollbar-track": {background:'#D9D9D9', borderRadius:"50px",},"&::-webkit-scrollbar-thumb": {background:'#122543', borderRadius:"50px",},}}>
+                <VStack align='left' pl={3} pt={3} spacing='30px'>
+                    <Box w='98%' h='auto' bg='#122543' borderRadius='25px'>
                         <Text color='white' fontSize='20px' pl={4} pt={2} pb={2} fontFamily='Raleway'>
                             Deskripsi Survei
                         </Text>
-                        <Box w='1075px' h='190px' bg='white' borderRadius='25px'>
+                        <Box w='100%' h='auto' bg='white' borderRadius='25px' pb={3}>
                             <Text color='#122543' fontSize='40px' fontWeight='900' pl={4} pb={2} fontFamily='Raleway'>
                                 Ceritanya Judul Survei
                             </Text>
@@ -26,28 +28,28 @@ const FormBuilder2 = () => {
                             </Text>
                         </Box>
                     </Box>
-                    <Box w='1075px' h='130px' bg='#122543' borderRadius='25px'>
+                    <Box w='98%' h='auto' bg='#122543' borderRadius='25px'>
                         <Text color='white' fontSize='20px' pl={4} pt={2} pb={2} fontFamily='Raleway'>
                             Syarat Survei
                         </Text>
-                        <Box w='1075px' h='130px' bg='white' borderRadius='25px'>
+                        <Box w='100%' h='auto' bg='white' borderRadius='25px' pb={3}>
                             <UnorderedList color='black' fontSize='20px' pl={4} pt={2} pb={4} fontFamily='Raleway'>
                                 <ListItem>Merupakan mahasiswa</ListItem>
                                 <ListItem>Berumur di bawah 25 tahun</ListItem>
                             </UnorderedList>
-                            <Box paddingLeft={4}>
+                            <Box pl={4} pb={2}>
                                 <Button bgColor='#122543' color='white' _hover={{ bg: '#375682' }} w='160px' h='30px' fontSize='14px' borderRadius='30px' fontFamily='Raleway'>
                                     Tambah syarat baru
                                 </Button>
                             </Box>
                         </Box>
                     </Box>
-                    <Box w='1075px' h='140px' bg='#122543' borderRadius='25px'>
+                    <Box w='98%' h='auto' bg='#122543' borderRadius='25px'>
                         <Text color='white' fontSize='20px' pl={4} pt={2} pb={2} fontFamily='Raleway'>
                             Survei Points
                         </Text>
-                        <Box w='1075px' h='140px' bg='white' borderRadius='25px'>
-                            <Stack pt={2} pl={4} spacing='0.5px'>
+                        <Box w='100%' h='auto' bg='white' borderRadius='25px'>
+                            <Stack pt={2} pl={4} pb={3} spacing='0.5px'>
                                 <Text color='black' fontSize='20px' fontFamily='Raleway'>Points per response : 10</Text>
                                 <Text color='black' fontSize='20px' fontFamily='Raleway'>Target respondents  : 100</Text>
                                 <Text color='black' fontSize='20px' fontFamily='Raleway'>Creation fee        : 1.500 points</Text>
@@ -55,12 +57,12 @@ const FormBuilder2 = () => {
                             </Stack>
                         </Box>
                     </Box>
-                    <Box paddingLeft='56em'>
-                        <Button color='black' bgColor='#EA8238' _hover={{ bg: '#d66a1e' }} w='180px' h='55px' fontSize='18px' fontFamily='Krona One' borderRadius='27px' borderColor='black' border='1px'>
-                            SUBMIT
-                        </Button>
-                    </Box>
                 </VStack>
+            </Box>
+            <Box align='right' pt={6}>
+                <Button color='black' bgColor='#EA8238' _hover={{ bg: '#d66a1e' }} w='180px' h='55px' fontSize='18px' fontFamily='Krona One' borderRadius='27px' borderColor='black' border='1px'>
+                    SUBMIT
+                </Button>
             </Box>
         </VStack>
     );
