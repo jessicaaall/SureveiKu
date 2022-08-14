@@ -18,10 +18,15 @@ import {
   ChatIcon,
 } from '@chakra-ui/icons';
 import { Box, Button, Spacer, Stack } from '@chakra-ui/react';
-import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth';
+import {
+  createUserWithEmailAndPassword,
+  getAuth,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from 'firebase/auth';
+import { getDoc, doc, getFirestore } from 'firebase/firestore';
 import { createNewUserData } from '../../firebase';
 import LoginGoogle from '../LoginGoogle';
-
 
 const SignUpBox = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -58,10 +63,27 @@ const SignUpBox = () => {
         );
         const user = userCredentials.user;
 
-        createNewUserData(user.uid, fullName, email, 17000);
+        createNewUserData(user.uid, fullName, email, 17000, 'email');
       } catch (error) {
         console.error(error);
       }
+    }
+  };
+
+  const signInAccountGoogle = async () => {
+    const provider = new GoogleAuthProvider();
+    const userCredentials = await signInWithPopup(getAuth(), provider);
+    const user = userCredentials.user;
+    const docSnap = await getDoc(doc(getFirestore(), 'Akun', user.uid));
+
+    if (!docSnap.exists()) {
+      await createNewUserData(
+        user.uid,
+        user.displayName,
+        user.email,
+        17000,
+        'google'
+      );
     }
   };
 
@@ -156,19 +178,21 @@ const SignUpBox = () => {
           <Spacer></Spacer>
           <Stack alignItems='center'>
             <Button
-            onClick={signUpAccount}
-            bg='#49439B'
-            color='white'
-            _hover={{ background: '#1A1287' }}
-            _active={{ background: '#1A1287' }}
-          >
-            Register
-          </Button>
-          <Text color='black'>or register with</Text>
-          <Spacer></Spacer>
-          <Box><LoginGoogle/></Box>
-          <Spacer></Spacer></Stack>
-          
+              onClick={signUpAccount}
+              bg='#49439B'
+              color='white'
+              _hover={{ background: '#1A1287' }}
+              _active={{ background: '#1A1287' }}
+            >
+              Register
+            </Button>
+            <Text color='black'>or register with</Text>
+            <Spacer></Spacer>
+            <Box onClick={signInAccountGoogle} _hover={{ cursor: 'pointer' }}>
+              <LoginGoogle />
+            </Box>
+            <Spacer></Spacer>
+          </Stack>
         </VStack>
       </Flex>
     </Container>

@@ -24,13 +24,24 @@ const SideBar = () => {
     const docSnap = await getDoc(doc(getFirestore(), 'Akun', id));
     const data = docSnap.data();
 
-    const url = await getDownloadURL(ref(getStorage(), `users/${id}/pp.jpg`));
-    setPpSrc(url);
+    if (data.accountType === 'google') {
+      setPpSrc(getAuth().currentUser.photoURL);
+      console.log(getAuth().currentUser.photoU);
+    } else {
+      try {
+        const url = await getDownloadURL(
+          ref(getStorage(), `users/${id}/pp.jpg`)
+        );
+        setPpSrc(url);
+      } catch (error) {
+        setPpSrc(ProfileSVG);
+      }
+    }
 
     setFullname(data.name);
 
     const capitalize = (s) => (s && s[0].toUpperCase() + s.slice(1)) || '';
-    setGender(capitalize(data.gender));
+    setGender(gender === '' ? '-' : capitalize(data.gender));
 
     const dobTimestamp = data.dob;
     const dobDate = dobTimestamp.toDate();
@@ -83,32 +94,41 @@ const SideBar = () => {
         </VStack>
         <Spacer></Spacer>
         <VStack align='baseline'>
-
-        <NavLink to='/redeempoints'>
-          <Link>
-            <Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
-              Redeem Points
-            </Button>
-          </Link>
-        </NavLink>
-
-          <NavLink to='/createsurvey'>
+          <NavLink to='/redeempoints'>
             <Link>
-              <Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
-                  Create Survey
+              <Button
+                color='white'
+                variant='link'
+                leftIcon={<ArrowForwardIcon />}
+              >
+                Redeem Points
               </Button>
             </Link>
           </NavLink>
-          
+
+          <NavLink to='/createsurvey'>
+            <Link>
+              <Button
+                color='white'
+                variant='link'
+                leftIcon={<ArrowForwardIcon />}
+              >
+                Create Survey
+              </Button>
+            </Link>
+          </NavLink>
 
           <NavLink to='/mysurveys'>
             <Link>
-              <Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
+              <Button
+                color='white'
+                variant='link'
+                leftIcon={<ArrowForwardIcon />}
+              >
                 My Surveys
               </Button>
             </Link>
           </NavLink>
-          
 
           <NavLink to='/available-surveys'>
             <Link>
@@ -124,27 +144,38 @@ const SideBar = () => {
 
           <NavLink to='/help'>
             <Link>
-              <Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
-              Help
+              <Button
+                color='white'
+                variant='link'
+                leftIcon={<ArrowForwardIcon />}
+              >
+                Help
               </Button>
             </Link>
           </NavLink>
-          
+
           <NavLink to='/privacypolicy'>
             <Link>
-              <Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
+              <Button
+                color='white'
+                variant='link'
+                leftIcon={<ArrowForwardIcon />}
+              >
                 Privacy Policy
               </Button>
             </Link>
           </NavLink>
           <NavLink to='/tos'>
             <Link>
-              <Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
+              <Button
+                color='white'
+                variant='link'
+                leftIcon={<ArrowForwardIcon />}
+              >
                 Terms of Service
               </Button>
             </Link>
           </NavLink>
-
         </VStack>
         <Spacer></Spacer>
         <NavLink to='/signup'>

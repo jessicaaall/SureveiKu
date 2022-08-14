@@ -13,8 +13,8 @@ import {
 } from '@chakra-ui/react';
 
 const AvailableSurveys = () => {
-  function Surveybox(){
-    return(
+  function Surveybox() {
+    return (
       <Box
         w='300px'
         h='700px'
@@ -30,42 +30,26 @@ const AvailableSurveys = () => {
             <Image src='./AvailableSurveys.png' />
           </Box>
           <Box>
-            <Text
-              fontSize='1em'
-              fontWeight='bold'
-              color='black'
-              align='left'
-            >
+            <Text fontSize='1em' fontWeight='bold' color='black' align='left'>
               Judul
             </Text>
             <Text align='left'>Kaitan Gawai dan Jam Tidur</Text>
           </Box>
           <Spacer></Spacer>
           <Box>
-            <Text
-              fontSize='1em'
-              fontWeight='bold'
-              color='black'
-              align='left'
-            >
+            <Text fontSize='1em' fontWeight='bold' color='black' align='left'>
               Deskripsi
             </Text>
             <Text align='left'>
               Survei ini dibuat untuk menganalisis kaitan antara penggunaan
               gawai terhadap waktu jam tidur. Hipotesis yang diajukan adalah
-              penggunaan gawai yang berlebih sebelum tidur akan
-              mengakibatkan waktu jam tidur yang berkurang dan kualitas
-              tidur yang tidak baik
+              penggunaan gawai yang berlebih sebelum tidur akan mengakibatkan
+              waktu jam tidur yang berkurang dan kualitas tidur yang tidak baik
             </Text>
           </Box>
           <Spacer></Spacer>
           <Box>
-            <Text
-              fontSize='1em'
-              fontWeight='bold'
-              color='black'
-              align='left'
-            >
+            <Text fontSize='1em' fontWeight='bold' color='black' align='left'>
               Syarat Khusus
             </Text>
             <Flex paddingLeft='10px'>
@@ -95,7 +79,7 @@ const AvailableSurveys = () => {
           <Spacer></Spacer>
         </Stack>
       </Box>
-    )
+    );
   }
   return (
     <div>
@@ -106,16 +90,16 @@ const AvailableSurveys = () => {
         <Spacer></Spacer>
         <Box w='auto' h='full' borderRadius={10}>
           <HStack p={5} spacing={20}>
-            <Surveybox/>
-            <Surveybox/>
-            <Surveybox/>
+            <Surveybox />
+            <Surveybox />
+            <Surveybox />
           </HStack>
         </Box>
         <Box w='auto' h='full' borderRadius={10}>
           <HStack p={5} spacing={20}>
-            <Surveybox/>
-            <Surveybox/>
-            <Surveybox/>
+            <Surveybox />
+            <Surveybox />
+            <Surveybox />
           </HStack>
         </Box>
       </VStack>

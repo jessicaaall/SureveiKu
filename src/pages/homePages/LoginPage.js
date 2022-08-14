@@ -8,11 +8,15 @@ const LoginPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    onAuthStateChanged(getAuth(), (user) => {
+    const unsubscribe = onAuthStateChanged(getAuth(), (user) => {
       if (user) {
         navigate('/dashboard', { replace: true });
       }
     });
+
+    return () => {
+      unsubscribe();
+    };
   }, []);
 
   return (

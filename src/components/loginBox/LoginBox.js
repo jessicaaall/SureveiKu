@@ -12,9 +12,17 @@ import { FormControl } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { EmailIcon, LockIcon, ViewOffIcon, ViewIcon } from '@chakra-ui/icons';
 import { Checkbox, Box, Button, Link, Spacer, Stack } from '@chakra-ui/react';
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from 'firebase/auth';
+import { getFirestore, doc, collection, getDoc } from 'firebase/firestore';
 import { Link as ReachLink } from 'react-router-dom';
 import LoginGoogle from '../LoginGoogle';
+import { accountExsists } from '../../firebase';
+import { createNewUserData } from '../../firebase';
 
 const LoginBox = () => {
   const [show, setShow] = useState(false);
@@ -28,7 +36,7 @@ const LoginBox = () => {
 
   const [invalidPrompt, setInvalidPrompt] = useState('');
 
-  const signInAccount = async () => {
+  const signInAccountEmail = async () => {
     try {
       const userCredentials = await signInWithEmailAndPassword(
         getAuth(),
@@ -37,6 +45,23 @@ const LoginBox = () => {
       );
     } catch (error) {
       console.error(error);
+    }
+  };
+
+  const signInAccountGoogle = async () => {
+    const provider = new GoogleAuthProvider();
+    const userCredentials = await signInWithPopup(getAuth(), provider);
+    const user = userCredentials.user;
+    const docSnap = await getDoc(doc(getFirestore(), 'Akun', user.uid));
+
+    if (!docSnap.exists()) {
+      await createNewUserData(
+        user.uid,
+        user.displayName,
+        user.email,
+        17000,
+        'google'
+      );
     }
   };
 
@@ -96,21 +121,24 @@ const LoginBox = () => {
                 />
               </InputGroup>
             </FormControl>
-            <Checkbox color="black">Remember me</Checkbox>
+            <Checkbox color='black'>Remember me</Checkbox>
           </Stack>
           <Spacer></Spacer>
-          <Stack alignItems='center'>          
+          <Stack alignItems='center'>
             <Button
-            bg='#49439B'
-            color='white'
-            _hover={{ background: '#1A1287' }}
-            _active={{ background: '#1A1287' }}
-            onClick={signInAccount}
-          >
-            Login
-          </Button>
-          <Text color='black'>or login with</Text>
-          <Box w='100%'><LoginGoogle/></Box></Stack>
+              bg='#49439B'
+              color='white'
+              _hover={{ background: '#1A1287' }}
+              _active={{ background: '#1A1287' }}
+              onClick={signInAccountEmail}
+            >
+              Login
+            </Button>
+            <Text color='black'>or login with</Text>
+            <Box _hover={{ cursor: 'pointer' }} onClick={signInAccountGoogle}>
+              <LoginGoogle />
+            </Box>
+          </Stack>
 
           <Spacer></Spacer>
           <Text color='black'>

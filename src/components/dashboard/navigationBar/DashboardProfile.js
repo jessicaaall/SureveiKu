@@ -16,8 +16,19 @@ const DashboardProfile = () => {
 
   const getProfilePicture = async (data) => {
     const { id } = data;
-    const url = await getDownloadURL(ref(getStorage(), `users/${id}/pp.jpg`));
-    setPpSrc(url);
+
+    if (data.accountType === 'google') {
+      setPpSrc(getAuth().currentUser.photoURL);
+    } else {
+      try {
+        const url = await getDownloadURL(
+          ref(getStorage(), `users/${id}/pp.jpg`)
+        );
+        setPpSrc(url);
+      } catch (error) {
+        setPpSrc(ProfileSVG);
+      }
+    }
   };
 
   useEffect(() => {

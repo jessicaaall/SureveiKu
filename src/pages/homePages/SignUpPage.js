@@ -1,4 +1,4 @@
-import MainWrapper from "./mainWrapper/MainWrapper";
+import MainWrapper from './mainWrapper/MainWrapper';
 import SignUpBox from '../../components/signUpBox/SignUpBox';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
@@ -8,16 +8,20 @@ const SignUpPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    onAuthStateChanged(getAuth(), (user) => {
+    const unsubscribe = onAuthStateChanged(getAuth(), (user) => {
       if (user) {
         navigate('/dashboard', { replace: true });
       }
     });
+
+    return () => {
+      unsubscribe();
+    };
   }, []);
 
   return (
     <MainWrapper>
-      <SignUpBox/>
+      <SignUpBox />
     </MainWrapper>
   );
 };

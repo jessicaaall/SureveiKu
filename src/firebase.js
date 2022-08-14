@@ -1,4 +1,5 @@
-import { doc, setDoc, getFirestore } from 'firebase/firestore';
+import { doc, setDoc, getFirestore, Timestamp } from 'firebase/firestore';
+import { ref, getStorage, getDownloadURL } from 'firebase/storage';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyD7M6DCxoStCLAvS_h90cYiP_lf0t-RZIM',
@@ -9,7 +10,10 @@ const firebaseConfig = {
   appId: '1:466573760758:web:735c666e5fb51dae55f4d7',
 };
 
-const createNewUserData = async (id, fullname, email, points) => {
+const createNewUserData = async (id, fullname, email, points, accountType) => {
+  const date = new Date();
+  const ts = Timestamp.fromDate(date);
+
   await setDoc(doc(getFirestore(), 'Akun', id), {
     acceptTos: false,
     alamat: '',
@@ -21,7 +25,8 @@ const createNewUserData = async (id, fullname, email, points) => {
     pekerjaan: '',
     points: points,
     telephone: '',
-    dob: undefined,
+    dob: ts,
+    accountType: accountType,
   });
 };
 
