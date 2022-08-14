@@ -1,9 +1,10 @@
-import { HStack, Box, Text,Spacer, Button, VStack, Checkbox, Link } from "@chakra-ui/react";
+import { HStack, Box, Text,Spacer, Button, VStack, Checkbox, Link} from "@chakra-ui/react";
+import FormalHeading from "../FormalHeading";
 
 const ToS = () => {
     return (
         <VStack>
-            <Text fontSize={70} color='white' fontWeight='bold'>TERMS OF SERVICE</Text>
+            <FormalHeading title='Terms of Service'/>
             <Box w='60%' h='full' bg='white' padding={10} borderRadius={20} boxShadow="lg">
                 <VStack alignItems='baseline'>
                     <Text fontSize={20} fontWeight='bold'>XXXXXX</Text>

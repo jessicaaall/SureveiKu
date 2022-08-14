@@ -7,6 +7,7 @@ import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import { BrowserRouter } from 'react-router-dom';
 import { initializeApp } from 'firebase/app';
 import { firebaseConfig } from './firebase';
+import theme from './theme'
 
 initializeApp(firebaseConfig);
 
@@ -14,7 +15,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <React.StrictMode>
-      <ChakraProvider>
+      <ChakraProvider theme={theme}>
         <ColorModeScript initialColorMode='light' useSystemColorMode='false' />
         <App />
       </ChakraProvider>

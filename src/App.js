@@ -40,12 +40,12 @@ const App = () => {
         <Route path='/feedback' element={<FeedbackPage />} />
         <Route path='/dashboard' element={<Dashboard />} />
         
-        <Route path='/redeempoints' element={<RedeemPoints/>} />
-        <Route path='/createsurvey' element={<CreateSurvey/>} />
-        <Route path='/mysurveys' element={<MySurveys/>} />
+        <Route path='/redeem-points' element={<RedeemPoints/>} />
+        <Route path='/create-survey' element={<CreateSurvey/>} />
+        <Route path='/my-surveys' element={<MySurveys/>} />
         <Route path='/available-surveys' element={<AvailableSurvey />} />
         <Route path='/help' element={<HelpPage/>} />
-        <Route path='/privacypolicy' element={<PrivacyPolicyPage />} />
+        <Route path='/privacy-policy' element={<PrivacyPolicyPage />} />
         <Route path='/tos' element={<ToSPage/>} />
         
         <Route path='*' element={<Navigate to='/home' replace />} />

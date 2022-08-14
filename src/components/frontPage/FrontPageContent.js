@@ -1,5 +1,6 @@
 import { Text, HStack, Image, VStack, Button, Link } from '@chakra-ui/react';
 import { NavLink } from 'react-router-dom';
+import FormalHeading from "../FormalHeading";
 
 const FrontPage = () => {
   return (
@@ -7,20 +8,16 @@ const FrontPage = () => {
     >
       <VStack spacing={19} alignItems='baseline'>
         <VStack alignItems='baseline'>
-          <VStack spacing={-8} alignItems='baseline'>
-            <Text fontSize='4.5em' fontWeight='bold' color='white' textShadow='1px 1px black'>
-              Daftarkan Surveimu
-            </Text>
-            <Text fontSize='4.5em' fontWeight='bold' color='white' textShadow='1px 1px black'>
-              Dengan Mudah
-            </Text>
+          <VStack spacing={-1} alignItems='baseline'>
+            <FormalHeading title='Daftarkan Surveimu'/>
+            <FormalHeading title='Dengan Mudah'/>
             </VStack>
           <VStack alignItems='baseline'>
-            <Text fontSize='xl' color={'white'} textShadow='1px 1px black'>
+            <Text fontSize='xl' color={'white'}>
               Ingin surveimu diisi dengan responden yang berkualitas dan memenuhi
               target?
             </Text>
-            <Text fontSize='xl' color={'white'} textShadow='1px 1px black'>
+            <Text fontSize='xl' color={'white'}>
               Bergabunglah dengan SureveiKu sekarang juga.
             </Text>
           </VStack>

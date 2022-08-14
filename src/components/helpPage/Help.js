@@ -2,14 +2,12 @@ import {Box, Text, VStack, Spacer, Accordion, AccordionItem, AccordionButton, Ac
 import "@fontsource/raleway"
 import "@fontsource/krona-one"
 import {TriangleDownIcon, TriangleUpIcon} from '@chakra-ui/icons';
+import FormalHeading from "../FormalHeading";
 
-  
 const Help = () => {
     return (
         <VStack align='left' paddingLeft='20px' w='full'>
-            <Text color='white' fontSize={'48px'} fontWeight='bold' letterSpacing='widest'>
-                HELP
-            </Text>
+            <FormalHeading title='Help'/>
             <Text color='white' fontSize={'18px'} fontFamily='Raleway'>
                 Kontak Customer Service : cs@sureveiku.com
             </Text>

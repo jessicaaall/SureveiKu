@@ -58,7 +58,9 @@ const SideBar = () => {
     >
       <Stack alignItems='center' spacing={4}>
         <Spacer></Spacer>
-        <Img
+        <NavLink to='/dashboard'>
+          <Link>
+          <Img
           borderRadius='full'
           objectFit='cover'
           boxSize='7em'
@@ -66,6 +68,8 @@ const SideBar = () => {
           alt='dashboard-pp'
           boxShadow='0 4px 12px 0 black'
         />
+          </Link>
+        </NavLink>
         <Text color='white' fontSize='1.2em'>
           {fullname !== '' ? fullname : <span>&nbsp;&nbsp;</span>}
         </Text>
@@ -84,7 +88,7 @@ const SideBar = () => {
         <Spacer></Spacer>
         <VStack align='baseline'>
 
-        <NavLink to='/redeempoints'>
+        <NavLink to='/redeem-points'>
           <Link>
             <Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
               Redeem Points
@@ -92,7 +96,7 @@ const SideBar = () => {
           </Link>
         </NavLink>
 
-          <NavLink to='/createsurvey'>
+          <NavLink to='/create-survey'>
             <Link>
               <Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
                   Create Survey
@@ -101,7 +105,7 @@ const SideBar = () => {
           </NavLink>
           
 
-          <NavLink to='/mysurveys'>
+          <NavLink to='/my-surveys'>
             <Link>
               <Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
                 My Surveys
@@ -130,7 +134,7 @@ const SideBar = () => {
             </Link>
           </NavLink>
           
-          <NavLink to='/privacypolicy'>
+          <NavLink to='/privacy-policy'>
             <Link>
               <Button color='white' variant='link' leftIcon={<ArrowForwardIcon />}>
                 Privacy Policy

@@ -11,6 +11,7 @@ import {
   UnorderedList,
   ListItem,
 } from '@chakra-ui/react';
+import FormalHeading from '../FormalHeading';
 
 const AvailableSurveys = () => {
   function Surveybox(){
@@ -100,9 +101,7 @@ const AvailableSurveys = () => {
   return (
     <div>
       <VStack align='center'>
-        <Text color='white' fontSize={'3em'} fontWeight='bold'>
-          AVAILABLE SURVEYS
-        </Text>
+        <FormalHeading title='Available Surveys'/>
         <Spacer></Spacer>
         <Box w='auto' h='full' borderRadius={10}>
           <HStack p={5} spacing={20}>
