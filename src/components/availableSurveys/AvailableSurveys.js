@@ -39,7 +39,7 @@ const AvailableSurveys = () => {
             >
               Judul
             </Text>
-            <Text align='left'>Kaitan Gawai dan Jam Tidur</Text>
+            <Text align='left' color='black'>Kaitan Gawai dan Jam Tidur</Text>
           </Box>
           <Spacer></Spacer>
           <Box>
@@ -51,7 +51,7 @@ const AvailableSurveys = () => {
             >
               Deskripsi
             </Text>
-            <Text align='left'>
+            <Text align='left' color='black'>
               Survei ini dibuat untuk menganalisis kaitan antara penggunaan
               gawai terhadap waktu jam tidur. Hipotesis yang diajukan adalah
               penggunaan gawai yang berlebih sebelum tidur akan
@@ -71,8 +71,8 @@ const AvailableSurveys = () => {
             </Text>
             <Flex paddingLeft='10px'>
               <UnorderedList>
-                <ListItem align='left'>Merupakan mahasiswa</ListItem>
-                <ListItem align='left'>Berumur di bawah 25 tahun</ListItem>
+                <ListItem align='left' color='black'>Merupakan mahasiswa</ListItem>
+                <ListItem align='left' color='black'>Berumur di bawah 25 tahun</ListItem>
               </UnorderedList>
             </Flex>
           </Box>
@@ -80,7 +80,7 @@ const AvailableSurveys = () => {
           <Spacer></Spacer>
           <Spacer></Spacer>
           <Spacer></Spacer>
-          <Text align='center'>Redeemable Points: 10</Text>
+          <Text align='center' color='black'>Redeemable Points: 10</Text>
           <Box align='center'>
             <Button
               bgColor='#EA8238'
@@ -117,6 +117,32 @@ const AvailableSurveys = () => {
             <Surveybox/>
           </HStack>
         </Box>
+      <VStack align='left'>
+        <Text color='white' fontSize={'3em'} fontWeight='bold' textAlign='center'>
+          AVAILABLE SURVEYS
+        </Text>
+        <VStack w='auto' h='full' css={{"&::-webkit-scrollbar": {width:"8px",},"&::-webkit-scrollbar-track": {background:'#D9D9D9', borderRadius:"50px",},"&::-webkit-scrollbar-thumb": {background:'#122543', borderRadius:"50px",},}} overflowX="auto" maxHeight="520px">
+          <Spacer></Spacer>
+          <Box w='auto' h='full' borderRadius={10}>
+            <HStack p={5} spacing={20}>
+              <Surveybox/>
+              <Surveybox/>
+              <Surveybox/>
+            </HStack>
+          </Box>          
+          <Box w='auto' h='full' borderRadius={10}>
+            <HStack spacing={20}>
+              <Surveybox/>
+              <Surveybox/>
+              <Surveybox/>
+            </HStack>
+          </Box>
+          <Spacer></Spacer>
+          <Spacer></Spacer>
+          <Spacer></Spacer>
+          <Spacer></Spacer>
+          <Spacer></Spacer>
+        </VStack>
       </VStack>
     </div>
   );

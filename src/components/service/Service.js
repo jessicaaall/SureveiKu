@@ -3,7 +3,7 @@ import { Image }from "@chakra-ui/react"
 
 const Service = () => {
     return(
-        <HStack mx="7.5%" mt="7.5%" mb="5%" w="100%" textAlign="center" spacing="5%">
+        <HStack mx="7.5%" mt="5%" mb="5%" w="100%" textAlign="center" spacing="5%">
             <Box boxShadow="dark-lg" rounded="md" bg="white" w="70%" h="500px">
                 <Stack w="100%" alignItems="center">
                     <Center rounded="md" bg="#0F2543" w="100%" h="100px">
