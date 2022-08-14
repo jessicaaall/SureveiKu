@@ -58,8 +58,8 @@ const Responses = () => {
                     <Text paddingLeft={'15px'} marginBottom='5px'>Pertanyaan 3</Text>
                     <Box w='100%' h='150px'bg={'white'} color='black' borderRadius='20' paddingLeft={'15px'} paddingTop='7px' paddingRight={'15px'} paddingBottom='7px'>
                     <Image src='./barchart.png' h='9em'/>
+                    </Box>
                 </Box>
-            </Box>
             </VStack>
         </VStack>
      );
