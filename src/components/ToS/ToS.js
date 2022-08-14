@@ -5,7 +5,7 @@ const ToS = () => {
     return (
         <VStack align='left' paddingLeft='2%' w='full'>
             <FormalHeading title='TERMS OF SERVICE'/>
-            <Box w='90%' h='full' bg='white' padding={10} borderRadius={20} boxShadow="lg">
+            <Box w='90%' h='100%' bg='white' padding={10} borderRadius={20} boxShadow="lg">
                 <VStack alignItems='baseline' css={{"&::-webkit-scrollbar": {width:"8px",},"&::-webkit-scrollbar-track": {background:'#D9D9D9', borderRadius:"50px",},"&::-webkit-scrollbar-thumb": {background:'#122543', borderRadius:"50px",},}} overflowX="auto" maxHeight="600px">
                     <Text fontSize={20} fontWeight='bold'>XXXXXX</Text>
                     <Spacer></Spacer>
@@ -25,7 +25,7 @@ const ToS = () => {
                         <Link color='blue' href='#'>terms of service</Link> 
                         {/* tinggal hrefnya diganti */}
                     </HStack>
-                    <Button bg='#EA8238' borderRadius={20} w='120px' border='1px' fontWeight='bold' _hover={{ bg: '#F19552' }} alignSelf='end'>SUBMIT</Button>
+                    <Button bg='#EA8238' borderRadius={20} w='10%' border='1px' fontWeight='bold' _hover={{ bg: '#F19552' }} alignSelf='end'>SUBMIT</Button>
                 </VStack>
             </Box>
         </VStack>
