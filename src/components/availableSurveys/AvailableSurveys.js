@@ -11,85 +11,41 @@ import {
   ListItem,
   SimpleGrid,
 } from '@chakra-ui/react';
+import { useEffect } from 'react';
+import { useState } from 'react';
 import FormalHeading from '../FormalHeading';
+import { collection, getDocs, getFirestore } from 'firebase/firestore';
 
 const AvailableSurveys = () => {
-  function Surveybox() {
-    return (
-      <Box
-        w='300px'
-        h='700px'
-        bg='white'
-        boxShadow='0 4px 12px 0 black'
-        borderRadius={20}
-        padding={5}
-      >
-        <Stack w='100%' h='100%'>
-          <Spacer></Spacer>
-          <Box boxSize={'15em'} w='100%'>
-            <Spacer></Spacer>
-            <Image src='./AvailableSurveys.png' />
-          </Box>
-          <Box>
-            <Text fontSize='1em' fontWeight='bold' color='black' align='left'>
-              Judul
-            </Text>
-            <Text align='left' color='black'>
-              Kaitan Gawai dan Jam Tidur
-            </Text>
-          </Box>
-          <Spacer></Spacer>
-          <Box>
-            <Text fontSize='1em' fontWeight='bold' color='black' align='left'>
-              Deskripsi
-            </Text>
-            <Text align='left' color='black'>
-              Survei ini dibuat untuk menganalisis kaitan antara penggunaan
-              gawai terhadap waktu jam tidur. Hipotesis yang diajukan adalah
-              penggunaan gawai yang berlebih sebelum tidur akan mengakibatkan
-              waktu jam tidur yang berkurang dan kualitas tidur yang tidak baik
-            </Text>
-          </Box>
-          <Spacer></Spacer>
-          <Box>
-            <Text fontSize='1em' fontWeight='bold' color='black' align='left'>
-              Syarat Khusus
-            </Text>
-            <Flex paddingLeft='10px'>
-              <UnorderedList>
-                <ListItem align='left' color='black'>
-                  Merupakan mahasiswa
-                </ListItem>
-                <ListItem align='left' color='black'>
-                  Berumur di bawah 25 tahun
-                </ListItem>
-              </UnorderedList>
-            </Flex>
-          </Box>
-          <Spacer></Spacer>
-          <Spacer></Spacer>
-          <Spacer></Spacer>
-          <Spacer></Spacer>
-          <Text align='center' color='black'>
-            Redeemable Points: 10
-          </Text>
-          <Box align='center'>
-            <Button
-              bgColor='#EA8238'
-              color='white'
-              _hover={{ bg: '#d66a1e' }}
-              w='80%'
-              fontWeight='bold'
-              borderRadius={20}
-            >
-              PARTICIPATE
-            </Button>
-          </Box>
-          <Spacer></Spacer>
-        </Stack>
-      </Box>
+  const [surveys, setSurveys] = useState([]);
+
+  const getSurveyData = async () => {
+    const newSurveysData = [];
+
+    const collectionSnapshot = await getDocs(
+      collection(getFirestore(), 'Survey')
     );
-  }
+
+    collectionSnapshot.forEach((doc) => {
+      const data = doc.data();
+
+      const survey = {
+        title: data.judul,
+        description: data.deskripsi,
+        requirements: data.syarat,
+        reedemable_points: data.redeemable_points,
+      };
+
+      newSurveysData.push(survey);
+    });
+
+    setSurveys(newSurveysData);
+  };
+
+  useEffect(() => {
+    getSurveyData();
+  }, []);
+
   return (
     <VStack align='center' h='100%'>
       <FormalHeading title='Available Surveys' />
@@ -115,14 +71,91 @@ const AvailableSurveys = () => {
           },
         }}
       >
-        <Surveybox />
-        <Surveybox />
-        <Surveybox />
-        <Surveybox />
-        <Surveybox />
-        <Surveybox />
+        {surveys.map(
+          ({ title, description, requirements, reedemable_points }) => (
+            <Surveybox
+              title={title}
+              description={description}
+              requirements={requirements}
+              reedemable_points={reedemable_points}
+            />
+          )
+        )}
       </SimpleGrid>
     </VStack>
+  );
+};
+
+const Surveybox = ({ title, description, requirements, reedemable_points }) => {
+  return (
+    <Box
+      w='300px'
+      h='700px'
+      bg='white'
+      boxShadow='0 4px 12px 0 black'
+      borderRadius={20}
+      padding={5}
+    >
+      <Stack w='100%' h='100%'>
+        <Spacer></Spacer>
+        <Box boxSize={'15em'} w='100%'>
+          <Spacer></Spacer>
+          <Image src='./AvailableSurveys.png' />
+        </Box>
+        <Box>
+          <Text fontSize='1em' fontWeight='bold' color='black' align='left'>
+            Judul
+          </Text>
+          <Text align='left' color='black'>
+            {title}
+          </Text>
+        </Box>
+        <Spacer></Spacer>
+        <Box>
+          <Text fontSize='1em' fontWeight='bold' color='black' align='left'>
+            Deskripsi
+          </Text>
+          <Text align='left' color='black'>
+            {description}
+          </Text>
+        </Box>
+        <Spacer></Spacer>
+        <Box>
+          <Text fontSize='1em' fontWeight='bold' color='black' align='left'>
+            Syarat Khusus
+          </Text>
+          <Flex paddingLeft='10px'>
+            <UnorderedList>
+              {requirements.map((req) => (
+                <ListItem align='left' color='black'>
+                  {req}
+                </ListItem>
+              ))}
+            </UnorderedList>
+          </Flex>
+        </Box>
+        <Spacer></Spacer>
+        <Spacer></Spacer>
+        <Spacer></Spacer>
+        <Spacer></Spacer>
+        <Text align='center' color='black'>
+          Redeemable Points: {reedemable_points}
+        </Text>
+        <Box align='center'>
+          <Button
+            bgColor='#EA8238'
+            color='white'
+            _hover={{ bg: '#d66a1e' }}
+            w='80%'
+            fontWeight='bold'
+            borderRadius={20}
+          >
+            PARTICIPATE
+          </Button>
+        </Box>
+        <Spacer></Spacer>
+      </Stack>
+    </Box>
   );
 };
 

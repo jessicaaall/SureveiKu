@@ -36,7 +36,6 @@ const SideBar = () => {
 
     if (data.accountType === 'google') {
       setPpSrc(getAuth().currentUser.photoURL);
-      console.log(getAuth().currentUser.photoU);
     } else {
       try {
         const url = await getDownloadURL(
