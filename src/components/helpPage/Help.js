@@ -22,12 +22,7 @@ const Help = () => {
       w='full'
       minH='full'
     >
-      <Text
-        color='white'
-        fontSize={'48px'}
-        fontWeight='bold'
-        letterSpacing='widest'
-      >
+      <Text color='white' fontSize={'48px'} fontWeight='bold'>
         HELP
       </Text>
       <Text color='white' fontSize={'18px'} fontFamily='Raleway'>
@@ -65,7 +60,7 @@ const Help = () => {
                     _hover={{ bg: '#122543' }}
                     bgColor='#122543'
                     color='white'
-                    w='1080px'
+                    w='full'
                     h='40px'
                     fontSize='15px'
                     fontFamily='Raleway'
@@ -79,7 +74,7 @@ const Help = () => {
                     {isExpanded ? <TriangleUpIcon /> : <TriangleDownIcon />}
                   </AccordionButton>
                   <AccordionPanel
-                    w='1080px'
+                    w='full'
                     h='90px'
                     borderRadius='25px'
                     bgColor='white'
@@ -111,7 +106,7 @@ const Help = () => {
                     _hover={{ bg: '#122543' }}
                     bgColor='#122543'
                     color='white'
-                    w='1080px'
+                    w='full'
                     h='40px'
                     fontSize='15px'
                     fontFamily='Raleway'
@@ -125,7 +120,7 @@ const Help = () => {
                     {isExpanded ? <TriangleUpIcon /> : <TriangleDownIcon />}
                   </AccordionButton>
                   <AccordionPanel
-                    w='1080px'
+                    w='full'
                     h='90px'
                     borderRadius='25px'
                     bgColor='white'
@@ -157,7 +152,7 @@ const Help = () => {
                     _hover={{ bg: '#122543' }}
                     bgColor='#122543'
                     color='white'
-                    w='1080px'
+                    w='full'
                     h='40px'
                     fontSize='15px'
                     fontFamily='Raleway'
@@ -171,7 +166,7 @@ const Help = () => {
                     {isExpanded ? <TriangleUpIcon /> : <TriangleDownIcon />}
                   </AccordionButton>
                   <AccordionPanel
-                    w='1080px'
+                    w='full'
                     h='90px'
                     borderRadius='25px'
                     bgColor='white'
@@ -208,7 +203,7 @@ const Help = () => {
                     _hover={{ bg: '#122543' }}
                     bgColor='#122543'
                     color='white'
-                    w='1080px'
+                    w='full'
                     h='40px'
                     fontSize='15px'
                     fontFamily='Raleway'
@@ -222,7 +217,7 @@ const Help = () => {
                     {isExpanded ? <TriangleUpIcon /> : <TriangleDownIcon />}
                   </AccordionButton>
                   <AccordionPanel
-                    w='1080px'
+                    w='full'
                     h='90px'
                     borderRadius='25px'
                     bgColor='white'
@@ -254,7 +249,7 @@ const Help = () => {
                     _hover={{ bg: '#122543' }}
                     bgColor='#122543'
                     color='white'
-                    w='1080px'
+                    w='full'
                     h='40px'
                     fontSize='15px'
                     fontFamily='Raleway'
@@ -268,7 +263,7 @@ const Help = () => {
                     {isExpanded ? <TriangleUpIcon /> : <TriangleDownIcon />}
                   </AccordionButton>
                   <AccordionPanel
-                    w='1080px'
+                    w='full'
                     h='90px'
                     borderRadius='25px'
                     bgColor='white'
