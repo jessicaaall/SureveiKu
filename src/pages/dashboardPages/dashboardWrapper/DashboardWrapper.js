@@ -5,7 +5,7 @@ import { Grid, GridItem } from '@chakra-ui/react';
 
 export default function DashboardWrapper(props){
     return(
-        <div>
+        <div className='dashboard-bg-image'>
             <Grid
             templateAreas={`"navbar navbar"
                             "sidebar content"
@@ -13,7 +13,6 @@ export default function DashboardWrapper(props){
             gridTemplateRows={'10vh 90vh'}
             gridTemplateColumns={'250px auto'}
             w='full'
-            className='dashboard-bg-image'
             color='blackAlpha.700'
             >
                 <GridItem area={'navbar'} zIndex='101'>

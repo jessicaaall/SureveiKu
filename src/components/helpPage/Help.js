@@ -4,9 +4,9 @@ import "@fontsource/krona-one"
 import {TriangleDownIcon, TriangleUpIcon} from '@chakra-ui/icons';
 
   
-const HelpPage = () => {
+const Help = () => {
     return (
-        <VStack align='left' paddingLeft='20px'>
+        <VStack align='left' paddingLeft='20px' w='full'>
             <Text color='white' fontSize={'48px'} fontWeight='bold'>
                 HELP
             </Text>
@@ -121,4 +121,4 @@ const HelpPage = () => {
     );
 };
       
-export default HelpPage;
+export default Help;
