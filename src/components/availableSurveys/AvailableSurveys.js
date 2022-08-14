@@ -4,13 +4,14 @@ import {
   Image,
   Spacer,
   Stack,
-  HStack,
   Button,
   VStack,
   Flex,
   UnorderedList,
   ListItem,
+  SimpleGrid,
 } from '@chakra-ui/react';
+import FormalHeading from '../FormalHeading';
 
 const AvailableSurveys = () => {
   function Surveybox() {
@@ -33,14 +34,16 @@ const AvailableSurveys = () => {
             <Text fontSize='1em' fontWeight='bold' color='black' align='left'>
               Judul
             </Text>
-            <Text align='left'>Kaitan Gawai dan Jam Tidur</Text>
+            <Text align='left' color='black'>
+              Kaitan Gawai dan Jam Tidur
+            </Text>
           </Box>
           <Spacer></Spacer>
           <Box>
             <Text fontSize='1em' fontWeight='bold' color='black' align='left'>
               Deskripsi
             </Text>
-            <Text align='left'>
+            <Text align='left' color='black'>
               Survei ini dibuat untuk menganalisis kaitan antara penggunaan
               gawai terhadap waktu jam tidur. Hipotesis yang diajukan adalah
               penggunaan gawai yang berlebih sebelum tidur akan mengakibatkan
@@ -54,8 +57,12 @@ const AvailableSurveys = () => {
             </Text>
             <Flex paddingLeft='10px'>
               <UnorderedList>
-                <ListItem align='left'>Merupakan mahasiswa</ListItem>
-                <ListItem align='left'>Berumur di bawah 25 tahun</ListItem>
+                <ListItem align='left' color='black'>
+                  Merupakan mahasiswa
+                </ListItem>
+                <ListItem align='left' color='black'>
+                  Berumur di bawah 25 tahun
+                </ListItem>
               </UnorderedList>
             </Flex>
           </Box>
@@ -63,7 +70,9 @@ const AvailableSurveys = () => {
           <Spacer></Spacer>
           <Spacer></Spacer>
           <Spacer></Spacer>
-          <Text align='center'>Redeemable Points: 10</Text>
+          <Text align='center' color='black'>
+            Redeemable Points: 10
+          </Text>
           <Box align='center'>
             <Button
               bgColor='#EA8238'
@@ -82,28 +91,38 @@ const AvailableSurveys = () => {
     );
   }
   return (
-    <div>
-      <VStack align='center'>
-        <Text color='white' fontSize={'3em'} fontWeight='bold'>
-          AVAILABLE SURVEYS
-        </Text>
-        <Spacer></Spacer>
-        <Box w='auto' h='full' borderRadius={10}>
-          <HStack p={5} spacing={20}>
-            <Surveybox />
-            <Surveybox />
-            <Surveybox />
-          </HStack>
-        </Box>
-        <Box w='auto' h='full' borderRadius={10}>
-          <HStack p={5} spacing={20}>
-            <Surveybox />
-            <Surveybox />
-            <Surveybox />
-          </HStack>
-        </Box>
-      </VStack>
-    </div>
+    <VStack align='center' h='100%'>
+      <FormalHeading title='Available Surveys' />
+      <SimpleGrid
+        pt={4}
+        pb={4}
+        pr={2}
+        columns={3}
+        spacingX={20}
+        spacingY='10'
+        overflowY={'scroll'}
+        w='auto'
+        h='full'
+        css={{
+          '&::-webkit-scrollbar': { width: '8px' },
+          '&::-webkit-scrollbar-track': {
+            background: '#D9D9D9',
+            borderRadius: '50px',
+          },
+          '&::-webkit-scrollbar-thumb': {
+            background: '#122543',
+            borderRadius: '50px',
+          },
+        }}
+      >
+        <Surveybox />
+        <Surveybox />
+        <Surveybox />
+        <Surveybox />
+        <Surveybox />
+        <Surveybox />
+      </SimpleGrid>
+    </VStack>
   );
 };
 

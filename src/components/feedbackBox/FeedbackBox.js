@@ -6,11 +6,15 @@ import {
     Input,
     InputGroup,
     InputLeftElement,
+    Button, 
+    Spacer, 
+    Stack, 
+    Link, 
+    Textarea, 
+    FormControl
   } from '@chakra-ui/react';
-  import { FormControl } from '@chakra-ui/react';
   import React from 'react';
-  import { EmailIcon, AtSignIcon, ChatIcon } from '@chakra-ui/icons';
-  import { Button, Spacer, Stack, Link } from '@chakra-ui/react';
+  import { EmailIcon, AtSignIcon} from '@chakra-ui/icons';
   import { NavLink } from 'react-router-dom';
   
   const FeedbackBox = () => {
@@ -58,19 +62,7 @@ import {
                   />
                 </InputGroup>
               </FormControl>
-              <FormControl>
-                <InputGroup>
-                    <InputLeftElement
-                        pointerEvents='none'
-                        children={<ChatIcon />}
-                        color='black'
-                    />
-                    <Input
-                        placeholder='your feedback'
-                        _placeholder={{ color: 'gray.400' }}
-                    />
-                </InputGroup>
-              </FormControl>
+              <Textarea placeholder='your feedback' maxHeight='25vh'/>
             </Stack>
             <Spacer></Spacer>
             <NavLink to='/thankyou'>

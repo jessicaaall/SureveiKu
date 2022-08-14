@@ -3,7 +3,7 @@ import FrontPageContent from "../../components/frontPage/FrontPageContent"
 
 export default function FrontPage(){
   return(
-    <MainWrapper>
+    <MainWrapper where='home'>
       <FrontPageContent/>
     </MainWrapper>
   );

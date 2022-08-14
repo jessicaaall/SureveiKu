@@ -7,6 +7,16 @@ import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { getDoc, doc, getFirestore } from 'firebase/firestore';
 import { getStorage, ref, getDownloadURL } from 'firebase/storage';
+import {
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogContent,
+  AlertDialogOverlay,
+} from '@chakra-ui/react';
+import { useDisclosure } from '@chakra-ui/react';
+import React from 'react';
 
 const SideBar = () => {
   const [fullname, setFullname] = useState('');
@@ -57,6 +67,9 @@ const SideBar = () => {
     onAuthStateChanged(getAuth(), getProfileData);
   }, []);
 
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const cancelRef = React.useRef();
+
   return (
     <Flex
       pos='fixed'
@@ -69,14 +82,18 @@ const SideBar = () => {
     >
       <Stack alignItems='center' spacing={4}>
         <Spacer></Spacer>
-        <Img
-          borderRadius='full'
-          objectFit='cover'
-          boxSize='7em'
-          src={ppSrc}
-          alt='dashboard-pp'
-          boxShadow='0 4px 12px 0 black'
-        />
+        <NavLink to='/dashboard'>
+          <Link>
+            <Img
+              borderRadius='full'
+              objectFit='cover'
+              boxSize='7em'
+              src={ppSrc}
+              alt='dashboard-pp'
+              boxShadow='0 4px 12px 0 black'
+            />
+          </Link>
+        </NavLink>
         <Text color='white' fontSize='1.2em'>
           {fullname !== '' ? fullname : <span>&nbsp;&nbsp;</span>}
         </Text>
@@ -94,7 +111,7 @@ const SideBar = () => {
         </VStack>
         <Spacer></Spacer>
         <VStack align='baseline'>
-          <NavLink to='/redeempoints'>
+          <NavLink to='/redeem-points'>
             <Link>
               <Button
                 color='white'
@@ -106,7 +123,7 @@ const SideBar = () => {
             </Link>
           </NavLink>
 
-          <NavLink to='/createsurvey'>
+          <NavLink to='/create-survey'>
             <Link>
               <Button
                 color='white'
@@ -118,7 +135,7 @@ const SideBar = () => {
             </Link>
           </NavLink>
 
-          <NavLink to='/mysurveys'>
+          <NavLink to='/my-surveys'>
             <Link>
               <Button
                 color='white'
@@ -154,7 +171,7 @@ const SideBar = () => {
             </Link>
           </NavLink>
 
-          <NavLink to='/privacypolicy'>
+          <NavLink to='/privacy-policy'>
             <Link>
               <Button
                 color='white'
@@ -178,11 +195,38 @@ const SideBar = () => {
           </NavLink>
         </VStack>
         <Spacer></Spacer>
-        <NavLink to='/signup'>
-          <Button onClick={signOutAccount} leftIcon={<ArrowLeftIcon />}>
-            Sign Out
-          </Button>
-        </NavLink>
+
+        <Button onClick={onOpen} leftIcon={<ArrowLeftIcon />}>
+          Sign Out
+        </Button>
+        <AlertDialog
+          motionPreset='slideInBottom'
+          isOpen={isOpen}
+          leastDestructiveRef={cancelRef}
+          onClose={onClose}
+          isCentered
+        >
+          <AlertDialogOverlay>
+            <AlertDialogContent>
+              <AlertDialogHeader fontSize='lg' fontWeight='bold'>
+                Sign Out
+              </AlertDialogHeader>
+
+              <AlertDialogBody>
+                Are you sure you want to sign out?
+              </AlertDialogBody>
+
+              <AlertDialogFooter>
+                <Button ref={cancelRef} onClick={onClose}>
+                  Cancel
+                </Button>
+                <Button colorScheme='red' onClick={signOutAccount} ml={3}>
+                  Proceed
+                </Button>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialogOverlay>
+        </AlertDialog>
 
         <Spacer></Spacer>
       </Stack>

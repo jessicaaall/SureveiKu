@@ -16,7 +16,7 @@ export default function MainWrapper(props){
         w='full'
         >
             <GridItem area={'navbar'} display='flex' alignItems='center'>
-                <NavigationBar />
+                <NavigationBar where={props.where}/>
             </GridItem>
             <GridItem area={'content'} display='flex' alignItems='center' justifyContent='center'>
                 {props.children}

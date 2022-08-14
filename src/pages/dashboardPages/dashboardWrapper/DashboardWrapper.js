@@ -13,7 +13,6 @@ export default function DashboardWrapper(props) {
         gridTemplateRows={'10vh 90vh'}
         gridTemplateColumns={'250px auto'}
         w='full'
-        h='100vh'
         color='blackAlpha.700'
       >
         <GridItem area={'navbar'} zIndex='101'>
@@ -22,7 +21,7 @@ export default function DashboardWrapper(props) {
         <GridItem area={'sidebar'} zIndex='100'>
           <SideBar />
         </GridItem>
-        <GridItem p={4} area={'content'}>
+        <GridItem p={8} area={'content'} paddingBottom={props.marginBawah}>
           {props.children}
         </GridItem>
       </Grid>

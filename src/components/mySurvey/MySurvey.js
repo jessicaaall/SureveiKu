@@ -4,13 +4,14 @@ import {
     Image,
     Spacer,
     Stack,
-    HStack,
+    SimpleGrid,
     Button,
     VStack,
     Flex,
     UnorderedList,
     ListItem,
   } from '@chakra-ui/react';
+  import FormalHeading from "../FormalHeading";
   
   const MySurvey = () => {
     function Surveybox(){
@@ -106,28 +107,18 @@ import {
       )
     }
     return (
-      <div>
-        <VStack align='center'>
-          <Text color='white' fontSize={'3em'} fontWeight='bold'>
-            MY SURVEYS
-          </Text>
-          <Spacer></Spacer>
-          <Box w='auto' h='full' borderRadius={10}>
-            <HStack p={5} spacing={20}>
+      <VStack align='center' h='100%'>
+        <FormalHeading title='My Surveys'/>
+        <SimpleGrid columns={3} spacingX={20} spacingY='10' overflowY={'scroll'} w='auto' h='full' css={{"&::-webkit-scrollbar": {width:"8px",},"&::-webkit-scrollbar-track": {background:'#D9D9D9', borderRadius:"50px",},"&::-webkit-scrollbar-thumb": {background:'#122543', borderRadius:"50px",},}}>
+              <Surveybox/>
+              <Surveybox/>
+              <Surveybox/>   
               <Surveybox/>
               <Surveybox/>
               <Surveybox/>
-            </HStack>
-          </Box>
-          <Box w='auto' h='full' borderRadius={10}>
-            <HStack p={5} spacing={20}>
-              <Surveybox/>
-              <Surveybox/>
-              <Surveybox/>
-            </HStack>
-          </Box>
-        </VStack>
-      </div>
+              <Spacer/>
+        </SimpleGrid>
+      </VStack>
     );
   };
   
