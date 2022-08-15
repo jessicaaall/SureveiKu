@@ -44,7 +44,7 @@ import FormalHeading from '../FormalHeading';
         <Text fontFamily='Raleway' color='white' fontSize='35px' fontWeigt='bold'>
           Your points : 17.000
         </Text>
-        <Box overflowX='auto' whiteSpace='nowrap' maxW='100vw' css={{"&::-webkit-scrollbar": {height:"10px",},"&::-webkit-scrollbar-track": {background:'#D9D9D9', borderRadius:"50px",},"&::-webkit-scrollbar-thumb": {background:'#122543', borderRadius:"50px",},}}>
+        <Box overflowX='auto' whiteSpace='nowrap' css={{"&::-webkit-scrollbar": {height:"10px",},"&::-webkit-scrollbar-track": {background:'#D9D9D9', borderRadius:"50px",},"&::-webkit-scrollbar-thumb": {background:'#122543', borderRadius:"50px",},}}>
           <HStack pb={5} spacing='50px'>
             <RewardBox/>
             <RewardBox/>
