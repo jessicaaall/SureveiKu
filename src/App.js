@@ -18,6 +18,7 @@ import RedeemPoints from './pages/dashboardPages/RedeemPoints';
 import CreateSurvey from './pages/dashboardPages/CreateSurvey';
 import MySurveys from './pages/dashboardPages/MySurveys';
 import DashboardProfilePage from './pages/dashboardPages/DashboardProfilePage';
+import SurveyDonePage from './pages/dashboardPages/SurveyDonePage';
 
 const App = () => {
   const navigate = useNavigate();
@@ -51,6 +52,7 @@ const App = () => {
         <Route path='/privacy-policy' element={<PrivacyPolicyPage />} />
         <Route path='/tos' element={<ToSPage/>} />
         <Route path='/profile' element={<DashboardProfilePage />} />
+        <Route path='/survey-done' element={<SurveyDonePage />} />
         
         <Route path='*' element={<Navigate to='/home' replace />} />
       </Routes>
