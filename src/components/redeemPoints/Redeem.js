@@ -6,7 +6,6 @@ import {
     VStack,
     HStack,
     Flex,
-    Spacer
   } from '@chakra-ui/react';
 import FormalHeading from '../FormalHeading';
   
