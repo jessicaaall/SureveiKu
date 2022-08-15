@@ -8,7 +8,7 @@ import FormalHeading from '../FormalHeading';
 const HelpPage = () => {
     return (
         <VStack align='left' paddingLeft='20px' h='100%'>
-            <FormalHeading title='HELP'/>
+            <FormalHeading title='Help'/>
             <Text color='white' fontSize={'18px'} fontFamily='Raleway' pb={3}>
                 Kontak Customer Service : cs@sureveiku.com
             </Text>

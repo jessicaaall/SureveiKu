@@ -4,7 +4,7 @@ import FormalHeading from '../FormalHeading'
 const ToS = () => {
     return (
         <VStack align='left' w='full' h='full'>
-            <FormalHeading title='TERMS OF SERVICE'/>
+            <FormalHeading title='Terms of Service'/>
             <Box w='100%' h='60vh' bg='white' borderRadius='6'>
                 <VStack alignItems='baseline' padding={10} borderRadius={20} boxShadow="lg" css={{"&::-webkit-scrollbar": {width:"8px",},"&::-webkit-scrollbar-track": {background:'#D9D9D9', borderRadius:"50px",},"&::-webkit-scrollbar-thumb": {background:'#122543', borderRadius:"50px",},}} overflowX="auto" height="full">
                     <Text fontSize={20} fontWeight='bold'>XXXXXX</Text>
