@@ -1,10 +1,11 @@
 import {SimpleGrid, Heading} from "@chakra-ui/react";
+import FormalHeading from "../../FormalHeading";
 import BoxButton from "./BoxButton";
 
 const DashboardArea = () => {
     return (
         <div>
-            <Heading p={4} fontSize='2em' color='whitesmoke'>Menu Dashboard</Heading>
+            <FormalHeading p={4} fontSize='2em' color='whitesmoke' title='Menu Dashboard'/>
             <SimpleGrid columns={4} spacing={10} padding={4}>
                 <BoxButton link="/redeem-points" title="Redeem Points" desc="Redeem your points here"/>
                 <BoxButton link="/create-survey" title="Create Survey" desc="Make your new survey here"/>
