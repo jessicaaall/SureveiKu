@@ -15,19 +15,16 @@ import "@fontsource/krona-one";
 const FillingForm = () => {
     const [sliderValue, setSliderValue] = React.useState(50)
     return (
-        <VStack
-            align="left"
-            direction="column"
-        >   
+        <VStack align='left' direction="column" h='100%'>   
             <FormalHeading title='JUDUL SURVEI'/>
             <HStack alignSelf={'end'} pb={2}>
                 <PhoneIcon color='white' boxSize='6'/>
-                <Link align="right" p={2} color='white' fontFamily='Nunito' fontSize='20px'>
+                <Link align="right" p={1} color='white' fontFamily='Nunito' fontSize='20px'>
                     Contact Surveyor
                 </Link>
             </HStack>
-            <Box bg='#7991b2' borderRadius='20px' p={6} w='100%' h='full'>
-                <VStack align='left' spacing='25px' overflowY={'scroll'} maxHeight='22em' css={{"&::-webkit-scrollbar": {width:"8px",},"&::-webkit-scrollbar-track": {background:'#D9D9D9', borderRadius:"50px",},"&::-webkit-scrollbar-thumb": {background:'#122543', borderRadius:"50px",},}}>
+            <Box bg='#7991b2' borderRadius='20px' p={6} w='100%'>
+                <VStack pr={4} align='left' spacing='25px' overflowY={'scroll'} maxHeight='330px' css={{"&::-webkit-scrollbar": {width:"8px",},"&::-webkit-scrollbar-track": {background:'#D9D9D9', borderRadius:"50px",},"&::-webkit-scrollbar-thumb": {background:'#122543', borderRadius:"50px",},}}>
                     <Box bg="#122543" borderRadius='25px'>
                         <Box pt={4} pb={3} pl={5} pr={5}>
                             <Text color={'white'} fontFamily='Raleway' fontSize='20px'>Pertanyaan</Text>
@@ -93,7 +90,7 @@ const FillingForm = () => {
                     </Box>
                 </VStack>
             </Box>
-            <Box align='right' pt={6}>
+            <Box align='right' pt={4}>
                 <Button color='black' bgColor='#EA8238' _hover={{ bg: '#d66a1e' }} w='180px' h='55px' fontSize='18px' fontFamily='Krona One' borderRadius='27px' borderColor='black' border='1px'>
                     SUBMIT
                 </Button>
