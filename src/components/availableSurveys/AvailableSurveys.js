@@ -15,6 +15,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import FormalHeading from '../FormalHeading';
 import { collection, getDocs, getFirestore } from 'firebase/firestore';
+import { NavLink } from 'react-router-dom';
 
 const AvailableSurveys = () => {
   const [surveys, setSurveys] = useState([]);
@@ -138,18 +139,20 @@ const Surveybox = ({ title, description, requirements, reedemable_points }) => {
         <Text align='center' color='black'>
           Redeemable Points: {reedemable_points}
         </Text>
-        <Box align='center'>
-          <Button
-            bgColor='#EA8238'
-            color='white'
-            _hover={{ bg: '#d66a1e' }}
-            w='80%'
-            fontWeight='bold'
-            borderRadius={20}
-          >
-            PARTICIPATE
-          </Button>
-        </Box>
+        <NavLink to='/filling-form'>
+          <Box align='center'>
+            <Button
+              bgColor='#EA8238'
+              color='white'
+              _hover={{ bg: '#d66a1e' }}
+              w='80%'
+              fontWeight='bold'
+              borderRadius={20}
+            >
+              PARTICIPATE
+            </Button>
+          </Box>
+        </NavLink>
         <Spacer></Spacer>
       </Stack>
     </Box>

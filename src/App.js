@@ -19,6 +19,9 @@ import CreateSurvey from './pages/dashboardPages/CreateSurvey';
 import MySurveys from './pages/dashboardPages/MySurveys';
 import DashboardProfilePage from './pages/dashboardPages/DashboardProfilePage';
 import SurveyDonePage from './pages/dashboardPages/SurveyDonePage';
+import DashboardAnalysisPage from './pages/dashboardPages/DashboardAnalysisPage';
+import ResponsesPage from './pages/dashboardPages/ResponsesPage';
+import FillingFormPage from './pages/dashboardPages/FillingFormPage';
 
 const App = () => {
   const navigate = useNavigate();
@@ -53,6 +56,9 @@ const App = () => {
         <Route path='/tos' element={<ToSPage/>} />
         <Route path='/profile' element={<DashboardProfilePage />} />
         <Route path='/survey-done' element={<SurveyDonePage />} />
+        <Route path='/analysis-page' element={<DashboardAnalysisPage />} />
+        <Route path='/responses-page' element={<ResponsesPage />} />
+        <Route path='/filling-form' element={<FillingFormPage />} />
         
         <Route path='*' element={<Navigate to='/home' replace />} />
       </Routes>
