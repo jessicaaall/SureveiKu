@@ -13,6 +13,7 @@ import { PhoneIcon } from '@chakra-ui/icons';
 
 import "@fontsource/raleway";
 import "@fontsource/krona-one";
+import "@fontsource/nunito";
 import "./garis.css"
 
 const FillingForm = () => {
@@ -108,7 +109,7 @@ const FillingForm = () => {
                 </VStack>
             </Box>
             <Box align='right' pt={4}>
-                <Button color='black' bgColor='#EA8238' _hover={{ bg: '#d66a1e' }} w='180px' h='55px' fontSize='18px' fontFamily='Krona One' borderRadius='27px' borderColor='black' border='1px'>
+                <Button color='white' bgColor='#EA8238' _hover={{ bg: '#d66a1e' }} w='180px' h='55px' fontSize='20px' letterSpacing={1} fontFamily='Nunito' borderRadius='27px'>
                     SUBMIT
                 </Button>
             </Box>
