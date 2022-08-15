@@ -292,7 +292,7 @@ const FormBuilder2 = () => {
                     </Box>
                 </VStack>
             </Box>
-            <Box align='right' pt={2}>
+            <Box align='right' pt={4}>
                 <Button color='white' bgColor='#EA8238' _hover={{ bg: '#d66a1e' }} w='180px' h='55px' fontSize='20px' letterSpacing={1} fontFamily='Nunito' borderRadius='27px'>
                     SUBMIT
                 </Button>
