@@ -22,17 +22,15 @@ const SurveyDone = () => {
             <Spacer p="5%"/>
             <Text fontSize={15} color='white' letterSpacing={3}>You earn 10 points!</Text>
             <NavLink to='/dashboard'>
-                <Link>
-                    <Button 
-                        bg="#EA8238"
-                        borderRadius={20}
-                        color="white"
-                        fontWeight="bold"
-                        fontSize={18}
-                        _hover={{ bg:"#d66a1e"}}
-                        w='220px'
-                        h='40px'>BACK TO DASHBOARD</Button>
-                </Link>
+                <Button 
+                    bg="#EA8238"
+                    borderRadius={20}
+                    color="white"
+                    fontWeight="bold"
+                    fontSize={18}
+                    _hover={{ bg:"#d66a1e"}}
+                    w='220px'
+                    h='40px'>BACK TO DASHBOARD</Button>
             </NavLink>
         </VStack>
      );

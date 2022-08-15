@@ -15,9 +15,24 @@ import {
   AlertDialogOverlay,
 } from '@chakra-ui/react';
 import { BsFillDoorOpenFill, BsCashCoin, BsClipboardPlus, BsClipboardData, BsClipboardCheck, BsQuestionCircle, BsFileText, BsJournalText,
-  BsXCircle, BsShieldFillExclamation, BsCollection } from "react-icons/bs";
+  BsXCircle, BsShieldFillExclamation, BsCollection, BsPersonCircle } from "react-icons/bs";
 import { useDisclosure } from '@chakra-ui/react';
 import React from 'react';
+
+const SideBarComp = (props) => {
+  return(
+    <NavLink to={props.linkTo}>
+      <Link>
+        <Button
+          color='white'
+          variant='link'
+          leftIcon={props.icon}>
+          <Text>{props.title}</Text>
+        </Button>
+      </Link>
+    </NavLink>
+  );
+};
 
 const SideBar = () => {
   const [fullname, setFullname] = useState('');
@@ -80,7 +95,8 @@ const SideBar = () => {
       justifyContent='space-between'
       bgGradient='linear(to-b, #8FBFDB, #33426E)'
     >
-      <Stack alignItems='center' spacing={4} h='90vh'>
+      <Stack alignItems='center' spacing={4} h='90vh' overflowY={'auto'} 
+      css={{"&::-webkit-scrollbar": {width:"0",}}}>
         <Spacer></Spacer>
         <NavLink to='/profile'>
           <Img
@@ -108,103 +124,16 @@ const SideBar = () => {
         </VStack>
         <Spacer></Spacer>
         <VStack align='baseline'>
-
-        <NavLink to='/dashboard'>
-            <Link>
-              <Button
-                color='white'
-                variant='link'
-                leftIcon={<BsCollection />}
-              >
-                Dashboard
-              </Button>
-            </Link>
-          </NavLink>
-
-          <NavLink to='/redeem-points'>
-            <Link>
-              <Button
-                color='white'
-                variant='link'
-                leftIcon={<BsCashCoin />}
-              >
-                Redeem Points
-              </Button>
-            </Link>
-          </NavLink>
-
-          <NavLink to='/create-survey'>
-            <Link>
-              <Button
-                color='white'
-                variant='link'
-                leftIcon={<BsClipboardPlus />}
-              >
-                Create Survey
-              </Button>
-            </Link>
-          </NavLink>
-
-          <NavLink to='/my-surveys'>
-            <Link>
-              <Button
-                color='white'
-                variant='link'
-                leftIcon={<BsClipboardData />}
-              >
-                My Surveys
-              </Button>
-            </Link>
-          </NavLink>
-
-          <NavLink to='/available-surveys'>
-            <Link>
-              <Button
-                color='white'
-                variant='link'
-                leftIcon={<BsClipboardCheck />}
-              >
-                Available Surveys
-              </Button>
-            </Link>
-          </NavLink>
-
-          <NavLink to='/help'>
-            <Link>
-              <Button
-                color='white'
-                variant='link'
-                leftIcon={<BsQuestionCircle />}
-              >
-                Help
-              </Button>
-            </Link>
-          </NavLink>
-
-          <NavLink to='/privacy-policy'>
-            <Link>
-              <Button
-                color='white'
-                variant='link'
-                leftIcon={<BsFileText />}
-              >
-                Privacy Policy
-              </Button>
-            </Link>
-          </NavLink>
-          <NavLink to='/tos'>
-            <Link>
-              <Button
-                color='white'
-                variant='link'
-                leftIcon={<BsJournalText />}
-              >
-                Terms of Service
-              </Button>
-            </Link>
-          </NavLink>
+          <SideBarComp title='Dashboard' icon={<BsCollection/>} linkTo='/dashboard'/>
+          <SideBarComp title='Profile' icon={<BsPersonCircle/>} linkTo='/profile'/>
+          <SideBarComp title='Redeem Points' icon={<BsCashCoin/>} linkTo='/redeem-points'/>
+          <SideBarComp title='Create Survey' icon={<BsClipboardPlus/>} linkTo='/create-survey'/>
+          <SideBarComp title='My Surveys' icon={<BsClipboardData/>} linkTo='/my-surveys'/>
+          <SideBarComp title='Available Surveys' icon={<BsClipboardCheck/>} linkTo='/available-surveys'/>
+          <SideBarComp title='Help' icon={<BsQuestionCircle />} linkTo='/help'/>
+          <SideBarComp title='Privacy Policy' icon={<BsFileText />} linkTo='/privacy-policy'/>
+          <SideBarComp title='Terms of Service' icon={<BsJournalText />} linkTo='/tos'/>
         </VStack>
-        <Spacer/>
         <Button onClick={onOpen} leftIcon={<BsFillDoorOpenFill />}>
           Sign Out
         </Button>
@@ -236,8 +165,7 @@ const SideBar = () => {
             </AlertDialogContent>
           </AlertDialogOverlay>
         </AlertDialog>
-
-        <Spacer></Spacer>
+        <Spacer/>
       </Stack>
     </Flex>
   );
