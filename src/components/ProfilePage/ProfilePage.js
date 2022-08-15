@@ -7,7 +7,7 @@ import "@fontsource/krona-one"
 const ProfilePage = () => {
     return (
         <VStack align="left" w="full" h="full">
-            <FormalHeading title="PROFILE"/>
+            <FormalHeading title="Profile"/>
             <SimpleGrid rows={8} spacingY={5} w="auto" h="full">
                 <Box w="100%" bg="#0F2543" boxShadow="dark-lg" borderRadius={20}>
                     <HStack>
