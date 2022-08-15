@@ -1,5 +1,5 @@
 import { Button, Image, Link, Spacer, Text, VStack, HStack } from "@chakra-ui/react";
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 import FormalHeading from "../FormalHeading";
 
 const SurveyDone = () => {
@@ -24,15 +24,14 @@ const SurveyDone = () => {
             <NavLink to='/dashboard'>
                 <Link>
                     <Button 
-                        bg='darkorange' 
-                        rounded="lg"
-                        border="1px"
-                        color='black'
-                        fontWeight='bold'
+                        bg="#EA8238"
+                        borderRadius={20}
+                        color="white"
+                        fontWeight="bold"
+                        fontSize={18}
+                        _hover={{ bg:"#d66a1e"}}
                         w='220px'
-                        h='40px'
-                        fontSize={18} 
-                        _hover={{ bg: '#231E63' }}>BACK TO DASHBOARD</Button>
+                        h='40px'>BACK TO DASHBOARD</Button>
                 </Link>
             </NavLink>
         </VStack>
