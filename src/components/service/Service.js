@@ -1,69 +1,61 @@
 import { Box, Button, Center, HStack, Spacer, Stack, Text } from "@chakra-ui/react"
-import { Image }from "@chakra-ui/react"
+import { HiOutlineDocumentAdd } from "react-icons/hi"
+import { HiOutlineDocumentSearch } from "react-icons/hi"
+import { HiOutlineDocumentText } from "react-icons/hi"
 
 const Service = () => {
     return(
-        <HStack mx="7.5%" mt="5%" mb="5%" w="100%" textAlign="center" spacing="5%">
-            <Box boxShadow="dark-lg" rounded="md" bg="white" w="70%" h="500px">
-                <Stack w="100%" alignItems="center">
-                    <Center rounded="md" bg="#0F2543" w="100%" h="100px">
-                        <Text fontSize="4xl" fontWeight="bold" color="white">
-                            Build Surveys</Text>
-                    </Center>
-                    <Spacer p="12.5px"/>
-                    <Image boxSize="100%" w="70%" src="left_service_icon.png"/>
-                    <Spacer p="12.5px"/>
-                        <Button
-                            bg="#49439B"
-                            size="lg"
-                            w="70%"
-                            h="30px"
-                            color="white"
-                            _hover={{bg:"#e3e3e3", color:"#49439B"}}>
-                            TRY NOW
-                            </Button>    
-                </Stack>
-            </Box>
-            <Box boxShadow="dark-lg" rounded="md" bg="white" w="70%" h="500px">
-                <Stack w="100%" alignItems="center">
-                    <Center rounded="md" bg="#0F2543" w="100%" h="100px">
-                        <Text fontSize="4xl" fontWeight="bold" color="white">
-                            Real Time Analysis</Text>
-                    </Center>
-                    <Spacer p="12.5px"/>
-                    <Image boxSize="100%" w="70%" src="middle_service_icon.png"/>
-                    <Spacer p="10px"/>
-                    <Button
-                        bg="#49439B"
-                        size="lg"
-                        w="70%"
-                        h="30px"
-                        color="white"
-                        _hover={{bg:"#e3e3e3", color:"#49439B"}}>
-                        TRY NOW
-                        </Button>
-                </Stack>
-            </Box>
-            <Box boxShadow="dark-lg" rounded="md" bg="white" w="70%" h="500px">
-                <Stack w="100%" alignItems="center">
-                    <Center rounded="md" bg="#0F2543" w="100%" h="100px">
-                        <Text fontSize="4xl" fontWeight="bold" color="white">
-                            Fill in Surveys</Text>
-                    </Center>
-                    <Spacer p="12.5px"/>
-                    <Image boxSize="100%" w="70%" src="right_service_icon.png"/>
-                    <Spacer p="6.5px"/>
-                    <Button
-                        bg="#49439B"
-                        size="lg"
-                        w="70%"
-                        h="30px"
-                        color="white"
-                        _hover={{bg:"#e3e3e3", color:"#49439B"}}>
-                        TRY NOW
-                        </Button>
-                </Stack>
-            </Box>
+        <HStack spacing={20} textAlign='center'>
+            <Center>
+                <Box w='25%' h='500px' bg='white' boxShadow="0 4px 12px 0 black" rounded="md" mr="2.5%">
+                    <Stack w='100%' h='100%' alignItems='center'>
+                        <Center w="full" h="100px" rounded="md" bg="#0F2543">
+                            <Text fontSize="4xl" fontWeight="bold" color="white">
+                                Build Surveys</Text>
+                        </Center>
+                        <Spacer/>
+                        <Box>
+                            <HiOutlineDocumentAdd color="#0F2543" size="125px"/>
+                        </Box>
+                        <Text color='black'>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</Text>
+                        <Spacer/>
+                        <Button bgColor='#0F2543' color='white' _hover={{ bg: '#375682' }} w='80%' fontWeight='bold'>TRY NOW</Button>
+                        <Spacer/>
+                    </Stack>
+                </Box>
+                <Box w='25%' h='500px' bg='#0F2543' boxShadow="0 4px 12px 0 black" rounded="md" mx="2.5%">
+                    <Stack w='100%' h='100%' alignItems='center'>
+                        <Center w="full" h="100px" rounded="md" bg="white">
+                            <Text fontSize="4xl" fontWeight="bold" color="#0F2543">
+                                Real Time Analysis</Text>
+                        </Center>
+                        <Spacer/>
+                        <Box>
+                            <HiOutlineDocumentSearch color="white" size="125px"/>
+                        </Box>
+                        <Text color='white'>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</Text>
+                        <Spacer/>
+                        <Button bgColor='white' color='#0F2543' _hover={{ bg: '#D0CDCD' }} w='80%' fontWeight='bold'>TRY NOW</Button>
+                        <Spacer/>
+                    </Stack>
+                </Box>
+                <Box w='25%' h='500px' bg='white' boxShadow="0 4px 12px 0 black" rounded="md" ml="2.5%">
+                    <Stack w='100%' h='100%' alignItems='center'>
+                        <Center w="full" h="100px" rounded="md" bg="#0F2543">
+                            <Text fontSize="4xl" fontWeight="bold" color="white">
+                                Fill in Surveys</Text>
+                        </Center>
+                        <Spacer/>
+                        <Box>
+                            <HiOutlineDocumentText color="#0F2543" size="125px"/>
+                        </Box>
+                        <Text color='black'>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</Text>
+                        <Spacer/>
+                        <Button bgColor='#0F2543' color='white' _hover={{ bg: '#375682' }} w='80%' fontWeight='bold'>TRY NOW</Button>
+                        <Spacer/>
+                    </Stack>
+                </Box>
+            </Center>
         </HStack>
     );
 }
