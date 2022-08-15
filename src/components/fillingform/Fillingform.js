@@ -59,8 +59,8 @@ const FillingForm = () => {
                         <Box pt={4} pb={3} pl={5} pr={5}>
                             <Text color={'white'} fontFamily='Raleway' fontSize='20px'>Pertanyaan</Text>
                         </Box>
-                        <Box bg='white' borderRadius='25px' p={2}>
-                            <RadioGroup onChange={setValue} value={value}>
+                        <Box bg='white' borderRadius='25px' p={6}>
+                            <RadioGroup onChange={setValue} value={value} align='center'>
                                 <div className="gray-bar">
                                 <Flex>
                                     <VStack mt={0} spacing={0}>
@@ -92,7 +92,7 @@ const FillingForm = () => {
                         <Box pt={4} pb={3} pl={5} pr={5}>
                             <Text color={'white'} fontFamily='Raleway' fontSize='20px'>Pertanyaan</Text>
                         </Box>
-                        <Box bg='white' pl={4} pr={14} pt={6} pb={10} borderRadius='25px'>
+                        <Box bg='white' borderRadius='25px' pl={2} pb={4} pt={4}>
                             <RadioGroup onChange={setValue1} value={value1}>
                                 <Stack mt={1} spacing={1} pl={4} pr={4} pb={1} fontFamily='Raleway' color='black'>
                                 <HStack><Radio bg="#385898" value='1' colorScheme="facebook"></Radio>
