@@ -23,14 +23,14 @@ const FillingForm = () => {
 
     return (
         <VStack align='left' h='100%'>   
-            <FormalHeading title='JUDUL SURVEI'/>
+            <FormalHeading title='Judul Survei'/>
             <HStack alignSelf={'end'} pb={2}>
-                <PhoneIcon color='white' boxSize='6'/>
+                <Image src='./PhoneIcon.png' boxSize={6}></Image>
                 <Link align="right" p={1} color='white' fontFamily='' fontSize='20px'>
                     Contact Surveyor
                 </Link>
             </HStack>
-            <Box bg='#7991b2' borderRadius='20px' p={6} w='auto' pr={4} overflowY={'scroll'} css={{"&::-webkit-scrollbar": {width:"8px",},"&::-webkit-scrollbar-track": {background:'#D9D9D9', borderRadius:"50px",},"&::-webkit-scrollbar-thumb": {background:'#122543', borderRadius:"50px",},}}>
+            <Box borderRadius='20px' p={6} w='auto' pr={4} overflowY={'scroll'} css={{"&::-webkit-scrollbar": {width:"8px",},"&::-webkit-scrollbar-track": {background:'#D9D9D9', borderRadius:"50px",},"&::-webkit-scrollbar-thumb": {background:'#122543', borderRadius:"50px",},}}>
                 <VStack align='left' spacing='25px'>
                     <Box bg="#122543" borderRadius='25px'>
                         <Box pt={4} pb={3} pl={5} pr={5}>
