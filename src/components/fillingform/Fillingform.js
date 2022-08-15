@@ -3,23 +3,29 @@ import {  Box, Text, Stack, Button, Image, Checkbox, Link, HStack, VStack, Input
     SliderFilledTrack,
     SliderThumb,
     SliderMark,
+    RadioGroup,
+    Spacer,
+    Flex
 } from "@chakra-ui/react";
 import React from "react";
 import FormalHeading from "../FormalHeading";
 import { PhoneIcon } from '@chakra-ui/icons';
-import "@fontsource/nunito";
+
 import "@fontsource/raleway";
 import "@fontsource/krona-one";
-
+import "./garis.css"
 
 const FillingForm = () => {
     const [sliderValue, setSliderValue] = React.useState(50)
+    const [value1, setValue1] = React.useState('1')
+    const [value, setValue] = React.useState('1')
+
     return (
         <VStack align='left' h='100%'>   
             <FormalHeading title='JUDUL SURVEI'/>
             <HStack alignSelf={'end'} pb={2}>
                 <PhoneIcon color='white' boxSize='6'/>
-                <Link align="right" p={1} color='white' fontFamily='Nunito' fontSize='20px'>
+                <Link align="right" p={1} color='white' fontFamily='' fontSize='20px'>
                     Contact Surveyor
                 </Link>
             </HStack>
@@ -42,50 +48,61 @@ const FillingForm = () => {
                         </Box>
                         <Box bg='white' borderRadius='25px' p={2}>
                             <Stack mt={1} spacing={1} pl={4} pr={4} pb={1} fontFamily='Raleway' color='black'>
-                                <Checkbox defaultChecked>Checkbox</Checkbox>
-                                <Checkbox defaultChecked>Checkbox</Checkbox>
-                                <Checkbox defaultChecked>Checkbox</Checkbox>
+                                <Checkbox defaultChecked colorScheme="facebook">Checkbox</Checkbox>
+                                <Checkbox defaultChecked colorScheme="facebook">Checkbox</Checkbox>
+                                <Checkbox defaultChecked colorScheme="facebook">Checkbox</Checkbox>
                             </Stack>
                         </Box>
                     </Box>
+
                     <Box bg="#122543" borderRadius='25px'>
                         <Box pt={4} pb={3} pl={5} pr={5}>
                             <Text color={'white'} fontFamily='Raleway' fontSize='20px'>Pertanyaan</Text>
                         </Box>
                         <Box bg='white' borderRadius='25px' p={2}>
-                            <Stack mt={1} spacing={1} pl={4} pr={4} pb={1} fontFamily='Raleway' color='black'>
-                                <Radio value='1'>First</Radio>
-                                <Radio value='2'>Second</Radio>
-                                <Radio value='3'>Third</Radio>
-                            </Stack>
+                            <RadioGroup onChange={setValue} value={value}>
+                                <div className="gray-bar">
+                                <Flex>
+                                    <VStack mt={0} spacing={0}>
+                                        <Radio bg="#385898" value='1' colorScheme="facebook"></Radio>
+                                        <Text color="#23395B">First</Text>
+                                    </VStack>
+                                    <Spacer></Spacer>
+                                    <VStack spacing={0}>
+                                        <Radio bg="#385898" value='2' colorScheme="facebook"></Radio><Text color="#23395B">Second</Text>
+                                    </VStack>
+                                    <Spacer></Spacer>
+                                    <VStack spacing={0}>
+                                        <Radio bg="#385898" value='3' colorScheme="facebook"></Radio><Text color="#23395B">Third</Text>
+                                    </VStack>
+                                    <Spacer></Spacer>
+                                    <VStack spacing={0}>
+                                        <Radio bg="#385898" value='4' colorScheme="facebook"></Radio><Text color="#23395B">Fourth</Text>
+                                    </VStack>
+                                    <Spacer></Spacer>
+                                    <VStack spacing={0}>
+                                        <Radio bg="#385898" value='5' colorScheme="facebook"></Radio><Text color="#23395B">Sangat Memuaskan</Text>
+                                    </VStack>
+                                </Flex>
+                                </div>
+                            </RadioGroup>
                         </Box>
                     </Box>
                     <Box bg="#122543" borderRadius='25px'>
                         <Box pt={4} pb={3} pl={5} pr={5}>
                             <Text color={'white'} fontFamily='Raleway' fontSize='20px'>Pertanyaan</Text>
                         </Box>
-                        <Box bg='white' pl={14} pr={14} pt={6} pb={10} borderRadius='25px'>
-                            <Slider oncChange={(val)=> setSliderValue(val)}>
-                                <SliderMark value={0} color='black'>
-                                    0%
-                                </SliderMark>
-                                <SliderMark value={25} color='black'>
-                                    25%
-                                </SliderMark>
-                                <SliderMark value={50} color='black'>
-                                    50%
-                                </SliderMark>
-                                <SliderMark value={75} color='black'>
-                                    75%
-                                </SliderMark>
-                                <SliderMark value={100} color='black'>
-                                    100%
-                                </SliderMark>
-                                <SliderTrack>
-                                    <SliderFilledTrack />
-                                </SliderTrack>
-                                <SliderThumb/>
-                            </Slider>
+                        <Box bg='white' pl={4} pr={14} pt={6} pb={10} borderRadius='25px'>
+                            <RadioGroup onChange={setValue1} value={value1}>
+                                <Stack mt={1} spacing={1} pl={4} pr={4} pb={1} fontFamily='Raleway' color='black'>
+                                <HStack><Radio bg="#385898" value='1' colorScheme="facebook"></Radio>
+                                <Text color="#23395B">First</Text></HStack>
+                                <HStack><Radio bg="#385898" value='2' colorScheme="facebook"></Radio><Text color="#23395B">Second</Text></HStack> 
+                                <HStack><Radio bg="#385898" value='3' colorScheme="facebook"></Radio><Text color="#23395B">Third</Text></HStack>
+                                <HStack><Radio bg="#385898" value='4' colorScheme="facebook"></Radio><Text color="#23395B">Fourth</Text></HStack>
+                                <HStack><Radio bg="#385898" value='5' colorScheme="facebook"></Radio><Text color="#23395B">Sangat Memuaskan</Text></HStack>
+                            </Stack>
+                            </RadioGroup>
                         </Box>
                     </Box>
                 </VStack>
