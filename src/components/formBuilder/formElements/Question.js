@@ -9,7 +9,7 @@ import {
   HStack,
 } from '@chakra-ui/react';
 import { TriangleDownIcon, CloseIcon } from '@chakra-ui/icons';
-import { AddIcon, PictIcon, VidIcon } from '../FormBuilder';
+import { AddIcon, PictIcon, VidIcon } from '../icons/Icons';
 import ParagraphQuestion from './questions/ParagraphQuestion';
 import { useState } from 'react';
 import CheckboxQuestion from './questions/CheckboxQuestion';

@@ -1,9 +1,10 @@
 import { Text, Spacer, VStack, HStack, Image } from "@chakra-ui/react";
+import FormalHeading from "../FormalHeading";
 
 const Contact = () => {
     return (
         <VStack>
-            <Text fontSize={60} fontWeight='bold' color='white' letterSpacing={2}>CONTACT US!</Text>
+            <FormalHeading fontSize={60} fontWeight='bold' color='white' letterSpacing={2} title='CONTACT US!'/>
             <Text fontSize={25} color='white' letterSpacing={3}>We will respond to you as soon as possible.</Text>
             <Spacer></Spacer>
             <Spacer></Spacer>

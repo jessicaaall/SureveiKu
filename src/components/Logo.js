@@ -11,7 +11,9 @@ const Logo = () => {
                     objectFit={'contain'}
                     src='/logo.png' 
                     alt='logo' />
-                    <Link fontSize='2em'
+                    <Link 
+                    fontFamily={'sans-serif'}
+                    fontSize='2em'
                     fontWeight='extrabold' 
                     href='#' 
                     bgGradient='linear(to-r, #33416E, #4686B2)'
