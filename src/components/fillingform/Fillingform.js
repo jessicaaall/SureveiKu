@@ -1,4 +1,4 @@
-import {  Box, Text, Stack, Spacer, Button, Image,  Flex, Checkbox, Link, HStack, VStack, Input, Radio, Slider,
+import {  Box, Text, Stack, Button, Image, Checkbox, Link, HStack, VStack, Input, Radio, Slider,
     SliderTrack,
     SliderFilledTrack,
     SliderThumb,
@@ -15,7 +15,7 @@ import "@fontsource/krona-one";
 const FillingForm = () => {
     const [sliderValue, setSliderValue] = React.useState(50)
     return (
-        <VStack align='left' direction="column" h='100%'>   
+        <VStack align='left' h='100%'>   
             <FormalHeading title='JUDUL SURVEI'/>
             <HStack alignSelf={'end'} pb={2}>
                 <PhoneIcon color='white' boxSize='6'/>
@@ -23,8 +23,8 @@ const FillingForm = () => {
                     Contact Surveyor
                 </Link>
             </HStack>
-            <Box bg='#7991b2' borderRadius='20px' p={6} w='100%'>
-                <VStack pr={4} align='left' spacing='25px' overflowY={'scroll'} maxHeight='330px' css={{"&::-webkit-scrollbar": {width:"8px",},"&::-webkit-scrollbar-track": {background:'#D9D9D9', borderRadius:"50px",},"&::-webkit-scrollbar-thumb": {background:'#122543', borderRadius:"50px",},}}>
+            <Box bg='#7991b2' borderRadius='20px' p={6} w='auto' pr={4} overflowY={'scroll'} css={{"&::-webkit-scrollbar": {width:"8px",},"&::-webkit-scrollbar-track": {background:'#D9D9D9', borderRadius:"50px",},"&::-webkit-scrollbar-thumb": {background:'#122543', borderRadius:"50px",},}}>
+                <VStack align='left' spacing='25px'>
                     <Box bg="#122543" borderRadius='25px'>
                         <Box pt={4} pb={3} pl={5} pr={5}>
                             <Text color={'white'} fontFamily='Raleway' fontSize='20px'>Pertanyaan</Text>
