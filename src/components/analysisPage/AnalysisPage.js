@@ -37,13 +37,12 @@ const AnalysisPage = () => {
                     <Box w='100%' h='full' bg={'white'} borderRadius='25px'>
                         <HStack>
                             <Image src='./kisaranuangdiagram.png' h='30em' pl={10} pt={20} pb={10}/>
-                            <Box pr={20}>
-                                <Text as='span' color='black' fontFamily='Nunito' fontSize='20px'>
-                                    Berdasarkan data survey, rata-rata persentasenya lihat kolom kategori_budget adalah pilihan 3, yaitu budget dengan kisaran Rp10.000 - Rp25.000. Kesimpulan yang dapat diambil adalah jumlah uang yang rela dikeluarkan oleh pembuat survey untuk mencapai target jumlah responden berada di kisaran Rp10.000 - Rp25.000.
-                                </Text>
-                                <Text as='span' color='orange'>
-                                    Halo
-                                </Text>
+                            <Box pr={20} fontFamily='Nunito' fontSize='20px'>
+                                <Text as='span' color='black'>Berdasarkan data survey, rata-rata persentasenya lihat kolom kategori_budget adalah pilihan 3, yaitu budget dengan</Text>
+                                <Text as='span' color='#4685B2'> kisaran Rp10.000 - Rp25.000</Text>
+                                <Text as='span' color='black'>. Kesimpulan yang dapat diambil adalah jumlah uang yang rela dikeluarkan oleh pembuat survey untuk mencapai target jumlah responden berada di </Text>
+                                <Text as='span' color='#4685B2'> kisaran Rp10.000 - Rp25.000</Text>
+                                <Text as='span' color='black'>.</Text>
                             </Box>
                         </HStack>
                     </Box>
