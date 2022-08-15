@@ -1,5 +1,5 @@
 import DashboardWrapper from './dashboardWrapper/DashboardWrapper';
-import SurveyDone from '../../components/surveyDone/SurveyDone';
+import SurveyDone from '../../components/surveydone/SurveyDone';
 
 const SurveyDonePage = () => {
   return (
