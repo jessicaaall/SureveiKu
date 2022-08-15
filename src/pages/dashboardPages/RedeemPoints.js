@@ -3,7 +3,7 @@ import RedeemPoint from '../../components/redeemPoint/RedeemPoint';
 
 const RedeemPoints = () => {
     return (
-        <DashboardWrapper>
+        <DashboardWrapper >
           <RedeemPoint/>
         </DashboardWrapper>
     );
