@@ -52,6 +52,9 @@ const MySurvey = () => {
     <VStack align='center' h='100%'>
       <FormalHeading title='My Surveys' />
       <SimpleGrid
+        pt={4}
+        pb={4}
+        pr={2}
         columns={3}
         spacingX={20}
         spacingY='10'
