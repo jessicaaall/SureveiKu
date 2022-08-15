@@ -1,5 +1,5 @@
 import DashboardWrapper from './dashboardWrapper/DashboardWrapper';
-import ProfilePage from '../../components/ProfilePage/ProfilPage';
+import ProfilePage from '../../components/ProfilePage/ProfilePage';
 
 const DashboardProfilePage = () => {
     return (
