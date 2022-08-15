@@ -18,6 +18,7 @@ function WhereAmI({link, children}){
       _hover={{bgGradient: "linear-gradient(to right, #FF9F45, #F76E11)"}}
       padding={5}
       bgGradient={path === link ? "linear-gradient(to right, #FF9F45, #F76E11)" : ""}
+      borderRadius={10}
       >{children}</Text>
     </NavLink>
   );
