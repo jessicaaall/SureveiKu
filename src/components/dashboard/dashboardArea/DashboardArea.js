@@ -1,4 +1,4 @@
-import {SimpleGrid, Heading} from "@chakra-ui/react";
+import {SimpleGrid} from "@chakra-ui/react";
 import FormalHeading from "../../FormalHeading";
 import BoxButton from "./BoxButton";
 

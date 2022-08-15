@@ -3,7 +3,7 @@ import "@fontsource/poppins";
 
 const theme = extendTheme({
   fonts: {
-    heading: `'Poppins', sans-serif`,
+    heading: `'Poppins'`,
     body: `'Raleway', sans-serif`,
   },
 })
