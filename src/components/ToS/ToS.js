@@ -24,7 +24,7 @@ const ToS = () => {
                     <HStack>
                         <Checkbox colorScheme='blue' color='white'>I agree to the <Link color='white' href='#'>terms of service</Link></Checkbox>
                     </HStack>
-                    <Button bg='#EA8238' borderRadius={20} w='10%' border='1px' fontWeight='bold' _hover={{ bg: '#F19552' }} alignSelf='end'>SUBMIT</Button>
+                    <Button bg='#EA8238' borderRadius={20} w='10%' fontWeight='bold' _hover={{ bg: '#F19552' }} alignSelf='end' color='white'>SUBMIT</Button>
                 </VStack>
                 
             </Box>
