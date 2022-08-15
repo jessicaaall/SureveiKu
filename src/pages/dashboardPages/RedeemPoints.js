@@ -1,10 +1,10 @@
 import DashboardWrapper from './dashboardWrapper/DashboardWrapper';
-import RedeemPoint from '../../components/redeemPoint/RedeemPoint';
+import Redeem from '../../components/redeemPoints/Redeem';
 
 const RedeemPoints = () => {
     return (
         <DashboardWrapper >
-          <RedeemPoint/>
+          <Redeem/>
         </DashboardWrapper>
     );
 }
