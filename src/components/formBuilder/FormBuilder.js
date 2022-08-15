@@ -1,9 +1,6 @@
 import { Radio, RadioGroup, Checkbox, CheckboxGroup, IconButton, Flex, Spacer, Box, Text, VStack, UnorderedList, ListItem, Button, Stack, Select, HStack } from '@chakra-ui/react';
 import { CloseIcon, TriangleDownIcon, createIcon} from '@chakra-ui/icons'
 import FormalHeading from '../FormalHeading';
-import "@fontsource/raleway";
-import "@fontsource/krona-one";
-import "@fontsource/nunito";
 
 export const AddIcon = createIcon({
     displayName: 'AddIcon',
@@ -45,33 +42,33 @@ const FormBuilder = () => {
             <Box w='auto' h='full' overflowY={'scroll'} css={{"&::-webkit-scrollbar": {width:"8px",},"&::-webkit-scrollbar-track": {background:'#D9D9D9', borderRadius:"50px",},"&::-webkit-scrollbar-thumb": {background:'#122543', borderRadius:"50px",},}}>
                 <VStack align='left' pl={3} pt={3} spacing='30px'>
                     <Box w='95.6%' h='auto' bg='#122543' borderRadius='25px'>
-                        <Text color='white' fontSize='20px' pl={4} pt={2} pb={2} fontFamily='Raleway'>
+                        <Text color='white' fontSize='20px' pl={4} pt={2} pb={2}>
                             Deskripsi Survei
                         </Text>
                         <Box w='100%' h='auto' bg='white' borderRadius='25px' pb={3}>
-                            <Text color='#122543' fontSize='40px' fontWeight='900' pl={4} pb={2} fontFamily='Raleway'>
+                            <Text color='#122543' fontSize='40px' fontWeight='900' pl={4} pb={2}>
                                 Ceritanya Judul Survei
                             </Text>
-                            <Text color='black' fontSize='20px' fontWeight='900' pl={4} fontFamily='Raleway'> 
+                            <Text color='black' fontSize='20px' fontWeight='900' pl={4}> 
                                 Deskripsi
                             </Text>
-                            <Text color='black' fontSize='17px' pl={4} pr={4} fontFamily='Raleway'> 
+                            <Text color='black' fontSize='17px' pl={4} pr={4}> 
                                 Survei ini dibuat untuk menganalisis kaitan antara penggunaan gawai terhadap waktu jam tidur. Hipotesis yang diajukan adalah penggunaan gawai yang berlebih sebelum tidur akan mengakibatkan waktu jam tidur yang berkurang dan kualitas tidur yang tidak baik.
                             </Text>
                         </Box>
                     </Box>
 
                     <Box w='95.6%' h='auto' bg='#122543' borderRadius='25px'>
-                        <Text color='white' fontSize='20px' pl={4} pt={2} pb={2} fontFamily='Raleway'>
+                        <Text color='white' fontSize='20px' pl={4} pt={2} pb={2}>
                             Syarat Survei
                         </Text>
                         <Box w='100%' h='auto' bg='white' borderRadius='25px' pb={3}>
-                            <UnorderedList color='black' fontSize='20px' pl={4} pt={2} pb={4} fontFamily='Raleway'>
+                            <UnorderedList color='black' fontSize='20px' pl={4} pt={2} pb={4}>
                                 <ListItem>Merupakan mahasiswa</ListItem>
                                 <ListItem>Berumur di bawah 25 tahun</ListItem>
                             </UnorderedList>
                             <Box pl={4} pb={2}>
-                                <Button bgColor='#122543' color='white' _hover={{ bg: '#375682' }} w='160px' h='30px' fontSize='14px' borderRadius='30px' fontFamily='Raleway'>
+                                <Button bgColor='#122543' color='white' _hover={{ bg: '#375682' }} w='160px' h='30px' fontSize='14px' borderRadius='30px'>
                                     Tambah syarat baru
                                 </Button>
                             </Box>
@@ -82,7 +79,7 @@ const FormBuilder = () => {
                     <Box w='98%' h='auto' bg='#122543' borderRadius='25px'>
                         <Box>
                           <Flex>
-                            <Text color='white' fontSize='20px' pl={4} pt={2} pb={2} fontFamily='Raleway'>
+                            <Text color='white' fontSize='20px' pl={4} pt={2} pb={2}>
                             Pertanyaan
                             </Text>
                             <Spacer />
@@ -98,7 +95,6 @@ const FormBuilder = () => {
                             fontWeight={'semibold'}
                             textAlign='center'
                             borderRadius='30px'
-                            fontFamily='Raleway'
                             pt={2} pb={2} mr={2}>
                                 <option style={{color:'black'}} value='Paragraph'>Paragraph</option>
                                 <option style={{color:'black'}} value='Text'>Text</option>
@@ -109,7 +105,7 @@ const FormBuilder = () => {
                           </Flex>
                         </Box>
                         <Box w="100%" h='auto' bg='white' borderRadius='25px' pb={2} pt={2}>
-                            <Text color='black' fontSize='17px' pl={4} pr={4} fontFamily='Raleway'> 
+                            <Text color='black' fontSize='17px' pl={4} pr={4}> 
                                 Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
                             </Text>
                         </Box>
@@ -125,7 +121,7 @@ const FormBuilder = () => {
                     <Box w='98%' h='auto' bg='#122543' borderRadius='25px'>
                         <Box>
                           <Flex>
-                            <Text color='white' fontSize='20px' pl={4} pt={2} pb={2} fontFamily='Raleway'>
+                            <Text color='white' fontSize='20px' pl={4} pt={2} pb={2}>
                             Pertanyaan
                             </Text>
                             <Spacer />
@@ -141,7 +137,6 @@ const FormBuilder = () => {
                             fontWeight={'semibold'}
                             textAlign='center'
                             borderRadius='30px'
-                            fontFamily='Raleway'
                             pt={2} pb={2} mr={2}>
                                 <option style={{color:'black'}} value='Paragraph'>Paragraph</option>
                                 <option style={{color:'black'}} value='Text'>Text</option>
@@ -152,7 +147,7 @@ const FormBuilder = () => {
                           </Flex>
                         </Box>
                         <Box w="100%" h='auto' bg='white' borderRadius='25px' pb={3} pt={2}>
-                            <Text color='black' fontSize='17px' pl={4} pr={4} fontFamily='Raleway'> 
+                            <Text color='black' fontSize='17px' pl={4} pr={4}> 
                                 Survei ini dibuat untuk menganalisis kaitan antara penggunaan gawai terhadap waktu jam tidur. Hipotesis yang diajukan adalah penggunaan gawai yang berlebih sebelum tidur akan mengakibatkan waktu jam tidur yang berkurang dan kualitas tidur yang tidak baik.
                             </Text>
                         </Box>
@@ -168,7 +163,7 @@ const FormBuilder = () => {
                     <Box w='98%' h='auto' bg='#122543' borderRadius='25px'>
                         <Box>
                           <Flex>
-                            <Text color='white' fontSize='20px' pl={4} pt={2} pb={2} fontFamily='Raleway'>
+                            <Text color='white' fontSize='20px' pl={4} pt={2} pb={2}>
                             Pertanyaan
                             </Text>
                             <Spacer />
@@ -184,7 +179,6 @@ const FormBuilder = () => {
                             fontWeight={'semibold'}
                             textAlign='center'
                             borderRadius='30px'
-                            fontFamily='Raleway'
                             pt={2} pb={2} mr={2}>
                                 <option style={{color:'black'}} value='Paragraph'>Paragraph</option>
                                 <option style={{color:'black'}} value='Text'>Text</option>
@@ -199,14 +193,14 @@ const FormBuilder = () => {
                                 <Box pb={3}>
                                 <CheckboxGroup colorScheme='facebook' direction={['column', 'row']} >
                                     <Stack spacing={[1, 5]} color='black'>
-                                        <Checkbox borderColor={'#375682'} fontFamily='Raleway' value='Pilihan 1'>Pilihan 1</Checkbox>
-                                        <Checkbox borderColor={'#375682'} fontFamily='Raleway' value='Pilihan 2'>Pilihan 2</Checkbox>
-                                        <Checkbox borderColor={'#375682'} fontFamily='Raleway' value='Pilihan 3'>Pilihan 3</Checkbox>
+                                        <Checkbox borderColor={'#375682'} value='Pilihan 1'>Pilihan 1</Checkbox>
+                                        <Checkbox borderColor={'#375682'} value='Pilihan 2'>Pilihan 2</Checkbox>
+                                        <Checkbox borderColor={'#375682'} value='Pilihan 3'>Pilihan 3</Checkbox>
                                     </Stack>
                                 </CheckboxGroup>
                                 </Box>
                                 <Box marginBottom='1' pt={3}>
-                                    <Button bgColor='#122543' color='white' _hover={{ bg: '#375682' }} w='160px' h='30px' fontSize='14px' borderRadius='30px' fontFamily='Raleway'>
+                                    <Button bgColor='#122543' color='white' _hover={{ bg: '#375682' }} w='160px' h='30px' fontSize='14px' borderRadius='30px'>
                                         Add New Option
                                     </Button>
                                 </Box>
@@ -224,7 +218,7 @@ const FormBuilder = () => {
                     <Box w='98%' h='auto' bg='#122543' borderRadius='25px'>
                         <Box>
                           <Flex>
-                            <Text color='white' fontSize='20px' pl={4} pt={2} pb={2} fontFamily='Raleway'>
+                            <Text color='white' fontSize='20px' pl={4} pt={2} pb={2}>
                             Pertanyaan
                             </Text>
                             <Spacer />
@@ -240,7 +234,6 @@ const FormBuilder = () => {
                             fontWeight={'semibold'}
                             textAlign='center'
                             borderRadius='30px'
-                            fontFamily='Raleway'
                             pt={2} pb={2} mr={2}>
                                 <option style={{color:'black'}} value='Paragraph'>Paragraph</option>
                                 <option style={{color:'black'}} value='Text'>Text</option>
@@ -254,7 +247,7 @@ const FormBuilder = () => {
                             <Box pl='6' pt='3' pr='6'>
                                 <Box pb={3}>
                                     <RadioGroup colorScheme='facebook' direction={['column', 'row']} >
-                                        <Stack spacing={[1, 5]} fontFamily='Raleway' color='black'>
+                                        <Stack spacing={[1, 5]} color='black'>
                                             <Radio borderColor={'#375682'} value='Pilihan 1'>Pilihan 1</Radio>
                                             <Radio borderColor={'#375682'} value='Pilihan 2'>Pilihan 2</Radio>
                                             <Radio borderColor={'#375682'} value='Pilihan 3'>Pilihan 3</Radio>
@@ -262,7 +255,7 @@ const FormBuilder = () => {
                                     </RadioGroup>
                                 </Box>
                                 <Box marginBottom='1' pt={3}>
-                                    <Button bgColor='#122543' color='white' _hover={{ bg: '#375682' }} w='160px' h='30px' fontSize='14px' borderRadius='30px' fontFamily='Raleway'>
+                                    <Button bgColor='#122543' color='white' _hover={{ bg: '#375682' }} w='160px' h='30px' fontSize='14px' borderRadius='30px'>
                                         Add New Option
                                     </Button>
                                 </Box>
@@ -278,22 +271,22 @@ const FormBuilder = () => {
 
 
                     <Box w='95.6%' h='auto' bg='#122543' borderRadius='25px'>
-                        <Text color='white' fontSize='20px' pl={4} pt={2} pb={2} fontFamily='Raleway'>
+                        <Text color='white' fontSize='20px' pl={4} pt={2} pb={2}>
                             Survei Points
                         </Text>
                         <Box w='100%' h='auto' bg='white' borderRadius='25px'>
                             <Stack pt={2} pl={4} pb={3} spacing='0.5px'>
-                                <Text color='black' fontSize='20px' fontFamily='Raleway'>Points per response : 10</Text>
-                                <Text color='black' fontSize='20px' fontFamily='Raleway'>Target respondents  : 100</Text>
-                                <Text color='black' fontSize='20px' fontFamily='Raleway'>Creation fee        : 1.500 points</Text>
-                                <Text color='#7298B9' fontSize='20px' fontFamily='Raleway'>Points needed     : 2.500</Text>
+                                <Text color='black' fontSize='20px'>Points per response : 10</Text>
+                                <Text color='black' fontSize='20px'>Target respondents  : 100</Text>
+                                <Text color='black' fontSize='20px'>Creation fee        : 1.500 points</Text>
+                                <Text color='#7298B9' fontSize='20px'>Points needed     : 2.500</Text>
                             </Stack>
                         </Box>
                     </Box>
                 </VStack>
             </Box>
             <Box align='right' pt={4}>
-                <Button color='white' bgColor='#EA8238' _hover={{ bg: '#d66a1e' }} w='180px' h='55px' fontSize='20px' letterSpacing={1} fontFamily='Nunito' borderRadius='27px'>
+                <Button color='white' bgColor='#EA8238' _hover={{ bg: '#d66a1e' }} w='180px' h='55px' fontSize='20px' letterSpacing={1} borderRadius='27px'>
                     SUBMIT
                 </Button>
             </Box>

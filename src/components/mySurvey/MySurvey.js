@@ -128,8 +128,6 @@ const Surveybox = ({ title, description, requirements }) => {
             </UnorderedList>
           </Flex>
         </Box>
-        <Spacer></Spacer>
-        <Spacer></Spacer>
         <Box align='center'>
           <Button
             bgColor='#EA8238'

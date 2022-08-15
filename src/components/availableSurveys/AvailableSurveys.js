@@ -135,9 +135,6 @@ const Surveybox = ({ title, description, requirements, reedemable_points }) => {
           </Flex>
         </Box>
         <Spacer></Spacer>
-        <Spacer></Spacer>
-        <Spacer></Spacer>
-        <Spacer></Spacer>
         <Text align='center' color='black'>
           Redeemable Points: {reedemable_points}
         </Text>
