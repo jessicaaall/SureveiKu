@@ -6,6 +6,7 @@ import ServicePage from './pages/homePages/ServicePage';
 import ContactPage from './pages/homePages/ContactPage';
 import FeedbackPage from './pages/homePages/FeedbackPage';
 import Dashboard from './pages/dashboardPages/Dashboard';
+import Thankyou from './pages/homePages/Thankyou';
 import { useEffect } from 'react';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import AvailableSurvey from './pages/dashboardPages/AvailableSurvey';
@@ -40,6 +41,7 @@ const App = () => {
         <Route path='/contact' element={<ContactPage />} />
         <Route path='/feedback' element={<FeedbackPage />} />
         <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/thankyou' element={<Thankyou />} />
         
         <Route path='/redeem-points' element={<RedeemPoints/>} />
         <Route path='/create-survey' element={<CreateSurvey/>} />
