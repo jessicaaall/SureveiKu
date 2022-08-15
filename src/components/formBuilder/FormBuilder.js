@@ -1,4 +1,4 @@
-import { Radio, RadioGroup, Checkbox, CheckboxGroup, IconButton, Flex, Spacer, MenuItem, MenuList, Box, Text, VStack, UnorderedList, ListItem, Button, Stack, Menu, MenuButton, Select, Image, HStack } from '@chakra-ui/react';
+import { Radio, RadioGroup, Checkbox, CheckboxGroup, IconButton, Flex, Spacer, Box, Text, VStack, UnorderedList, ListItem, Button, Stack, Select, HStack } from '@chakra-ui/react';
 import { CloseIcon, TriangleDownIcon, createIcon} from '@chakra-ui/icons'
 import FormalHeading from '../FormalHeading';
 import "@fontsource/raleway";
@@ -36,9 +36,9 @@ export const VidIcon = createIcon({
     ),
 })
 
-const FormBuilder2 = () => {
+const FormBuilder = () => {
     return (
-        <VStack align='left' h='100%'>
+<VStack align='left' h='100%'>
             <Box pb={3}>
                 <FormalHeading title='Create Survey'/>
             </Box>
@@ -301,4 +301,4 @@ const FormBuilder2 = () => {
     );
 };
   
-export default FormBuilder2;
+export default FormBuilder;

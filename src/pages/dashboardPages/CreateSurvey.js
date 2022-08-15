@@ -1,10 +1,10 @@
 import DashboardWrapper from './dashboardWrapper/DashboardWrapper';
-import FormBuilder2 from '../../components/formBuilder2/FormBuilder2';
+import FormBuilder from '../../components/formBuilder/FormBuilder';
 
 const CreateSurvey = () => {
     return (
         <DashboardWrapper>
-            <FormBuilder2 />
+            <FormBuilder />
         </DashboardWrapper>
     );
 }
