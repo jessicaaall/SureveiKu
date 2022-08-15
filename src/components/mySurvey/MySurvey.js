@@ -15,6 +15,8 @@ import FormalHeading from '../FormalHeading';
 import { collection, getDocs, getFirestore } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
 import { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
+
 
 const MySurvey = () => {
   const [surveys, setSurveys] = useState([]);
@@ -128,30 +130,34 @@ const Surveybox = ({ title, description, requirements }) => {
             </UnorderedList>
           </Flex>
         </Box>
-        <Box align='center'>
-          <Button
-            bgColor='#EA8238'
-            color='white'
-            _hover={{ bg: '#d66a1e' }}
-            w='80%'
-            fontWeight='bold'
-            borderRadius={20}
-          >
-            ANALYSYS
-          </Button>
-        </Box>
-        <Box align='center'>
-          <Button
-            bgColor='#EA8238'
-            color='white'
-            _hover={{ bg: '#d66a1e' }}
-            w='80%'
-            fontWeight='bold'
-            borderRadius={20}
-          >
-            EDIT SURVEY
-          </Button>
-        </Box>
+        <NavLink to='/analysis-page'>
+          <Box align='center'>
+            <Button
+              bgColor='#EA8238'
+              color='white'
+              _hover={{ bg: '#d66a1e' }}
+              w='80%'
+              fontWeight='bold'
+              borderRadius={20}
+            >
+              ANALYSIS
+            </Button>
+          </Box>
+        </NavLink>
+        <NavLink to='/responses-page'>
+          <Box align='center'>
+            <Button
+              bgColor='#EA8238'
+              color='white'
+              _hover={{ bg: '#d66a1e' }}
+              w='80%'
+              fontWeight='bold'
+              borderRadius={20}
+            >
+              RESPONSES
+            </Button>
+          </Box>
+        </NavLink>
       </Stack>
     </Box>
   );

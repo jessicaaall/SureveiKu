@@ -2,6 +2,7 @@ import { Box, Button, Center, HStack, Spacer, Stack, Text } from "@chakra-ui/rea
 import { HiOutlineDocumentAdd } from "react-icons/hi"
 import { HiOutlineDocumentSearch } from "react-icons/hi"
 import { HiOutlineDocumentText } from "react-icons/hi"
+import { NavLink } from "react-router-dom"
 
 const Service = () => {
     return(
@@ -19,7 +20,9 @@ const Service = () => {
                         </Box>
                         <Text color='black'>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</Text>
                         <Spacer/>
-                        <Button bgColor='#0F2543' color='white' _hover={{ bg: '#375682' }} w='80%' fontWeight='bold'>TRY NOW</Button>
+                        <NavLink to='/signup'>
+                            <Button bgColor='#0F2543' color='white' _hover={{ bg: '#375682' }} w='full' fontWeight='bold'>TRY NOW</Button>
+                        </NavLink>
                         <Spacer/>
                     </Stack>
                 </Box>
@@ -35,7 +38,9 @@ const Service = () => {
                         </Box>
                         <Text color='white'>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</Text>
                         <Spacer/>
-                        <Button bgColor='white' color='#0F2543' _hover={{ bg: '#D0CDCD' }} w='80%' fontWeight='bold'>TRY NOW</Button>
+                        <NavLink to='/signup'>
+                            <Button bgColor='white' color='#0F2543' _hover={{ bg: '#D0CDCD' }} w='full' fontWeight='bold'>TRY NOW</Button>
+                        </NavLink>
                         <Spacer/>
                     </Stack>
                 </Box>
@@ -51,7 +56,9 @@ const Service = () => {
                         </Box>
                         <Text color='black'>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</Text>
                         <Spacer/>
-                        <Button bgColor='#0F2543' color='white' _hover={{ bg: '#375682' }} w='80%' fontWeight='bold'>TRY NOW</Button>
+                        <NavLink to='/signup'>
+                            <Button bgColor='#0F2543' color='white' _hover={{ bg: '#375682' }} w='full' fontWeight='bold'>TRY NOW</Button>
+                        </NavLink>
                         <Spacer/>
                     </Stack>
                 </Box>

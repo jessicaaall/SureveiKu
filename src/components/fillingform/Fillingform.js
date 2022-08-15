@@ -10,6 +10,7 @@ import {  Box, Text, Stack, Button, Image, Checkbox, Link, HStack, VStack, Input
 import React from "react";
 import FormalHeading from "../FormalHeading";
 import { PhoneIcon } from '@chakra-ui/icons';
+import { NavLink } from "react-router-dom";
 
 import "@fontsource/raleway";
 import "@fontsource/krona-one";
@@ -109,9 +110,11 @@ const FillingForm = () => {
                 </VStack>
             </Box>
             <Box align='right' pt={4}>
-                <Button color='white' bgColor='#EA8238' _hover={{ bg: '#d66a1e' }} w='180px' h='55px' fontSize='20px' letterSpacing={1} fontFamily='Nunito' borderRadius='27px'>
-                    SUBMIT
-                </Button>
+                <NavLink to='/survey-done'>
+                    <Button color='white' bgColor='#EA8238' _hover={{ bg: '#d66a1e' }} w='180px' h='55px' fontSize='20px' letterSpacing={1} fontFamily='Nunito' borderRadius='27px'>
+                        SUBMIT
+                    </Button>
+                </NavLink>
             </Box>
         </VStack>
     );

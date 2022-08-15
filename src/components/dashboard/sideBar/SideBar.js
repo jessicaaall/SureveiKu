@@ -96,7 +96,7 @@ const SideBar = () => {
       bgGradient='linear(to-b, #8FBFDB, #33426E)'
     >
       <Stack alignItems='center' spacing={4} h='90vh' overflowY={'auto'} 
-      css={{"&::-webkit-scrollbar": {width:"0",}}}>
+      css={{"&::-webkit-scrollbar": {width:"0"}}}>
         <Spacer></Spacer>
         <NavLink to='/profile'>
           <Img

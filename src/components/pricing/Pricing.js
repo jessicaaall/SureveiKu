@@ -1,10 +1,11 @@
-import { HStack, Box, Text, Stack, Spacer, Button, Image, Center } from "@chakra-ui/react";
+import { HStack, Box, Text, Stack, Spacer, Button, Image, Center} from "@chakra-ui/react";
+import { NavLink } from "react-router-dom";
 
 const Pricing = () => {
     return ( 
         <HStack spacing={20} textAlign='center'>
             <Center>
-                <Box w='25%' h='500px' bg='white' boxShadow="0 4px 12px 0 black" borderRadius={20} padding='1%' margin='2%'>
+                <Box w='25%' h='500px' bg='white' boxShadow="0 4px 12px 0 black" borderRadius={20} padding='1vh' margin='2vh'>
                     <Stack w='100%' h='100%' alignItems='center'>
                         <Spacer></Spacer>
                         <Box boxSize='4em'>
@@ -16,7 +17,9 @@ const Pricing = () => {
                         <Text fontSize='2em' fontWeight='bold' color='black'>Rp30.000,-</Text>
                         <Text color='black'>Dapatkan hingga puluhan survey!</Text>    
                         <Spacer></Spacer>
-                        <Button bgColor='#0F2543' color='white' _hover={{ bg: '#375682' }} w='80%' fontWeight='bold'>BELI SEKARANG</Button>
+                        <NavLink to='/signup'>
+                            <Button bgColor='#0F2543' color='white' _hover={{ bg: '#375682' }} w='full' fontWeight='bold'>BELI SEKARANG</Button>
+                        </NavLink>
                         <Spacer></Spacer>
                     </Stack>
                 </Box>
@@ -32,7 +35,9 @@ const Pricing = () => {
                         <Text fontSize='2em' fontWeight='bold' color='white'>Rp52.500,-</Text>
                         <Text color='white'>Dapatkan hingga puluhan survey!</Text>    
                         <Spacer></Spacer>
-                        <Button bgColor='white' color='#0F2543' _hover={{ bg: '#D0CDCD' }} w='80%' fontWeight='bold'>BELI SEKARANG</Button>
+                        <NavLink to='/signup'>
+                            <Button bgColor='white' color='#0F2543' _hover={{ bg: '#D0CDCD' }} w='full' fontWeight='bold'>BELI SEKARANG</Button>
+                        </NavLink>
                         <Spacer></Spacer>
                     </Stack>
                 </Box>
@@ -48,7 +53,9 @@ const Pricing = () => {
                         <Text fontSize='2em' fontWeight='bold' color='black'>Rp17.000,-</Text>
                         <Text color='black'>Dapatkan hingga puluhan survey!</Text>    
                         <Spacer></Spacer>
-                        <Button bgColor='#0F2543' color='white' _hover={{ bg: '#375682' }} w='80%' fontWeight='bold'>BELI SEKARANG</Button>
+                        <NavLink to='/signup'>
+                           <Button bgColor='#0F2543' color='white' _hover={{ bg: '#375682' }} w='full' fontWeight='bold'>BELI SEKARANG</Button>
+                        </NavLink>
                         <Spacer></Spacer>
                     </Stack>
                 </Box>
