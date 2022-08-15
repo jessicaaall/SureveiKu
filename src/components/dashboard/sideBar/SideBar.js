@@ -1,6 +1,5 @@
 import { VStack, Spacer, Stack, Button, Flex, Link } from '@chakra-ui/react';
 import { Img, Text } from '@chakra-ui/react';
-import { ArrowForwardIcon, ArrowLeftIcon } from '@chakra-ui/icons';
 import ProfileSVG from '../../../assets/account.svg';
 import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
 import { useEffect, useState } from 'react';
@@ -15,6 +14,8 @@ import {
   AlertDialogContent,
   AlertDialogOverlay,
 } from '@chakra-ui/react';
+import { BsFillDoorOpenFill, BsCashCoin, BsClipboardPlus, BsClipboardData, BsClipboardCheck, BsQuestionCircle, BsFileText, BsJournalText,
+  BsXCircle, BsShieldFillExclamation, BsCollection } from "react-icons/bs";
 import { useDisclosure } from '@chakra-ui/react';
 import React from 'react';
 
@@ -79,24 +80,21 @@ const SideBar = () => {
       justifyContent='space-between'
       bgGradient='linear(to-b, #8FBFDB, #33426E)'
     >
-      <Stack alignItems='center' spacing={4}>
+      <Stack alignItems='center' spacing={4} h='90vh'>
         <Spacer></Spacer>
-        <NavLink to='/dashboard'>
-          <Link>
-            <Img
-              borderRadius='full'
-              objectFit='cover'
-              boxSize='7em'
-              src={ppSrc}
-              alt='dashboard-pp'
-              boxShadow='0 4px 12px 0 black'
-            />
-          </Link>
+        <NavLink to='/profile'>
+          <Img
+            borderRadius='full'
+            objectFit='cover'
+            boxSize='7em'
+            src={ppSrc}
+            alt='dashboard-pp'
+            boxShadow='0 4px 12px 0 black'
+          />
         </NavLink>
         <Text color='white' fontSize='1.2em'>
           {fullname !== '' ? fullname : <span>&nbsp;&nbsp;</span>}
         </Text>
-        <Spacer></Spacer>
         <VStack align='baseline'>
           <Text color='white' fontSize='1em'>
             Gender: {gender}
@@ -110,12 +108,25 @@ const SideBar = () => {
         </VStack>
         <Spacer></Spacer>
         <VStack align='baseline'>
+
+        <NavLink to='/dashboard'>
+            <Link>
+              <Button
+                color='white'
+                variant='link'
+                leftIcon={<BsCollection />}
+              >
+                Dashboard
+              </Button>
+            </Link>
+          </NavLink>
+
           <NavLink to='/redeem-points'>
             <Link>
               <Button
                 color='white'
                 variant='link'
-                leftIcon={<ArrowForwardIcon />}
+                leftIcon={<BsCashCoin />}
               >
                 Redeem Points
               </Button>
@@ -127,7 +138,7 @@ const SideBar = () => {
               <Button
                 color='white'
                 variant='link'
-                leftIcon={<ArrowForwardIcon />}
+                leftIcon={<BsClipboardPlus />}
               >
                 Create Survey
               </Button>
@@ -139,7 +150,7 @@ const SideBar = () => {
               <Button
                 color='white'
                 variant='link'
-                leftIcon={<ArrowForwardIcon />}
+                leftIcon={<BsClipboardData />}
               >
                 My Surveys
               </Button>
@@ -151,7 +162,7 @@ const SideBar = () => {
               <Button
                 color='white'
                 variant='link'
-                leftIcon={<ArrowForwardIcon />}
+                leftIcon={<BsClipboardCheck />}
               >
                 Available Surveys
               </Button>
@@ -163,7 +174,7 @@ const SideBar = () => {
               <Button
                 color='white'
                 variant='link'
-                leftIcon={<ArrowForwardIcon />}
+                leftIcon={<BsQuestionCircle />}
               >
                 Help
               </Button>
@@ -175,7 +186,7 @@ const SideBar = () => {
               <Button
                 color='white'
                 variant='link'
-                leftIcon={<ArrowForwardIcon />}
+                leftIcon={<BsFileText />}
               >
                 Privacy Policy
               </Button>
@@ -186,16 +197,15 @@ const SideBar = () => {
               <Button
                 color='white'
                 variant='link'
-                leftIcon={<ArrowForwardIcon />}
+                leftIcon={<BsJournalText />}
               >
                 Terms of Service
               </Button>
             </Link>
           </NavLink>
         </VStack>
-        <Spacer></Spacer>
-
-        <Button onClick={onOpen} leftIcon={<ArrowLeftIcon />}>
+        <Spacer/>
+        <Button onClick={onOpen} leftIcon={<BsFillDoorOpenFill />}>
           Sign Out
         </Button>
         <AlertDialog
@@ -216,10 +226,10 @@ const SideBar = () => {
               </AlertDialogBody>
 
               <AlertDialogFooter>
-                <Button ref={cancelRef} onClick={onClose}>
+                <Button colorScheme='red' ref={cancelRef} onClick={onClose} leftIcon={<BsXCircle/>}>
                   Cancel
                 </Button>
-                <Button colorScheme='red' onClick={signOutAccount} ml={3}>
+                <Button colorScheme='green' onClick={signOutAccount} ml={3} leftIcon={<BsShieldFillExclamation/>}>
                   Proceed
                 </Button>
               </AlertDialogFooter>

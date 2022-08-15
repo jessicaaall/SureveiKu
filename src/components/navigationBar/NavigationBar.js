@@ -6,7 +6,7 @@ import {
 } from '@chakra-ui/react';
 import { NavLink } from 'react-router-dom';
 import LogoHome from '../../components/LogoHome';
-
+import { BsFillDoorClosedFill, BsFillFilePostFill } from "react-icons/bs";
 
 function WhereAmI({link, children}){
   const path = window.location.pathname;
@@ -50,7 +50,8 @@ const NavigationBar = () => {
             borderRadius='10'
             _hover={{ bg:'#F76E11' }}
             _active={{bg:'#F76E11'}}
-            size='md'>
+            size='md'
+            leftIcon={<BsFillDoorClosedFill/>}>
               Login
             </Button>
           </NavLink>
@@ -61,7 +62,8 @@ const NavigationBar = () => {
               borderRadius='10'
               _hover={{ bg:'#FF9F45' }}
               _active={{bg:'#FF9F45'}}
-              size='md'>
+              size='md'
+              leftIcon={<BsFillFilePostFill/>}>
                 SignUp
               </Button>
           </NavLink>

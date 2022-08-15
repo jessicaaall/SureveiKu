@@ -5,6 +5,7 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { useEffect, useState } from 'react';
 import { getDoc, getFirestore, doc } from 'firebase/firestore';
 import { getStorage, ref, getDownloadURL } from 'firebase/storage';
+import { NavLink } from 'react-router-dom';
 
 const DashboardProfile = () => {
   const [fullname, setFullname] = useState('');
@@ -43,20 +44,22 @@ const DashboardProfile = () => {
   }, []);
 
   return (
-    <VStack>
-      <Flex alignItems='center'>
-        <Text fontSize='1em' mr={2}>
-          {fullname}
-        </Text>
-        <Img
-          borderRadius='full'
-          objectFit='cover'
-          boxSize='2.5em'
-          src={ppSrc}
-          alt='dashboard-pp'
-        />
-      </Flex>
-    </VStack>
+    <NavLink to='/profile'>
+      <VStack>
+        <Flex alignItems='center'>
+          <Text fontSize='1em' mr={2}>
+            {fullname}
+          </Text>
+          <Img
+            borderRadius='full'
+            objectFit='cover'
+            boxSize='2.5em'
+            src={ppSrc}
+            alt='dashboard-pp'
+          />
+        </Flex>
+      </VStack>
+    </NavLink>
   );
 };
 

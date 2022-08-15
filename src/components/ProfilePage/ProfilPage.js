@@ -4,7 +4,7 @@ import "@fontsource/krona-one"
 
 
 
-const ProfilPage = () => {
+const ProfilePage = () => {
     return (
         <VStack align="left" w="full" h="full">
             <FormalHeading title="PROFILE"/>
@@ -89,4 +89,4 @@ const ProfilPage = () => {
     )
 }
 
-export default ProfilPage;
+export default ProfilePage;

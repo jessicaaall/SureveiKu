@@ -13,6 +13,7 @@ const DashboardArea = () => {
                 <BoxButton link="/help" title="Help Page" desc="Need customer support?"/>
                 <BoxButton link="/privacy-policy" title="Privacy Policy" desc="All about privacy policy"/>
                 <BoxButton link="/tos" title="Terms of Service" desc="All about terms of service"/>
+                <BoxButton link="/profile" title="Profile" desc="Change your personal details here"/>
                 <BoxButton link="/home" title="Back to Homepage" desc="Forwarding you back to homepage"/>
             </SimpleGrid>
         </div>

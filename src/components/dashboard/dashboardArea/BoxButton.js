@@ -1,4 +1,4 @@
-import { Box, Text, Divider, VStack, Link} from "@chakra-ui/react";
+import { Box, Text, Divider, VStack} from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
@@ -7,7 +7,7 @@ export default function BoxButton(props){
     const [isFocused, setFocus] = useState(false);
     let styles = {
         box: {
-            background: isFocused ? 'linear-gradient(to bottom right, #0752a3 30%, #4685B2 100%)' : 'linear-gradient(to bottom right, #FFFFFF 30%, #4685B2 100%)',
+            background: isFocused ? 'linear-gradient(to bottom right, #F76E11 30%, #FF9F45 100%)' : 'linear-gradient(to bottom right, #FFFFFF 30%, #4685B2 100%)',
             width: '275px',
             padding: '10px',
             borderRadius: '4px',
@@ -22,18 +22,17 @@ export default function BoxButton(props){
       }
     return(
         <NavLink to={props.link}>
-            <Link>
-                <Box as='button' style={styles.box}
-                onMouseEnter={() => setFocus(true)}
-                onMouseLeave={() => setFocus(false)}
-                >
-                    <VStack display='flex' textAlign={'left'} alignItems='baseline' spacing={3}>
-                        <Text style={styles.boxTitle}>{props.title}</Text>
-                        <Divider borderColor={'black'}/>
-                        <Text style={styles.boxDesc}>{props.desc}</Text>
-                    </VStack>
-                </Box>
-            </Link>
+            <Box as='button' 
+            style={styles.box}
+            onMouseEnter={() => setFocus(true)}
+            onMouseLeave={() => setFocus(false)}
+            >
+                <VStack display='flex' textAlign={'left'} alignItems='baseline' spacing={3}>
+                    <Text style={styles.boxTitle}>{props.title}</Text>
+                    <Divider borderColor={'black'}/>
+                    <Text style={styles.boxDesc}>{props.desc}</Text>
+                </VStack>
+            </Box>
         </NavLink>
     );
 }

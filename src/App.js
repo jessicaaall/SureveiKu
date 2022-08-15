@@ -16,6 +16,7 @@ import HelpPage from './pages/dashboardPages/HelpPage';
 import RedeemPoints from './pages/dashboardPages/RedeemPoints';
 import CreateSurvey from './pages/dashboardPages/CreateSurvey';
 import MySurveys from './pages/dashboardPages/MySurveys';
+import DashboardProfilePage from './pages/dashboardPages/DashboardProfilePage';
 
 const App = () => {
   const navigate = useNavigate();
@@ -47,6 +48,7 @@ const App = () => {
         <Route path='/help' element={<HelpPage/>} />
         <Route path='/privacy-policy' element={<PrivacyPolicyPage />} />
         <Route path='/tos' element={<ToSPage/>} />
+        <Route path='/profile' element={<DashboardProfilePage />} />
         
         <Route path='*' element={<Navigate to='/home' replace />} />
       </Routes>
