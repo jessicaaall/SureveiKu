@@ -134,6 +134,7 @@ const SideBar = () => {
           <SideBarComp title='Privacy Policy' icon={<BsFileText />} linkTo='/privacy-policy'/>
           <SideBarComp title='Terms of Service' icon={<BsJournalText />} linkTo='/tos'/>
         </VStack>
+        <Spacer/>
         <Button onClick={onOpen} leftIcon={<BsFillDoorOpenFill />}>
           Sign Out
         </Button>
