@@ -38,7 +38,7 @@ const FillingForm = () => {
                         <Button
                         color='white'
                         variant='link'
-                        fontSize='2em'
+                        fontSize='1.5em'
                         leftIcon={<BsTelephone/>}>
                         <Text>Contact Surveyor</Text>
                         </Button>
