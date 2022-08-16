@@ -3,6 +3,7 @@
 
 ## Kelompok 21 - SureveiKu
 1. Muhammad Dhiwaul Akbar (16521009) 
+  * Menulis File ReadMe
 2. Nicolas Owen Halim (16521018)
   * Privacy Policy Page
   * Lead Moderator Demo
