@@ -1,5 +1,5 @@
 import DashboardWrapper from './dashboardWrapper/DashboardWrapper';
-import FillingForm from '../../components/fillingform/FillingForm';
+import FillingForm from '../../components/fillingForm/FillingForm';
 
 const FillingFormPage = () => {
   return (
