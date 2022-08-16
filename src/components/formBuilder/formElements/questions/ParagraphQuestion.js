@@ -1,12 +1,25 @@
-import { Text } from '@chakra-ui/react';
+import { Textarea } from '@chakra-ui/react';
+import { useState } from 'react';
 
-const ParagraphQuestion = () => {
+const ParagraphQuestion = ({ setQuestionText, questionText }) => {
+  const handleChange = (e) => {
+    setQuestionText(e.target.value);
+  };
+
   return (
-    <Text color='black' fontSize='17px' pl={4} pr={4} fontFamily='Raleway'>
-      Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-      Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-      Lorem ipsum Lorem ipsum
-    </Text>
+    <Textarea
+      color='black'
+      fontSize='17px'
+      pl={4}
+      pr={4}
+      fontFamily='Raleway'
+      value={questionText}
+      onChange={handleChange}
+      bg='none'
+      border='none'
+      _focus={{ boxShadow: 'none' }}
+      placeholder='Masukkan pertanyaan anda kesini'
+    />
   );
 };
 

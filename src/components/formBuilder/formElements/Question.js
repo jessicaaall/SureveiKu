@@ -7,6 +7,7 @@ import {
   VStack,
   Select,
   HStack,
+  Input,
 } from '@chakra-ui/react';
 import { TriangleDownIcon, CloseIcon } from '@chakra-ui/icons';
 import { AddIcon, PictIcon, VidIcon } from '../icons/Icons';
@@ -15,16 +16,25 @@ import { useState } from 'react';
 import CheckboxQuestion from './questions/CheckboxQuestion';
 import RadioQuestion from './questions/RadioQuestion';
 
-const Question = ({ type }) => {
-  const [QuestionComponent, setQuestionComponent] = useState(
-    type === 'paragraph' ? (
-      <ParagraphQuestion />
-    ) : type === 'checkbox' ? (
-      <CheckboxQuestion />
-    ) : (
-      <RadioQuestion />
-    )
-  );
+const Question = ({
+  type,
+  changeType,
+  removeQuestion,
+  addQuestion,
+  isLast,
+}) => {
+  const [questionText, setQuestionText] = useState('');
+  const [questionChoices, setQuestionChoices] = useState([
+    'Pilihan 1',
+    'Pilihan 2',
+    'Pilihan 3',
+  ]);
+
+  const handleTypeChange = (e) => {
+    if (e.target.value !== type) {
+      changeType(e.target.value);
+    }
+  };
 
   return (
     <HStack alignItems='start' w='99%'>
@@ -58,17 +68,15 @@ const Question = ({ type }) => {
               pt={2}
               pb={2}
               mr={2}
+              onChange={handleTypeChange}
             >
-              <option style={{ color: 'black' }} value='Paragraph'>
+              <option style={{ color: 'black' }} value='paragraph'>
                 Paragraph
               </option>
-              <option style={{ color: 'black' }} value='Text'>
-                Text
-              </option>
-              <option style={{ color: 'black' }} value='Checkbox'>
+              <option style={{ color: 'black' }} value='checkbox'>
                 Checkbox
               </option>
-              <option style={{ color: 'black' }} value='Radio'>
+              <option style={{ color: 'black' }} value='radio'>
                 Radio
               </option>
             </Select>
@@ -79,48 +87,71 @@ const Question = ({ type }) => {
               color='white'
               _hover={{ bg: 'red' }}
               borderRadius='100'
+              onClick={removeQuestion}
             />
           </Flex>
         </Box>
         <Box w='100%' h='auto' bg='white' borderRadius='25px' pb={2} pt={2}>
-          {QuestionComponent}
+          {type === 'paragraph' ? (
+            <ParagraphQuestion
+              questionText={questionText}
+              setQuestionText={setQuestionText}
+            />
+          ) : type === 'checkbox' ? (
+            <CheckboxQuestion
+              questionText={questionText}
+              setQuestionText={setQuestionText}
+              questionChoices={questionChoices}
+              setQuestionChoices={setQuestionChoices}
+            />
+          ) : (
+            <RadioQuestion
+              questionText={questionText}
+              setQuestionText={setQuestionText}
+              questionChoices={questionChoices}
+              setQuestionChoices={setQuestionChoices}
+            />
+          )}
         </Box>
       </Box>
-      <VStack
-        bg='#122543'
-        w='auto'
-        align={'center'}
-        borderRadius='10px'
-        padding={1.5}
-      >
-        <IconButton
-          aria-label='Add'
-          icon={<AddIcon />}
-          color='#122543'
-          bg='white'
-          size='xs'
-          isRound
-          _hover={{ bg: '#122543', color: 'white' }}
-        />
-        <IconButton
-          aria-label='Add'
-          icon={<PictIcon />}
-          color='#122543'
-          bg='white'
-          size='xs'
-          isRound
-          _hover={{ bg: '#122543', color: 'white' }}
-        />
-        <IconButton
-          aria-label='Add'
-          icon={<VidIcon />}
-          color='#122543'
-          bg='white'
-          size='xs'
-          isRound
-          _hover={{ bg: '#122543', color: 'white' }}
-        />
-      </VStack>
+      {isLast && (
+        <VStack
+          bg='#122543'
+          w='auto'
+          align={'center'}
+          borderRadius='10px'
+          padding={1.5}
+        >
+          <IconButton
+            aria-label='Add'
+            icon={<AddIcon />}
+            color='#122543'
+            bg='white'
+            size='xs'
+            isRound
+            _hover={{ bg: '#122543', color: 'white' }}
+            onClick={addQuestion}
+          />
+          <IconButton
+            aria-label='Add'
+            icon={<PictIcon />}
+            color='#122543'
+            bg='white'
+            size='xs'
+            isRound
+            _hover={{ bg: '#122543', color: 'white' }}
+          />
+          <IconButton
+            aria-label='Add'
+            icon={<VidIcon />}
+            color='#122543'
+            bg='white'
+            size='xs'
+            isRound
+            _hover={{ bg: '#122543', color: 'white' }}
+          />
+        </VStack>
+      )}
     </HStack>
   );
 };

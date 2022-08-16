@@ -1,20 +1,88 @@
-import { Radio, RadioGroup, Box, Button, Stack } from '@chakra-ui/react';
+import {
+  Radio,
+  RadioGroup,
+  Box,
+  Button,
+  Stack,
+  Textarea,
+  Flex,
+  Input,
+} from '@chakra-ui/react';
 
-const RadioQuestion = () => {
+const RadioQuestion = ({
+  setQuestionText,
+  questionText,
+  questionChoices,
+  setQuestionChoices,
+}) => {
+  const handleChangeChoice = (value, idx) => {
+    const newChoice = [...questionChoices];
+    newChoice[idx] = value;
+    setQuestionChoices(newChoice);
+  };
+
+  const addChoice = () => {
+    const newChoice = [...questionChoices];
+    newChoice.push('');
+    setQuestionChoices(newChoice);
+  };
+
+  const removeChoice = (idx) => {
+    const newChoice = [...questionChoices];
+    newChoice.splice(idx, 1);
+    setQuestionChoices(newChoice);
+  };
+
   return (
     <Box pl='6' pt='3' pr='6'>
       <Box pb={3}>
+        <Textarea
+          color='black'
+          fontSize='17px'
+          pl={4}
+          pr={4}
+          fontFamily='Raleway'
+          value={questionText}
+          onChange={(e) => {
+            setQuestionText(e.target.value);
+          }}
+          bg='none'
+          border='none'
+          _focus={{ boxShadow: 'none' }}
+          placeholder='Masukkan pertanyaan anda di sini'
+        />
         <RadioGroup colorScheme='facebook' direction={['column', 'row']}>
-          <Stack spacing={[1, 5]} fontFamily='Raleway' color='black'>
-            <Radio borderColor={'#375682'} value='Pilihan 1'>
-              Pilihan 1
-            </Radio>
-            <Radio borderColor={'#375682'} value='Pilihan 2'>
-              Pilihan 2
-            </Radio>
-            <Radio borderColor={'#375682'} value='Pilihan 3'>
-              Pilihan 3
-            </Radio>
+          <Stack fontFamily='Raleway' color='black'>
+            {questionChoices.map((choice, idx) => (
+              <Flex role='group'>
+                <Radio borderColor={'#375682'} value='Pilihan 1'></Radio>
+                <Input
+                  color='black'
+                  fontSize='17px'
+                  pl={4}
+                  pr={4}
+                  fontFamily='Raleway'
+                  value={choice}
+                  onChange={(e) => {
+                    handleChangeChoice(e.target.value, idx);
+                  }}
+                  bg='none'
+                  border='none'
+                  _focus={{ boxShadow: 'none' }}
+                  checked={false}
+                  placeholder='Masukkan pilihan disini'
+                />
+                <Button
+                  visibility='hidden'
+                  _groupHover={{ visibility: 'visible' }}
+                  onClick={() => {
+                    removeChoice(idx);
+                  }}
+                >
+                  X
+                </Button>
+              </Flex>
+            ))}
           </Stack>
         </RadioGroup>
       </Box>
@@ -28,6 +96,7 @@ const RadioQuestion = () => {
           fontSize='14px'
           borderRadius='30px'
           fontFamily='Raleway'
+          onClick={addChoice}
         >
           Add New Option
         </Button>
