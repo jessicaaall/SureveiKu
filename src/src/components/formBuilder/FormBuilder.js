@@ -1,18 +1,28 @@
 import { Box, VStack, Button } from '@chakra-ui/react';
-import { CloseIcon, TriangleDownIcon, createIcon } from '@chakra-ui/icons';
-import { AddIcon, PictIcon, VidIcon } from './icons/Icons';
+import {
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogContent,
+  AlertDialogOverlay,
+} from '@chakra-ui/react';
+import '@fontsource/nunito';
+import { BsXCircle, BsShieldFillExclamation} from "react-icons/bs";
 import { NavLink, useNavigate } from 'react-router-dom';
 import FormalHeading from '../FormalHeading';
-import '@fontsource/nunito';
 import SurveyOverview from './formElements/SurveyOverview';
 import SurveyRequirements from './formElements/SurveyRequirements';
-import ParagraphQuestion from './formElements/questions/ParagraphQuestion';
 import Question from './formElements/Question';
 import SurveyPoints from './formElements/SurveyPoints';
 import { useState } from 'react';
 import { createNewSurvey } from '../../firebase';
+import { useDisclosure } from '@chakra-ui/react';
+import React from 'react';
 
 const FormBuilder = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const cancelRef = React.useRef();
   const navigate = useNavigate();
 
   const [surveyTitle, setSurveyTitle] = useState('');
@@ -120,20 +130,50 @@ const FormBuilder = () => {
         </VStack>
       </Box>
       <Box align='right' pt={4}>
-        <Button
-          color='white'
-          bgColor='#EA8238'
-          _hover={{ bg: '#d66a1e' }}
-          w='180px'
-          h='55px'
-          fontSize='20px'
-          letterSpacing={1}
-          fontFamily='Nunito'
-          borderRadius='27px'
-          onClick={createSurvey}
+          <Button
+            color='white'
+            bgColor='#EA8238'
+            _hover={{ bg: '#d66a1e' }}
+            w='180px'
+            h='55px'
+            fontSize='20px'
+            letterSpacing={1}
+            fontFamily='Nunito'
+            borderRadius='27px'
+            onClick={onOpen}
+          >
+            SUBMIT
+          </Button>
+        <AlertDialog
+          motionPreset='slideInBottom'
+          isOpen={isOpen}
+          leastDestructiveRef={cancelRef}
+          onClose={onClose}
+          isCentered
         >
-          SUBMIT
-        </Button>
+          <AlertDialogOverlay>
+            <AlertDialogContent>
+              <AlertDialogHeader fontSize='lg' fontWeight='bold'>
+                Create Survey
+              </AlertDialogHeader>
+
+              <AlertDialogBody>
+                Are you sure you want to create this survey?
+              </AlertDialogBody>
+
+              <AlertDialogFooter>
+                <Button colorScheme='red' ref={cancelRef} onClick={onClose} leftIcon={<BsXCircle/>}>
+                  Cancel
+                </Button>
+                <NavLink to='/my-surveys'>
+                  <Button colorScheme='green' onClick={createSurvey} ml={3} leftIcon={<BsShieldFillExclamation/>}>
+                    Proceed
+                  </Button>
+                </NavLink>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialogOverlay>
+        </AlertDialog>
       </Box>
     </VStack>
   );
