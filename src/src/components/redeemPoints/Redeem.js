@@ -4,9 +4,9 @@ import {
     Image,
     Button,
     VStack,
-    HStack,
     Flex,
   } from '@chakra-ui/react';
+import CardWrapper from '../CardWrapper';
 import FormalHeading from '../FormalHeading';
   
   const RedeemPoint = () => {
@@ -35,28 +35,19 @@ import FormalHeading from '../FormalHeading';
       )
     }
     return (
-      <VStack align='left' h='100%'>
+      <VStack h='100%'>
         <FormalHeading title='Redeem Points'></FormalHeading>
         <Text fontFamily='Raleway' color='white' fontSize='35px' fontWeigt='bold'>
           Your points : 17.000
         </Text>
-        <Box w='160vh' overflowX='auto' whiteSpace='nowrap' css={{"&::-webkit-scrollbar": {height:"10px", width:'10px',},"&::-webkit-scrollbar-track": {background:'#D9D9D9', borderRadius:"50px",},"&::-webkit-scrollbar-thumb": {background:'#122543', borderRadius:"50px",},}}>
-          <HStack pb={10} spacing='50px'>
-            <RewardBox/>
-            <RewardBox/>
-            <RewardBox/>
-          </HStack>
-          <HStack pb={10} spacing='50px'>
-            <RewardBox/>
-            <RewardBox/>
-            <RewardBox/>
-          </HStack>
-          <HStack pb={10} spacing='50px'>
-            <RewardBox/>
-            <RewardBox/>
-            <RewardBox/>
-          </HStack>
-        </Box>
+        <CardWrapper columns={3}>
+          <RewardBox/>
+          <RewardBox/>
+          <RewardBox/>
+          <RewardBox/>
+          <RewardBox/>
+          <RewardBox/>
+        </CardWrapper>
       </VStack>
     );
   };
