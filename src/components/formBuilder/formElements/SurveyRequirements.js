@@ -28,26 +28,12 @@ const SurveyRequirements = ({ surveyReqs, setSurveyReqs }) => {
   };
 
   return (
-    <Box w='95.6%' h='auto' bg='#122543' borderRadius='25px'>
-      <Text
-        color='white'
-        fontSize='20px'
-        pl={4}
-        pt={2}
-        pb={2}
-        fontFamily='Raleway'
-      >
+    <Box w='97%' h='auto' bg='#122543' borderRadius='25px'>
+      <Text color='white' fontSize='20px' pl={4} pt={2} pb={2}>
         Syarat Survei
       </Text>
       <Box w='100%' h='auto' bg='white' borderRadius='25px' pb={3}>
-        <UnorderedList
-          color='black'
-          fontSize='20px'
-          pl={4}
-          pt={2}
-          pb={4}
-          fontFamily='Raleway'
-        >
+        <UnorderedList color='black' fontSize='20px' pl={4} pt={2} pb={4}>
           {surveyReqs.map((req, idx) => (
             <ListItem pr={5}>
               <Flex role='group'>

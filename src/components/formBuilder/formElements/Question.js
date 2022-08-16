@@ -58,7 +58,6 @@ const Question = ({
               pl={4}
               pt={2}
               pb={2}
-              fontFamily='Raleway'
             >
               Pertanyaan
             </Text>
@@ -75,7 +74,6 @@ const Question = ({
               fontWeight={'semibold'}
               textAlign='center'
               borderRadius='30px'
-              fontFamily='Raleway'
               pt={2}
               pb={2}
               mr={2}

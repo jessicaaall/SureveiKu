@@ -12,7 +12,6 @@ const ParagraphQuestion = ({ setQuestionText, questionText }) => {
       fontSize='17px'
       pl={4}
       pr={4}
-      fontFamily='Raleway'
       value={questionText}
       onChange={handleChange}
       bg='none'

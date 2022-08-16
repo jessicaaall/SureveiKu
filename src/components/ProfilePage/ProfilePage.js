@@ -1,8 +1,8 @@
 import {
   Button,
-  Flex,
   SimpleGrid,
   VStack,
+  Box
 } from '@chakra-ui/react';
 import FormalHeading from '../FormalHeading';
 import ProfileBar from './ProfileBar';
@@ -47,20 +47,20 @@ const ProfilPage = () => {
           <ProfileBar title='Pekerjaan' placeholder='Input pekerjaan di sini...'/>
           <ProfileGenderBar title='Gender'/>
           <ProfileBar title='Hobi' placeholder='Input hobi di sini...'/>
+          <Box align='right' pt={4}>
+            <Button
+              bg='#EA8238'
+              borderRadius={20}
+              color='white'
+              fontWeight='bold'
+              fontSize='20px'
+              w='200px'
+              _hover={{ bg: '#d66a1e' }}
+            >
+              EDIT PROFILE
+            </Button>
+          </Box>
         </SimpleGrid>
-        <Flex pl='85%' pr='1.25%' pt='1.75%' pb='0.5%'>
-          <Button
-            bg='#EA8238'
-            borderRadius={20}
-            color='white'
-            fontWeight='bold'
-            w='100%'
-            fontSize={18}
-            _hover={{ bg: '#d66a1e' }}
-          >
-            EDIT PROFILE
-          </Button>
-        </Flex>
       </VStack>
     </VStack>
   );

@@ -7,15 +7,8 @@ const SurveyOverview = ({
   setSurveyDesc,
 }) => {
   return (
-    <Box w='95.6%' h='auto' bg='#122543' borderRadius='25px'>
-      <Text
-        color='white'
-        fontSize='20px'
-        pl={4}
-        pt={2}
-        pb={2}
-        fontFamily='Raleway'
-      >
+    <Box w='97%' h='auto' bg='#122543' borderRadius='25px'>
+      <Text color='white' fontSize='20px' pl={4} pt={2} pb={2}>
         Deskripsi Survei
       </Text>
       <Box w='100%' h='auto' bg='white' borderRadius='25px' pb={3}>
@@ -36,15 +29,6 @@ const SurveyOverview = ({
             setSurveyTitle(e.target.value);
           }}
         />
-        <Text
-          color='black'
-          fontSize='20px'
-          fontWeight='900'
-          pl={4}
-          fontFamily='Raleway'
-        >
-          Deskripsi
-        </Text>
         <Textarea
           color='black'
           fontSize='17px'

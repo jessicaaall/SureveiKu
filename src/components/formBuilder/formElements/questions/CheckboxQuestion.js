@@ -42,7 +42,6 @@ const CheckboxQuestion = ({
           fontSize='17px'
           pl={4}
           pr={4}
-          fontFamily='Raleway'
           value={questionText}
           onChange={(e) => {
             setQuestionText(e.target.value);
@@ -62,7 +61,6 @@ const CheckboxQuestion = ({
               <Flex role='group'>
                 <Checkbox
                   borderColor={'#375682'}
-                  fontFamily='Raleway'
                   value='Pilihan 1'
                   onChange={null}
                 ></Checkbox>
@@ -71,7 +69,6 @@ const CheckboxQuestion = ({
                   fontSize='17px'
                   pl={4}
                   pr={4}
-                  fontFamily='Raleway'
                   value={choice}
                   onChange={(e) => {
                     handleChangeChoice(e.target.value, idx);
@@ -105,7 +102,6 @@ const CheckboxQuestion = ({
           h='30px'
           fontSize='14px'
           borderRadius='30px'
-          fontFamily='Raleway'
           onClick={addChoice}
         >
           Add New Option

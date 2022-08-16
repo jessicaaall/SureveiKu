@@ -41,7 +41,6 @@ const RadioQuestion = ({
           fontSize='17px'
           pl={4}
           pr={4}
-          fontFamily='Raleway'
           value={questionText}
           onChange={(e) => {
             setQuestionText(e.target.value);
@@ -52,7 +51,7 @@ const RadioQuestion = ({
           placeholder='Masukkan pertanyaan anda di sini'
         />
         <RadioGroup colorScheme='facebook' direction={['column', 'row']}>
-          <Stack fontFamily='Raleway' color='black'>
+          <Stack color='black'>
             {questionChoices.map((choice, idx) => (
               <Flex role='group'>
                 <Radio borderColor={'#375682'} value='Pilihan 1'></Radio>
@@ -61,7 +60,6 @@ const RadioQuestion = ({
                   fontSize='17px'
                   pl={4}
                   pr={4}
-                  fontFamily='Raleway'
                   value={choice}
                   onChange={(e) => {
                     handleChangeChoice(e.target.value, idx);
@@ -95,7 +93,6 @@ const RadioQuestion = ({
           h='30px'
           fontSize='14px'
           borderRadius='30px'
-          fontFamily='Raleway'
           onClick={addChoice}
         >
           Add New Option

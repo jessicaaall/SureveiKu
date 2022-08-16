@@ -30,7 +30,6 @@ const FillingForm = () => {
   return (
     <VStack align='left' h='100%'>
       <FormalHeading title='Judul Survei' />
-
       <HStack alignSelf={'end'} pb={2}>
         <NavLink to='/dashboard'>
           <Link>
