@@ -1,24 +1,16 @@
-import {  Box, Text, Stack, Button, Image, Checkbox, Link, HStack, VStack, Input, Radio, Slider,
-    SliderTrack,
-    SliderFilledTrack,
-    SliderThumb,
-    SliderMark,
+import {  Box, Text, Stack, Button, Image, Checkbox, Link, HStack, VStack, Input, Radio,
     RadioGroup,
     Spacer,
     Flex
 } from "@chakra-ui/react";
 import React from "react";
 import FormalHeading from "../FormalHeading";
-import { PhoneIcon } from '@chakra-ui/icons';
 import { NavLink } from "react-router-dom";
 
-import "@fontsource/raleway";
-import "@fontsource/krona-one";
 import "@fontsource/nunito";
 import "./garis.css"
 
 const FillingForm = () => {
-    const [sliderValue, setSliderValue] = React.useState(50)
     const [value1, setValue1] = React.useState('1')
     const [value, setValue] = React.useState('1')
 
@@ -27,7 +19,7 @@ const FillingForm = () => {
             <FormalHeading title='Judul Survei'/>
             <HStack alignSelf={'end'} pb={2}>
                 <Image src='./PhoneIcon.png' boxSize={6}></Image>
-                <Link align="right" p={1} color='white' fontFamily='' fontSize='20px'>
+                <Link align="right" p={1} color='white' fontSize='20px'>
                     Contact Surveyor
                 </Link>
             </HStack>
@@ -35,7 +27,7 @@ const FillingForm = () => {
                 <VStack align='left' spacing='25px'>
                     <Box bg="#122543" borderRadius='25px'>
                         <Box pt={4} pb={3} pl={5} pr={5}>
-                            <Text color={'white'} fontFamily='Raleway' fontSize='20px'>Pertanyaan</Text>
+                            <Text color={'white'} fontSize='20px'>Pertanyaan</Text>
                         </Box>
                         <Box pb={5} pl={5} pr={5}>
                             <Image boxSize='100%' src="https://www.jcceramictiles.com/Content/upload/2017249249/201711241527057755410.jpg"></Image>
@@ -46,10 +38,10 @@ const FillingForm = () => {
                     </Box>
                     <Box bg="#122543" borderRadius='25px'>
                         <Box pt={4} pb={3} pl={5} pr={5}>
-                            <Text color={'white'} fontFamily='Raleway' fontSize='20px'>Pertanyaan</Text>
+                            <Text color={'white'} fontSize='20px'>Pertanyaan</Text>
                         </Box>
                         <Box bg='white' borderRadius='25px' p={2}>
-                            <Stack mt={1} spacing={1} pl={4} pr={4} pb={1} fontFamily='Raleway' color='black'>
+                            <Stack mt={1} spacing={1} pl={4} pr={4} pb={1} color='black'>
                                 <Checkbox defaultChecked colorScheme="facebook">Checkbox</Checkbox>
                                 <Checkbox defaultChecked colorScheme="facebook">Checkbox</Checkbox>
                                 <Checkbox defaultChecked colorScheme="facebook">Checkbox</Checkbox>
@@ -59,7 +51,7 @@ const FillingForm = () => {
 
                     <Box bg="#122543" borderRadius='25px'>
                         <Box pt={4} pb={3} pl={5} pr={5}>
-                            <Text color={'white'} fontFamily='Raleway' fontSize='20px'>Pertanyaan</Text>
+                            <Text color={'white'} fontSize='20px'>Pertanyaan</Text>
                         </Box>
                         <Box bg='white' borderRadius='25px' p={6}>
                             <RadioGroup onChange={setValue} value={value} align='center'>
@@ -92,11 +84,11 @@ const FillingForm = () => {
                     </Box>
                     <Box bg="#122543" borderRadius='25px'>
                         <Box pt={4} pb={3} pl={5} pr={5}>
-                            <Text color={'white'} fontFamily='Raleway' fontSize='20px'>Pertanyaan</Text>
+                            <Text color={'white'} fontSize='20px'>Pertanyaan</Text>
                         </Box>
                         <Box bg='white' borderRadius='25px' pl={2} pb={4} pt={4}>
                             <RadioGroup onChange={setValue1} value={value1}>
-                                <Stack mt={1} spacing={1} pl={4} pr={4} pb={1} fontFamily='Raleway' color='black'>
+                                <Stack mt={1} spacing={1} pl={4} pr={4} pb={1} color='black'>
                                 <HStack><Radio bg="#385898" value='1' colorScheme="facebook"></Radio>
                                 <Text color="#23395B">First</Text></HStack>
                                 <HStack><Radio bg="#385898" value='2' colorScheme="facebook"></Radio><Text color="#23395B">Second</Text></HStack> 
