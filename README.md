@@ -80,6 +80,6 @@
 6. Buka folder tersebut dengan VSCode
 7. Klik terminal di bar atas VSCode, lalu klik New Terminal
 8. Di terminal, ketik "node -v" untuk memastikan node.js sudah terinstall
-9. Di terminal, ketik "npm i react-google-login --force"
+9. Di terminal, ketik "npm install --force"
 10. Kemudian, ketik "npm start" di terminal untuk membuka localhost agar bisa melihat tampilan web
 
