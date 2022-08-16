@@ -1,4 +1,6 @@
 import { doc, setDoc, getFirestore, Timestamp } from 'firebase/firestore';
+import { getAuth } from 'firebase/auth';
+import { v4 as uuid } from 'uuid';
 import { ref, getStorage, getDownloadURL } from 'firebase/storage';
 
 const firebaseConfig = {
@@ -30,4 +32,56 @@ const createNewUserData = async (id, fullname, email, points, accountType) => {
   });
 };
 
-export { firebaseConfig, createNewUserData };
+const createNewSurvey = async (
+  title,
+  desc,
+  reqs,
+  questions,
+  finishUploadCB
+) => {
+  const id = uuid();
+
+  await setDoc(doc(getFirestore(), 'Survey', id), {
+    creatorId: getAuth().currentUser.uid,
+    deskripsi: desc,
+    id: id,
+    judul: title,
+    redeemable_points: 10,
+    syarat: reqs,
+  });
+
+  await Promise.all(
+    questions.map(async ({ question, qType, choices }, idx) => {
+      await setDoc(
+        doc(getFirestore(), 'Survey', id, 'questions', `question${idx + 1}`),
+        {
+          question: question,
+          qType: qType,
+        }
+      );
+
+      await Promise.all(
+        choices.map(async (choice, cidx) => {
+          await setDoc(
+            doc(
+              getFirestore(),
+              'Survey',
+              id,
+              'questions',
+              `question${idx + 1}`,
+              'choices',
+              `choice${cidx + 1}`
+            ),
+            {
+              choice: choice,
+            }
+          );
+        })
+      );
+    })
+  );
+
+  finishUploadCB();
+};
+
+export { firebaseConfig, createNewUserData, createNewSurvey };

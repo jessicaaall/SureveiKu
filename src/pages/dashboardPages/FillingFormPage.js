@@ -1,12 +1,12 @@
 import DashboardWrapper from './dashboardWrapper/DashboardWrapper';
-import FillingForm from '../../components/fillingForm/FillingForm';
+import FillingForm from '../../components/fillingform/FillingForm';
 
 const FillingFormPage = () => {
-    return (
-        <DashboardWrapper >
-          <FillingForm/>
-        </DashboardWrapper>
-    );
-}
- 
+  return (
+    <DashboardWrapper>
+      <FillingForm />
+    </DashboardWrapper>
+  );
+};
+
 export default FillingFormPage;

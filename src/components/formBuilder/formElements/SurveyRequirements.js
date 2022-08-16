@@ -1,6 +1,32 @@
-import { Box, Text, UnorderedList, ListItem, Button } from '@chakra-ui/react';
+import {
+  Box,
+  Text,
+  UnorderedList,
+  ListItem,
+  Button,
+  Input,
+  Flex,
+} from '@chakra-ui/react';
 
-const SurveyRequirements = () => {
+const SurveyRequirements = ({ surveyReqs, setSurveyReqs }) => {
+  const handleChange = (value, idx) => {
+    const newSurveyReqs = [...surveyReqs];
+    newSurveyReqs[idx] = value;
+    setSurveyReqs(newSurveyReqs);
+  };
+
+  const addReq = () => {
+    const newSurveyReqs = [...surveyReqs];
+    newSurveyReqs.push('');
+    setSurveyReqs(newSurveyReqs);
+  };
+
+  const removeReq = (idx) => {
+    const newSurveyReqs = [...surveyReqs];
+    newSurveyReqs.splice(idx, 1);
+    setSurveyReqs(newSurveyReqs);
+  };
+
   return (
     <Box w='95.6%' h='auto' bg='#122543' borderRadius='25px'>
       <Text
@@ -22,8 +48,33 @@ const SurveyRequirements = () => {
           pb={4}
           fontFamily='Raleway'
         >
-          <ListItem>Merupakan mahasiswa</ListItem>
-          <ListItem>Berumur di bawah 25 tahun</ListItem>
+          {surveyReqs.map((req, idx) => (
+            <ListItem pr={5}>
+              <Flex role='group'>
+                <Input
+                  value={req}
+                  onChange={(e) => {
+                    handleChange(e.target.value, idx);
+                  }}
+                  p={0}
+                  bg='none'
+                  border='none'
+                  _focus={{ boxShadow: 'none' }}
+                  spellCheck={false}
+                  placeholder='Masukkan syarat disini'
+                />
+                <Button
+                  visibility='hidden'
+                  _groupHover={{ visibility: 'visible' }}
+                  onClick={() => {
+                    removeReq(idx);
+                  }}
+                >
+                  X
+                </Button>
+              </Flex>
+            </ListItem>
+          ))}
         </UnorderedList>
         <Box pl={4} pb={2}>
           <Button
@@ -35,6 +86,7 @@ const SurveyRequirements = () => {
             fontSize='14px'
             borderRadius='30px'
             fontFamily='Raleway'
+            onClick={addReq}
           >
             Tambah syarat baru
           </Button>

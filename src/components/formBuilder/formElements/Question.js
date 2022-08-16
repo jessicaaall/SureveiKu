@@ -15,6 +15,7 @@ import ParagraphQuestion from './questions/ParagraphQuestion';
 import { useState } from 'react';
 import CheckboxQuestion from './questions/CheckboxQuestion';
 import RadioQuestion from './questions/RadioQuestion';
+import { useEffect } from 'react';
 
 const Question = ({
   type,
@@ -22,6 +23,8 @@ const Question = ({
   removeQuestion,
   addQuestion,
   isLast,
+  onChangeQuestionText,
+  onChangeQuestionChoices,
 }) => {
   const [questionText, setQuestionText] = useState('');
   const [questionChoices, setQuestionChoices] = useState([
@@ -35,6 +38,14 @@ const Question = ({
       changeType(e.target.value);
     }
   };
+
+  useEffect(() => {
+    onChangeQuestionText(questionText);
+  }, [questionText]);
+
+  useEffect(() => {
+    onChangeQuestionChoices(questionChoices);
+  }, [questionChoices]);
 
   return (
     <HStack alignItems='start' w='99%'>
@@ -69,6 +80,7 @@ const Question = ({
               pb={2}
               mr={2}
               onChange={handleTypeChange}
+              value={type}
             >
               <option style={{ color: 'black' }} value='paragraph'>
                 Paragraph

@@ -18,7 +18,7 @@ import {
 } from '@chakra-ui/react';
 import { CloseIcon, TriangleDownIcon, createIcon } from '@chakra-ui/icons';
 import { AddIcon, PictIcon, VidIcon } from './icons/Icons';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import FormalHeading from '../FormalHeading';
 import '@fontsource/raleway';
 import '@fontsource/krona-one';
@@ -29,15 +29,50 @@ import ParagraphQuestion from './formElements/questions/ParagraphQuestion';
 import Question from './formElements/Question';
 import SurveyPoints from './formElements/SurveyPoints';
 import { useState } from 'react';
+import { createNewSurvey } from '../../firebase';
 
 const FormBuilder = () => {
+  const navigate = useNavigate();
+
+  const [surveyTitle, setSurveyTitle] = useState('');
+  const [surveyDesc, setSurveyDesc] = useState('');
+  const [surveyReqs, setSurveyReqs] = useState([
+    'Merupakan mahasiswa',
+    'Berumur di bawah 25 tahun',
+  ]);
+
   const [questionTypes, setQuestionTypes] = useState([
     'paragraph',
     'checkbox',
     'radio',
   ]);
 
-  const createSurvey = async () => {};
+  const [questionText, setQuestionText] = useState(['', '', '']);
+  const [questionChoices, setQuestionChoices] = useState([[''], [''], ['']]);
+
+  const createSurvey = async () => {
+    const questions = questionText.map((q, idx) => ({
+      question: q,
+      qType: questionTypes[idx],
+      choices: questionChoices[idx],
+    }));
+
+    createNewSurvey(surveyTitle, surveyDesc, surveyReqs, questions, () => {
+      navigate('/my-surveys', { replace: true });
+    });
+  };
+
+  const handleChangeQuestionText = (val, idx) => {
+    const newQuestionText = [...questionText];
+    newQuestionText[idx] = val;
+    setQuestionText(newQuestionText);
+  };
+
+  const handleChangeQuestionChoices = (val, idx) => {
+    const newQuestionChoices = [...questionChoices];
+    newQuestionChoices[idx] = val;
+    setQuestionChoices(newQuestionChoices);
+  };
 
   return (
     <VStack align='left' h='100%'>
@@ -61,8 +96,16 @@ const FormBuilder = () => {
         }}
       >
         <VStack align='left' pl={3} pt={3} spacing='30px'>
-          <SurveyOverview />
-          <SurveyRequirements />
+          <SurveyOverview
+            surveyTitle={surveyTitle}
+            surveyDesc={surveyDesc}
+            setSurveyTitle={setSurveyTitle}
+            setSurveyDesc={setSurveyDesc}
+          />
+          <SurveyRequirements
+            surveyReqs={surveyReqs}
+            setSurveyReqs={setSurveyReqs}
+          />
           {questionTypes.map((qType, idx) => (
             <Question
               type={qType}
@@ -72,9 +115,11 @@ const FormBuilder = () => {
                 setQuestionTypes(newQuestionType);
               }}
               removeQuestion={() => {
-                const newQuestionType = [...questionTypes];
-                newQuestionType.splice(idx, 1);
-                setQuestionTypes(newQuestionType);
+                if (questionTypes.length > 1) {
+                  const newQuestionType = [...questionTypes];
+                  newQuestionType.splice(idx, 1);
+                  setQuestionTypes(newQuestionType);
+                }
               }}
               addQuestion={() => {
                 const newQuestionType = [...questionTypes];
@@ -82,27 +127,32 @@ const FormBuilder = () => {
                 setQuestionTypes(newQuestionType);
               }}
               isLast={idx === questionTypes.length - 1}
+              onChangeQuestionText={(val) => {
+                handleChangeQuestionText(val, idx);
+              }}
+              onChangeQuestionChoices={(val) => {
+                handleChangeQuestionChoices(val, idx);
+              }}
             />
           ))}
           <SurveyPoints />
         </VStack>
       </Box>
       <Box align='right' pt={4}>
-        <NavLink to='/my-surveys'>
-          <Button
-            color='white'
-            bgColor='#EA8238'
-            _hover={{ bg: '#d66a1e' }}
-            w='180px'
-            h='55px'
-            fontSize='20px'
-            letterSpacing={1}
-            fontFamily='Nunito'
-            borderRadius='27px'
-          >
-            SUBMIT
-          </Button>
-        </NavLink>
+        <Button
+          color='white'
+          bgColor='#EA8238'
+          _hover={{ bg: '#d66a1e' }}
+          w='180px'
+          h='55px'
+          fontSize='20px'
+          letterSpacing={1}
+          fontFamily='Nunito'
+          borderRadius='27px'
+          onClick={createSurvey}
+        >
+          SUBMIT
+        </Button>
       </Box>
     </VStack>
   );

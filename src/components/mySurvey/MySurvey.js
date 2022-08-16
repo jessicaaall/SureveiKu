@@ -17,7 +17,6 @@ import { getAuth } from 'firebase/auth';
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
-
 const MySurvey = () => {
   const [surveys, setSurveys] = useState([]);
 
