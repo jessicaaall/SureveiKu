@@ -57,26 +57,8 @@ const createNewSurvey = async (
         {
           question: question,
           qType: qType,
+          choices: choices,
         }
-      );
-
-      await Promise.all(
-        choices.map(async (choice, cidx) => {
-          await setDoc(
-            doc(
-              getFirestore(),
-              'Survey',
-              id,
-              'questions',
-              `question${idx + 1}`,
-              'choices',
-              `choice${cidx + 1}`
-            ),
-            {
-              choice: choice,
-            }
-          );
-        })
       );
     })
   );

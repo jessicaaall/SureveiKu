@@ -46,20 +46,22 @@ const App = () => {
         <Route path='/feedback' element={<FeedbackPage />} />
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/thankyou' element={<Thankyou />} />
-        
-        <Route path='/redeem-points' element={<RedeemPoints/>} />
-        <Route path='/create-survey' element={<CreateSurvey/>} />
-        <Route path='/my-surveys' element={<MySurveys/>} />
+
+        <Route path='/redeem-points' element={<RedeemPoints />} />
+        <Route path='/create-survey' element={<CreateSurvey />} />
+        <Route path='/my-surveys' element={<MySurveys />} />
         <Route path='/available-surveys' element={<AvailableSurvey />} />
-        <Route path='/help' element={<HelpPage/>} />
+        <Route path='/help' element={<HelpPage />} />
         <Route path='/privacy-policy' element={<PrivacyPolicyPage />} />
-        <Route path='/tos' element={<ToSPage/>} />
+        <Route path='/tos' element={<ToSPage />} />
         <Route path='/profile' element={<DashboardProfilePage />} />
         <Route path='/survey-done' element={<SurveyDonePage />} />
         <Route path='/analysis-page' element={<DashboardAnalysisPage />} />
         <Route path='/responses-page' element={<ResponsesPage />} />
-        <Route path='/filling-form' element={<FillingFormPage />} />
-        
+        <Route path='/filling-form'>
+          <Route path=':id' element={<FillingFormPage />} />
+        </Route>
+
         <Route path='*' element={<Navigate to='/home' replace />} />
       </Routes>
     </div>

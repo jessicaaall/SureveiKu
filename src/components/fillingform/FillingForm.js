@@ -15,17 +15,55 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 import FormalHeading from '../FormalHeading';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 import { BsTelephone } from 'react-icons/bs';
 
 import QuestionInputBox from '../fillingForm/QuestionInputBox';
-import QuestionNonInputBox from '../fillingForm/QuestionNonInput';
+import QuestionCheckbox from '../fillingForm/QuestionCheckbox';
+import QuestionRadio from '../fillingForm/QuestionRadio';
 
 import './garis.css';
+import { useEffect, useState } from 'react';
+import {
+  getFirestore,
+  getDoc,
+  getDocs,
+  doc,
+  collection,
+  setDoc,
+} from 'firebase/firestore';
+import { getAuth } from 'firebase/auth';
 
 const FillingForm = () => {
-  const [value1, setValue1] = React.useState('1');
-  const [value, setValue] = React.useState('1');
+  const { id } = useParams();
+  const [questions, setQuestions] = useState([]);
+
+  const getQuestionData = async () => {
+    const docSnap = await getDocs(
+      collection(getFirestore(), 'Survey', id, 'questions')
+    );
+
+    const newQuestions = [...questions];
+
+    docSnap.forEach((doc) => {
+      newQuestions.push(doc.data());
+    });
+
+    setQuestions(newQuestions);
+  };
+
+  const addPoints = async () => {
+    const id = getAuth().currentUser.uid;
+    const docSnap = await getDoc(doc(getFirestore(), 'Akun', id));
+    const data = docSnap.data();
+    data.points = data.points + 10;
+
+    await setDoc(doc(getFirestore(), 'Akun', id), data);
+  };
+
+  useEffect(() => {
+    getQuestionData();
+  }, []);
 
   return (
     <VStack align='left' h='100%'>
@@ -64,99 +102,25 @@ const FillingForm = () => {
         }}
       >
         <VStack align='left' spacing='25px'>
-          <QuestionInputBox
-            judulPertanyaan='Contoh Pertanyaan Input'
-            inputPlaceholder='Masukkan contoh jawaban'
-            imageSrc='https://www.jcceramictiles.com/Content/upload/2017249249/201711241527057755410.jpg'
-          >
-            <Text color='white'>Bisa jadi deskripsi gambar ato yang lain</Text>
-          </QuestionInputBox>
-
-          <QuestionNonInputBox judulPertanyaan='Contoh Pertanyaan Checkbox'>
-            <Stack mt={1} spacing={1} pl={4} pr={4} pb={1} color='black'>
-              <Checkbox defaultChecked colorScheme='facebook'>
-                Checkbox
-              </Checkbox>
-              <Checkbox defaultChecked colorScheme='facebook'>
-                Checkbox
-              </Checkbox>
-              <Checkbox defaultChecked colorScheme='facebook'>
-                Checkbox
-              </Checkbox>
-            </Stack>
-          </QuestionNonInputBox>
-
-          <QuestionNonInputBox
-            judulPertanyaan='Contoh Radio Horizontal'
-            imageSrc='https://coolthemestores.com/wp-content/uploads/2021/06/valorant-wallpaper-background.jpg'
-          >
-            <RadioGroup onChange={setValue} value={value} align='center' p={2}>
-              <div className='gray-bar'>
-                <Flex>
-                  <VStack mt={0} spacing={0}>
-                    <Radio
-                      bg='#385898'
-                      value='1'
-                      colorScheme='facebook'
-                    ></Radio>
-                    <Text color='#23395B'>First</Text>
-                  </VStack>
-                  <Spacer></Spacer>
-                  <VStack spacing={0}>
-                    <Radio
-                      bg='#385898'
-                      value='2'
-                      colorScheme='facebook'
-                    ></Radio>
-                    <Text color='#23395B'>Second</Text>
-                  </VStack>
-                  <Spacer></Spacer>
-                  <VStack spacing={0}>
-                    <Radio
-                      bg='#385898'
-                      value='3'
-                      colorScheme='facebook'
-                    ></Radio>
-                    <Text color='#23395B'>Third</Text>
-                  </VStack>
-                  <Spacer></Spacer>
-                  <VStack spacing={0}>
-                    <Radio
-                      bg='#385898'
-                      value='4'
-                      colorScheme='facebook'
-                    ></Radio>
-                    <Text color='#23395B'>Fourth</Text>
-                  </VStack>
-                  <Spacer></Spacer>
-                  <VStack spacing={0}>
-                    <Radio
-                      bg='#385898'
-                      value='5'
-                      colorScheme='facebook'
-                    ></Radio>
-                    <Text color='#23395B'>Sangat Memuaskan</Text>
-                  </VStack>
-                </Flex>
-              </div>
-            </RadioGroup>
-          </QuestionNonInputBox>
-
-          <QuestionNonInputBox judulPertanyaan='Contoh Radio Vertikal'>
-            <RadioGroup onChange={setValue1} value={value1}>
-              <Stack mt={1} spacing={1} pl={4} pr={4} pb={1} color='black'>
-                <Radio bg='#385898' value='1' colorScheme='facebook'>
-                  First
-                </Radio>
-                <Radio bg='#385898' value='2' colorScheme='facebook'>
-                  Second
-                </Radio>
-                <Radio bg='#385898' value='3' colorScheme='facebook'>
-                  Third
-                </Radio>
-              </Stack>
-            </RadioGroup>
-          </QuestionNonInputBox>
+          {questions.map(({ qType, question, choices }) => {
+            if (qType === 'paragraph') {
+              return (
+                <QuestionInputBox
+                  question={question}
+                  inputPlaceholder='Masukkan contoh jawaban'
+                />
+              );
+            } else if (qType === 'checkbox') {
+              return <QuestionCheckbox question={question} choices={choices} />;
+            } else {
+              return (
+                <QuestionRadio
+                  question='yes'
+                  choices={['Pilihan 1', 'Pilihan 2', 'Pilihan 3']}
+                />
+              );
+            }
+          })}
         </VStack>
       </Box>
 
@@ -172,6 +136,7 @@ const FillingForm = () => {
             letterSpacing={1}
             fontFamily='Nunito'
             borderRadius='27px'
+            onClick={addPoints}
           >
             SUBMIT
           </Button>

@@ -35,6 +35,7 @@ const AvailableSurveys = () => {
         description: data.deskripsi,
         requirements: data.syarat,
         reedemable_points: data.redeemable_points,
+        id: data.id,
       };
 
       newSurveysData.push(survey);
@@ -73,12 +74,13 @@ const AvailableSurveys = () => {
         }}
       >
         {surveys.map(
-          ({ title, description, requirements, reedemable_points }) => (
+          ({ title, description, requirements, reedemable_points, id }) => (
             <Surveybox
               title={title}
               description={description}
               requirements={requirements}
               reedemable_points={reedemable_points}
+              id={id}
             />
           )
         )}
@@ -87,7 +89,13 @@ const AvailableSurveys = () => {
   );
 };
 
-const Surveybox = ({ title, description, requirements, reedemable_points }) => {
+const Surveybox = ({
+  title,
+  description,
+  requirements,
+  reedemable_points,
+  id,
+}) => {
   return (
     <Box
       w='300px'
@@ -139,7 +147,7 @@ const Surveybox = ({ title, description, requirements, reedemable_points }) => {
         <Text align='center' color='black'>
           Redeemable Points: {reedemable_points}
         </Text>
-        <NavLink to='/filling-form'>
+        <NavLink to={`/filling-form/${id}`}>
           <Box align='center'>
             <Button
               bgColor='#EA8238'
