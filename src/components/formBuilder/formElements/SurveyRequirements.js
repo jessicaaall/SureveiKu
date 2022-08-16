@@ -2,14 +2,13 @@ import { Box, Text, UnorderedList, ListItem, Button } from '@chakra-ui/react';
 
 const SurveyRequirements = () => {
   return (
-    <Box w='95.6%' h='auto' bg='#122543' borderRadius='25px'>
+    <Box w='97%' h='auto' bg='#122543' borderRadius='25px'>
       <Text
         color='white'
         fontSize='20px'
         pl={4}
         pt={2}
         pb={2}
-        fontFamily='Raleway'
       >
         Syarat Survei
       </Text>
@@ -20,7 +19,6 @@ const SurveyRequirements = () => {
           pl={4}
           pt={2}
           pb={4}
-          fontFamily='Raleway'
         >
           <ListItem>Merupakan mahasiswa</ListItem>
           <ListItem>Berumur di bawah 25 tahun</ListItem>
@@ -34,7 +32,6 @@ const SurveyRequirements = () => {
             h='30px'
             fontSize='14px'
             borderRadius='30px'
-            fontFamily='Raleway'
           >
             Tambah syarat baru
           </Button>

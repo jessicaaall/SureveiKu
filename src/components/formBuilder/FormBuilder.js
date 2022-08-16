@@ -1,27 +1,10 @@
 import {
-  Radio,
-  RadioGroup,
-  Checkbox,
-  CheckboxGroup,
-  IconButton,
-  Flex,
-  Spacer,
   Box,
-  Text,
   VStack,
-  UnorderedList,
-  ListItem,
-  Button,
-  Stack,
-  Select,
-  HStack,
+  Button
 } from '@chakra-ui/react';
-import { CloseIcon, TriangleDownIcon, createIcon } from '@chakra-ui/icons';
-import { AddIcon, PictIcon, VidIcon } from './icons/Icons';
 import { NavLink } from 'react-router-dom';
 import FormalHeading from '../FormalHeading';
-import '@fontsource/raleway';
-import '@fontsource/krona-one';
 import '@fontsource/nunito';
 import SurveyOverview from './formElements/SurveyOverview';
 import SurveyRequirements from './formElements/SurveyRequirements';
