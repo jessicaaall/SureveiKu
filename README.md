@@ -1,6 +1,7 @@
 # **SureveiKu**
 
 **Milestone 2 - SPARTA 2021**
+- Lampiran Tambahan: https://docs.google.com/spreadsheets/d/1WDrvDOd6HXa6D0EeuEXBpIuIjYp2kNG8jBQ6tDsXP5A/edit?usp=sharing
 
 ## Kelompok 21 - SureveiKu
 
