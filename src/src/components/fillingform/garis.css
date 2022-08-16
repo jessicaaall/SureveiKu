@@ -1,0 +1,14 @@
+.gray-bar {
+    position: relative;
+  }
+  
+  .gray-bar::after {
+    content: "";
+    background-color: lightgray;
+    position: absolute;
+    width: 5px;
+    left: 33px;
+    top: 0;
+    bottom: 10px;
+    z-index: -1;
+  }
