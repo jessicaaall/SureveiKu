@@ -21,18 +21,12 @@
   * Form Builder - Title and Question Box
   * Redeem Points Page
 6. Nicholas Liem (16521108) 
-  * Layouting, Folder Structuring, and Page Routing
-  * Dashboard Homepage
-  * Feedback Page
-  * Sign Up Page - Sign Up Box
-  * Login Page - Login Box
-  * Create Survey & My Surveys: menyambungkan tombol
-  * Menyambungkan tombol Pricing & Sign Up, Service & Sign Up, Responses & My Surveys
-  * Side Bar: scroll hide, menambahkan opsi Profile
-  * Filling Form, Avaliable Surveys, Survey Done
-  * Survey Done: menghapus link button di Survey Done
-  * Profile: box & input, date, dropdown gender
-  * Filling Form: memisahkan komponen
+  * Layouting, Folder Structuring, and Page Routing (Semua page)
+  * Wrapper components
+  * Dashboard (NavBar, Buttons, Background), Homepage (SideBar, NavBar, Buttons, Background)
+  * Feedback Page, SignUp Page, Login Page (+ add Google Login), Filling Form, Avaliable Surveys, Survey Done, etc
+  * [Edit] Profile: Box & Input, Date, Dropdown gender
+  * [Edit] Filling Form: Membuat reusable component
 7. Marcheline Fanni Hidayat Putri (16521117)
   * Moderator Demo
   * Menulis file ReadMe
@@ -76,7 +70,7 @@
 2. Install node.js, pastikan **Add to Path**
 3. Buka folder untuk menyimpan file
 4. Klik kanan folder tersebut dan open with terminal atau Git Bash Here
-5. Pada terminal, ketik "git clone https://github.com/Kelompok21Milestone/Milestone2.git"
+5. Pada terminal, ketik "git clone https://github.com/Kelompok21Milestone/Milestone02_K21.git"
 6. Buka folder tersebut dengan VSCode
 7. Klik terminal di bar atas VSCode, lalu klik New Terminal
 8. Di terminal, ketik "node -v" untuk memastikan node.js sudah terinstall
