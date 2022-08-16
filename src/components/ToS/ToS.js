@@ -1,12 +1,11 @@
 import { HStack, Box, Text,Spacer, Button, VStack, Checkbox, Link } from "@chakra-ui/react";
 import FormalHeading from '../FormalHeading'
-import "@fontsource/nunito"
 
 const ToS = () => {
     return (
         <VStack align='left' h='100%'>
             <FormalHeading title='Terms of Service'/>
-            <Box w='100%' h='auto' bg='white' borderRadius={20} boxShadow='lg' overflowY='auto' css={{"&::-webkit-scrollbar": {width:"8px",},"&::-webkit-scrollbar-track": {background:'#D9D9D9', borderRadius:"50px",},"&::-webkit-scrollbar-thumb": {background:'#122543', borderRadius:"50px",},}}>
+            <Box w='100%' h='auto' bg='white' borderRadius='6' boxShadow='lg' overflowY='auto' css={{"&::-webkit-scrollbar": {width:"8px",},"&::-webkit-scrollbar-track": {background:'#D9D9D9', borderRadius:"50px",},"&::-webkit-scrollbar-thumb": {background:'#122543', borderRadius:"50px",},}}>
                 <VStack alignItems='baseline' padding={10} borderRadius={20}  >
                     <Text fontSize={20} fontWeight='bold'>XXXXXX</Text>
                     <Spacer></Spacer>
