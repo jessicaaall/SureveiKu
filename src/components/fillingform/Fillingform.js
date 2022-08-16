@@ -21,9 +21,6 @@ import {BsTelephone} from "react-icons/bs";
 import QuestionInputBox from "./QuestionInputBox";
 import QuestionNonInputBox from "./QuestionNonInput";
 
-import "@fontsource/raleway";
-import "@fontsource/krona-one";
-import "@fontsource/nunito";
 import "./garis.css"
 
 
