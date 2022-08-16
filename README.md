@@ -70,7 +70,6 @@
 - Login system, Inserting Routing System
 - Sign Up & Login: pesan error dan confirm password
 - My Surveys: Edit Survey
-- My Surveys & Available Surveys: tulisan no survey
 
 11. Nadira Rahmananda Arifandi (16521423)
 
