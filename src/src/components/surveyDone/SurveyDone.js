@@ -4,7 +4,8 @@ import FormalHeading from "../FormalHeading";
 
 const SurveyDone = () => {
     return (
-        <VStack p="5%" textAlign="center">
+        <VStack h='full' w='full' display="flex" textAlign="center" alignContent={'center'} alignItems={'center'} align={'center'}>
+            <Spacer/>
             <FormalHeading fontSize={60} fontWeight='bold' color='white' letterSpacing={2} title='Thanks for filling out this form!'/>
             <Text fontSize={30} color='white' letterSpacing={2}>
                 Your contribution towards this survey means a lot for us and other people.
@@ -19,8 +20,8 @@ const SurveyDone = () => {
                     </NavLink>
                 </VStack>
             </HStack>
-            <Spacer p="5%"/>
-            <Text fontSize={15} color='white' letterSpacing={3}>You earn 10 points!</Text>
+            <Spacer/>
+            <Text fontSize={15} color='white' letterSpacing={3}>You earned 10 points!</Text>
             <NavLink to='/dashboard'>
                 <Button 
                     bg="#EA8238"
