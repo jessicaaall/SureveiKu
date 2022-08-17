@@ -89,7 +89,7 @@
 14. Gyan Maiziko (16521535)
 
 - Moderator Demo
-- Filling Form
+- Filling Form (Ikut mengerjakan bersama Athif dan Henry melalui Zoom, sehingga tidak melakukan commit)
 
 ## Cara menjalankan SureveiKu:
 
