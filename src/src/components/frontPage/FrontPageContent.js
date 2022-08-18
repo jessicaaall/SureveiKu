@@ -23,9 +23,7 @@ const FrontPage = () => {
           </VStack>
         </VStack>
         <NavLink to='/signup'>
-          <Link>
           <Button bg='#49439B' color='white' fontWeight='bold' borderRadius={0} w='220px' h='40px' fontSize={18} _hover={{ bg: '#231E63' }}>DAFTAR SEKARANG</Button>
-          </Link>
         </NavLink>
       </VStack>
       <Image src='./pie-chart.png' boxSize={500}/>
