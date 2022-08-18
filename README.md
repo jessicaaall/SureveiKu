@@ -7,8 +7,6 @@
 
 1. Muhammad Dhiwaul Akbar (16521009)
 
-- Menulis File ReadMe
-
 2. Nicolas Owen Halim (16521018)
 
 - Privacy Policy Page
@@ -19,58 +17,59 @@
 - Side Scroll
 - Help Page
 - Analysis Page
-- Form Builder 2
+- Form Builder
 
 4. Athif Nirwasito (16521026)
 
 - Moderator Demo
-- Contact Surveyor
-- Question Box 1
+- Filling Form
 
 5. Akhmad Setiawan (16521074)
 
-- Dropdown and Delete Icon
-- Form Builder - Title and Question Box
+- Form Builder
 - Redeem Points Page
 
 6. Nicholas Liem (16521108)
 
+- Lead FrontEnd
 - Layouting, Folder Structuring, and Page Routing (Semua page)
 - Wrapper components
 - Dashboard (NavBar, Buttons, Background), Homepage (SideBar, NavBar, Buttons, Background)
-- Feedback Page, SignUp Page, Login Page (+ add Google Login), Filling Form, Avaliable Surveys, Survey Done, etc
+- Feedback Page, SignUp Page, Login Page (+ add Google Login)
 - [Edit] Profile: Box & Input, Date, Dropdown gender
 - [Edit] Filling Form: Membuat reusable component
+- Linking pages & buttons
 
 7. Marcheline Fanni Hidayat Putri (16521117)
 
 - Moderator Demo
 - Menulis file ReadMe
-- Revisi Redeem Points
+- Revisi Redeem Points Page
 - Feedback Done Page
 
 8. Hosea Nathanael Abetnego (16521156)
 
-- Revisi Filling Form
 - Terms of Service Page
 - Contact Page
 - Pricing Page
 - Front Page
+- Filling Form
 
 9. Christina Wijaya (16521224)
 
-- Form Builder: Side Icon Question Box
+- Project Manager
 - Menghubungi mentor dan mengatur jadwal dengan asisten
+- Form Builder
 - Responses Page
 - My Surveys Page
 - Available Survey Page
 
 10. Rinaldy Adin (16521390)
 
-- Back end
+- Lead BackEnd (Membuat semua hal yang berkaitan dengan BackEnd)
 - Login system, Inserting Routing System
-- Sign Up & Login: pesan error dan confirm password
-- My Surveys: Edit Survey
+- Merevisi Filling Form Page
+- Merevisi dan merapikan semua page yang dirasa perlu sebelum dihubungkan dengan BackEnd
 
 11. Nadira Rahmananda Arifandi (16521423)
 
@@ -85,14 +84,12 @@
 
 13. Henry Anand Septian Radityo (16521507)
 
-- Filling Form + Button
-- Filling Form: Question Box 2
+- Filling Form
 
 14. Gyan Maiziko (16521535)
 
 - Moderator Demo
-- Filling Form: Question Box 3
-- Filling Form: Title and Container
+- Filling Form (Ikut mengerjakan bersama Athif dan Henry melalui Zoom, sehingga tidak melakukan commit)
 
 ## Cara menjalankan SureveiKu:
 
