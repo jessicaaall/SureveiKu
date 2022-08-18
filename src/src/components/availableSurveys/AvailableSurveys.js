@@ -107,8 +107,8 @@ const Surveybox = ({
           <Flex paddingLeft='10px'>
             <UnorderedList>
               {requirements.map((req) => (
-                <ListItem align='left' color='black' style={{whiteSpace: 'pre-wrap', overflowWrap: 'break-word'}}>
-                  {req}
+                <ListItem align='left' color='black'>
+                  <Text style={{whiteSpace: 'pre-wrap', overflowWrap: 'break-word'}}>{req}</Text>
                 </ListItem>
               ))}
             </UnorderedList>

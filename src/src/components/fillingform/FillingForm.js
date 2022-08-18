@@ -115,8 +115,8 @@ const FillingForm = () => {
             } else {
               return (
                 <QuestionRadio
-                  question='yes'
-                  choices={['Pilihan 1', 'Pilihan 2', 'Pilihan 3']}
+                  question={question}
+                  choices={choices}
                 />
               );
             }
