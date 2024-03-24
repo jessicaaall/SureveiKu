@@ -1,106 +1,52 @@
-# **SureveiKu**
+# SureveiKu
+SureveiKu is a web application for conducting surveys, collaboratively designed by Group 21 Milestone SPARTA. The primary objective behind SureveiKu is to serve as an effective platform that connects surveyors with respondents. SureveiKu acts as a facilitator for surveyors in need of participants to fill out their surveys, while offering respondents the opportunity to earn reedemable points for their participation.
 
-**Milestone 2 - SPARTA 2021**
-- Lampiran Tambahan: https://docs.google.com/spreadsheets/d/1WDrvDOd6HXa6D0EeuEXBpIuIjYp2kNG8jBQ6tDsXP5A/edit?usp=sharing
 
-## Kelompok 21 - SureveiKu
+## Features
+SureveiKu offers several main features:
+1. Pricing
 
-1. Muhammad Dhiwaul Akbar (16521009)
+   Surveyors can select from a variety of point packages available for purchase. These points are necessary for surveyors to create surveys that offer point rewards, thus attracting participants to fill out their surveys.
+2. Create Survey
 
-2. Nicolas Owen Halim (16521018)
+   This feature allows surveyors to create customized surveys that meet their specific needs.
+3. My Surveys
 
-- Privacy Policy Page
-- Lead Moderator Demo
+   Surveyors can access a comprehensive overview of their surveys, including detailed response results and insightful analysis.
+4. Available Surveys
 
-3. Jessica (16521024)
+   Participants can find ongoing surveys, enabling them to actively contribute by completing those surveys.
+5. Reedem Points
 
-- Side Scroll
-- Help Page
-- Analysis Page
-- Form Builder
+   Participants who accumulate points have the opportunity to redeem them for valuable gift cards, adding an incentive for active participation.
 
-4. Athif Nirwasito (16521026)
 
-- Moderator Demo
-- Filling Form
+## How to Run
+1. Install node.js from https://nodejs.org/en/ and check the "Add to Path" option
+2. Open a folder to save files
+3. Right-click on the folder and select "Open with Terminal" or "Git Bash Here"
+4. Type "git clone https://github.com/jessicaaall/SureveiKu.git"
+5. Open the folder using Visual Studio Code, then select "New Terminal"
+6. In the terminal, type "node -v" to verify that node.js has been successfully installed
+7. Type "cd src" to navigate to the "src" folder
+8. Type "npm install --force" to install dependencies
+9. Finally, type "npm start" to run the web app on localhost
 
-5. Akhmad Setiawan (16521074)
 
-- Form Builder
-- Redeem Points Page
-
-6. Nicholas Liem (16521108)
-
-- Lead FrontEnd
-- Layouting, Folder Structuring, and Page Routing (Semua page)
-- Wrapper components
-- Dashboard (NavBar, Buttons, Background), Homepage (SideBar, NavBar, Buttons, Background)
-- Feedback Page, SignUp Page, Login Page (+ add Google Login)
-- [Edit] Profile: Box & Input, Date, Dropdown gender
-- [Edit] Filling Form: Membuat reusable component
-- Linking pages & buttons
-
-7. Marcheline Fanni Hidayat Putri (16521117)
-
-- Moderator Demo
-- Menulis file ReadMe
-- Revisi Redeem Points Page
-- Feedback Done Page
-
-8. Hosea Nathanael Abetnego (16521156)
-
-- Terms of Service Page
-- Contact Page
-- Pricing Page
-- Front Page
-- Filling Form
-
-9. Christina Wijaya (16521224)
-
-- Project Manager
-- Menghubungi mentor dan mengatur jadwal dengan asisten
-- Form Builder
-- Responses Page
-- My Surveys Page
-- Available Survey Page
-
-10. Rinaldy Adin (16521390)
-
-- Lead BackEnd (Membuat semua hal yang berkaitan dengan BackEnd)
-- Login system, Inserting Routing System
-- Merevisi Filling Form Page
-- Merevisi dan merapikan semua page yang dirasa perlu sebelum dihubungkan dengan BackEnd
-
-11. Nadira Rahmananda Arifandi (16521423)
-
-- Membuat Script Demo
-- Profile Page
-
-12. Wildhan Hidayatullah (16521487)
-
-- Service Page
-- Analysis Page
-- Survey Done Page
-
-13. Henry Anand Septian Radityo (16521507)
-
-- Filling Form
-
-14. Gyan Maiziko (16521535)
-
-- Moderator Demo
-- Filling Form (Ikut mengerjakan bersama Athif dan Henry melalui Zoom, sehingga tidak melakukan commit)
-
-## Cara menjalankan SureveiKu:
-
-1. Download node.js di https://nodejs.org/en/
-2. Install node.js, pastikan **Add to Path**
-3. Buka folder untuk menyimpan file
-4. Klik kanan folder tersebut dan open with terminal atau Git Bash Here
-5. Pada terminal, ketik "git clone https://github.com/Kelompok21Milestone/Milestone02_K21.git"
-6. Buka folder tersebut dengan VSCode
-7. Klik terminal di bar atas VSCode, lalu klik New Terminal
-8. Di terminal, ketik "node -v" untuk memastikan node.js sudah terinstall
-9. Di terminal, ketik "cd src" untuk memindahkan directory ke folder src
-9. Di terminal, ketik "npm install --force"
-10. Kemudian, ketik "npm start" di terminal untuk membuka localhost agar bisa melihat tampilan web
+## Team Members
+| Name | Task |
+| ----- | ---- |
+| Muhammad Dhiwaul Akbar |  |
+| Nicolas Owen Halim | Privacy Policy Page |
+| Jessica | Side Scroll, Help Page, Analysis Page, Form Builder |
+| Athif Nirwasito | Filling Form |
+| Akhmad Setiawan | Form Builder, Reedem Points Page |
+| Nicholas Liem | Dashboard, Homepage, Feedback Page, Sign Up and Login Page, Profile, Filling Form |
+| Marcheline Fanni Hidayat Putri | Reedem Points Page, Feedback Done Page |
+| Hosea Nathanael Abetnego | Terms of Service Page, Contact Page, Pricing Page, Filling Form |
+| Christina Wijaya | Form Builder, Responses Page, My Surveys Page, Available Survey Page |
+| Rinaldy Adin | Login System, Routing System, Filling Form, Back End |
+| Nadira Rahmananda Arifandi | Profile Page |
+| Wildhan Hidayatullah | Service Page, Survey Done Page |
+| Henry Anand Septian Radityo | Filling Form |
+| Gyan Maiziko | Filling Form |
